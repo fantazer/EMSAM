@@ -1,7 +1,7 @@
 {
 	"block":{
-		"header":"header",
-		"footer":"footer"
+		"menu":"menu",
+		"toolbar":"toolbar"
 	},
 	"page":{
 		"index":"index"

@@ -1,0 +1,62 @@
+/*! block toolbar*/
+.toolbar
+	width: 95px
+	height: 100%
+
+.toolbar-wrap
+	f()
+	fl()
+	position: fixed
+	width: 95px
+	height: 100%
+	border-left:1px solid #e8d8d2
+
+.toolbar-icon
+	flex(mid)
+	cp()
+	padding: 27px
+	border-bottom:1px solid #e8d8d2
+	tr(all)
+	&:hover
+		background: $red
+		.icon
+			fill white
+	.icon
+		size 40px
+		fill $gray-dark
+
+.toolbar-enter
+	@extend .toolbar-icon
+
+.toolbar-cart
+	@extend .toolbar-icon
+	&:hover
+
+		.toolbar-cart__val
+			background: white
+			color $red
+
+
+.toolbar-cart__icon
+	position: relative
+//.icon
+.toolbar-cart__val
+	tr(all)
+	br(10px)
+	position: absolute
+	top -5px
+	right: -10px
+	padding: 1px 5px
+	background: $red
+	color white
+	font-size: 12px
+
+.toolbar-call
+	@extend .toolbar-icon
+	margin-top: auto
+	border-top:1px solid #e8d8d2
+
+.toolbar-up
+	@extend .toolbar-icon
+
+/*!block toolbar end */

@@ -1,0 +1,31 @@
+mixin menu()
+	//block menu
+	.menu
+		.menu-wrap
+			.menu-cont
+				a(href="/").menu-logo
+					+icon("apple","icon")
+				.menu-nav
+					-
+						var items = [
+							'Меню',
+							'Акции',
+							'Доставка',
+							'Отзывы',
+							'О нас'
+							];
+					each item in items
+						a(href="#").menu-nav__el #{item}
+
+				.menu-info
+					.menu-info-hr
+					a(href="tel:8 (3435) 21-10-10").menu-phone 8 (3435) 21-10-10
+					.menu-timework с 10:00 до 24:00
+					.soc-row
+						a(href="#").soc-row__el.soc-row__el--vk
+							+icon("soc-vk","icon")
+						a(href="#").soc-row__el.soc-row__el--fb
+							+icon("soc-facebook","icon")
+						a(href="#").soc-row__el.soc-row__el--ok
+							+icon("soc-ok","icon")
+	//block menu end

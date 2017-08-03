@@ -1,0 +1,22 @@
+mixin toolbar()
+	//block toolbar
+	.toolbar
+		.toolbar-wrap
+			.toolbar-enter
+				+icon("account-key","icon")
+				//icon for login user
+				//<svg class="icon">
+				//	<use xlink:href="#account"></use>
+				//</svg>
+			.toolbar-cart
+				.toolbar-cart__icon
+					+icon("cart","icon")
+					.toolbar-cart__val 32
+			.toolbar-call
+				+icon("phone","icon")
+			.toolbar-up
+				+icon("arrow-top","icon")
+
+
+
+	//block toolbar end

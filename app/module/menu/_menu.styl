@@ -1,0 +1,94 @@
+/*! block menu*/
+.menu
+	position: relative
+	width: 385px
+
+.menu-wrap
+	position: fixed
+	width: 385px
+	height: 100%
+	border-right:1px solid #e8d8d2
+	fl()
+	flex(mid)
+
+.menu-cont
+	fl()
+	flex(mid)
+
+.menu-logo
+	size 30%
+	margin-bottom: 5vh
+	.icon
+		size 100%
+
+.menu-nav
+	margin-bottom: 5vh
+	flex(mid)
+	fl()
+
+.menu-nav__el
+	@extend .type--md
+	up()
+	tr(all)
+	br-animate(#4d342c,2px)
+	font-weight:700
+	color #956c5f
+	text-align: center
+	margin-bottom: 3vh
+	&:hover
+		color #4d342c
+
+.menu-info
+	flex(mid)
+	fl()
+
+.menu-info-hr
+	height: 1px
+	width: 120%
+	background: #e8d8d2
+	margin-bottom: 3vh
+
+.menu-phone
+	margin-bottom: 10px
+
+.menu-timework
+	opacity 0.6
+	margin-bottom: 3vh
+
+.soc-row
+	flex(mid)
+
+.soc-row__el
+	flex(mid)
+	round()
+	tr(all)
+	border 1px solid $gray
+	size 30px
+	margin-right: 10px
+	&:last-child
+		margin-right: 0px
+	.icon
+		tr(all)
+		size 12px
+		fill $gray
+
+.soc-row__el--vk
+	&:hover
+		border 1px solid #578ed0
+		.icon
+			fill #578ed0
+
+.soc-row__el--fb
+	&:hover
+		border 1px solid #293c93
+		.icon
+			fill #293c93
+
+.soc-row__el--ok
+	&:hover
+		border 1px solid #d99a34
+		.icon
+			fill #d99a34
+
+
+/*!block menu end */

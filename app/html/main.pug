@@ -1,6 +1,84 @@
 include block_html/_style.pug
 include block_html/_include.pug
 
-+header()
+.page
+	+menu()
+	.content
+		.main-page
+			.main-page__first-section
+				.main-page__first-section-about
+					.main-page__first-section-slider.owl-carousel
+							.main-page__first-section-slider__el(style="background-image:url('img/slide-item-1.jpg')")
+								//.filter
+							.main-page__first-section-slider__el(style="background-image:url('img/slide-item-1.jpg')")
+								//.filter
+				.main-page__first-section-info
+					.item-block(style="background-image:url('img/tea.jpg')")
+						.filter
+						.item-block__info
+							.item-block__name Сангрия
+							.item-block__cost 159 Р.
+
+					.item-slider.item-slider--review
+						a(href="#").item-slider__link Все отзывы
+						.item-slider__nav
+							.item-slider__nav-prev
+								+icon("arrow-left","slider-control")
+							.item-slider__nav-next
+								+icon("arrow-right","slider-control")
+						.line-title-wrap
+							.line-title-el
+							.line-title Отзывы
+							.line-title-el
+						.item-slider__wrap.owl-carousel
+							.item-slider__el
+								.item-slider__info
+									.item-slider_title Спасибо! Всё было вкусно!!!
+									.item-slider_text Добрый день. Спасибо большое всей команде вы превзошли все наши ожидания! Мало того что приготовили и привезли 8 пицц менее
+							.item-slider__el
+								.item-slider__info
+									.item-slider_title Спасибо! Всё было вкусно!!!
+									.item-slider_text Добрый день. Спасибо большое всей команде вы превзошли все наши ожидания! Мало того что приготовили и привезли 8 пицц менее чем за 2 часа ...
+
+			.main-page__second-section
+				.item-slider.item-slider--news
+					a(href="#").item-slider__link Все новости
+					.item-slider__nav
+						.item-slider__nav-prev
+							+icon("arrow-left","slider-control")
+						.item-slider__nav-next
+							+icon("arrow-right","slider-control")
+					.line-title-wrap
+						.line-title-el
+						.line-title Отзывы
+						.line-title-el
+					.item-slider__wrap.owl-carousel
+						.item-slider__el
+							.item-slider__info
+								.item-slider_title Новое меню
+								.item-slider_text Добрый день. Спасибо большое всей команде вы превзошли все наши ожидания! Мало того что приготовили и привезли 8 пицц менее
+						.item-slider__el
+							.item-slider__info
+								.item-slider_title Новое меню
+								.item-slider_text Добрый день. Спасибо большое всей команде вы превзошли все наши ожидания! Мало того что приготовили и привезли 8 пицц менее чем за 2 часа ...
+
+				.item-block(style="background-image:url('img/vok.jpg')")
+					.filter
+					.item-block__info
+						.item-block__name Морской салат,<br>с жареными креветками
+						.item-block__cost 159 Р.
+
+			.restorans(style="background-image:url('img/restorante.jpg')")
+				.restorans-wrap
+					.restorans-cont
+						.restorans-title
+							.line-title-wrap
+								.line-title-el
+								.line-title Наши рестораны
+								.line-title-el
+						.restorans-row
+							a(href="#").restorans-btn.btn--md.btn--light Интерьер
+							a(href="#").restorans-btn.btn--md.btn--light На карте
+	+toolbar()
 
 include ./block_html/_script.pug
