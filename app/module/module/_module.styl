@@ -1,0 +1,79 @@
+/*! block module*/
+
+.module-el
+	width: 50%
+	height: 100%
+	background: white
+	padding: 3.5%
+	form
+		width: 100%
+		input
+			width: 100%
+			margin-bottom: 5%
+
+.module__cont
+	height: 100%
+	transition all 1s
+	transform translateX(200%)
+	@extend .module-el
+
+
+.module-reg
+	width: 50%
+	height: 100%
+
+.module__cont--open
+	transform translateX(100%)
+	transition all 1s
+
+.enter-foget__link
+	@extend .link--main
+	cp()
+
+.enter-foget__get
+	@extend .btn--md
+	@extend .btn--green
+
+
+.form-title
+	text-align: center
+	font-family Oswald
+	@extend .type--lg
+	font-weight 300
+	margin-bottom: 10%
+
+.enter-foget
+	f()
+	justify-content: space-between
+	margin-bottom: 20%
+
+.enter-soc__text
+	@extend .type--main
+	font-weight 400
+	margin-right: 10%
+	color black
+
+.enter-soc
+	flex(mid)
+	padding: 5% 0
+	border-top 1px solid $gray
+	border-bottom 1px solid $gray
+	margin-bottom: 30%
+
+.veksel
+	flex(mid)
+	.icon
+		size 25px
+		fill $gray
+
+.enter-account
+	.veksel
+		margin-bottom: 5%
+
+.enter-account__text
+	text-align: center
+	span
+		@extend .link--main
+		cp()
+
+/*!block module end */

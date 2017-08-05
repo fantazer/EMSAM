@@ -2,13 +2,16 @@ mixin toolbar()
 	//block toolbar
 	.toolbar
 		.toolbar-wrap
-			.toolbar-enter
-				+icon("account-key","icon")
-				//icon for login user
-				//<svg class="icon">
-				//	<use xlink:href="#account"></use>
-				//</svg>
-			.toolbar-cart
+			.toolbar-enter.get-module(data-module="enter")
+				.toolbar-enter-icon--open
+					+icon("account-key","icon")
+					//icon for login user
+					//<svg class="icon">
+					//	<use xlink:href="#account"></use>
+					//</svg>
+				.toolbar-enter-icon--close
+					+icon("close","icon ")
+			.toolbar-cart.get-module(data-module="cart")
 				.toolbar-cart__icon
 					+icon("cart","icon")
 					.toolbar-cart__val 32

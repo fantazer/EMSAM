@@ -1,0 +1,29 @@
+mixin module()
+	//block module
+	.module(data-module="enter")
+		.module-auth.module__cont
+			.form-title Вход
+			form(action="#")
+				input(type="text" placeholder="Username" )
+				input(type="password" placeholder="Passwords")
+				.enter-foget
+					.enter-foget__link Забыли пароль?
+					.enter-foget__get Войти
+			.enter-soc
+				.enter-soc__text Вход через соц.сети
+				.soc-row
+					a(href="#").soc-row__el.soc-row__el--vk
+						+icon("soc-vk","icon")
+					a(href="#").soc-row__el.soc-row__el--fb
+						+icon("soc-facebook","icon")
+					a(href="#").soc-row__el.soc-row__el--ok
+						+icon("soc-ok","icon")
+			.enter-account
+				.veksel
+					+icon("uzor","icon")
+				.enter-account__text Нет аккаунта?
+					span Зерегистрируйтесь
+	.module(data-module="cart")
+		.module-reg.module__cont
+			h1 Корзина
+	//block module end

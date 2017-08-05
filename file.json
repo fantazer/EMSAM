@@ -1,7 +1,8 @@
 {
 	"block":{
 		"menu":"menu",
-		"toolbar":"toolbar"
+		"toolbar":"toolbar",
+		"module":"module"
 	},
 	"page":{
 		"index":"index"

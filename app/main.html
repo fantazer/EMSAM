@@ -73,28 +73,117 @@
 			</div>
 			<!--block menu end-->
 			<div class="content">
-				<div class="main-page">
-					<div class="main-page__first-section">
-						<div class="main-page__first-section-about">
-							<div class="main-page__first-section-slider owl-carousel">
-								<div class="main-page__first-section-slider__el" style="background-image:url('img/slide-item-1.jpg');">
-									<!--.filter-->
+				<div class="content-filter"></div>
+				<div class="content-wrap">
+					<!--block module-->
+					<div class="module" data-module="enter">
+						<div class="module-auth module__cont">
+							<div class="form-title">Вход</div>
+							<form action="#">
+								<input type="text" placeholder="Username" />
+								<input type="password" placeholder="Passwords" />
+								<div class="enter-foget">
+									<div class="enter-foget__link">Забыли пароль?</div>
+									<div class="enter-foget__get">Войти</div>
 								</div>
-								<div class="main-page__first-section-slider__el" style="background-image:url('img/slide-item-1.jpg');">
-									<!--.filter-->
+							</form>
+							<div class="enter-soc">
+								<div class="enter-soc__text">Вход через соц.сети</div>
+								<div class="soc-row">
+									<a class="soc-row__el soc-row__el--vk" href="#">
+										<svg class="icon">
+											<use xlink:href="#soc-vk"></use>
+										</svg>
+									</a>
+									<a class="soc-row__el soc-row__el--fb" href="#">
+										<svg class="icon">
+											<use xlink:href="#soc-facebook"></use>
+										</svg>
+									</a>
+									<a class="soc-row__el soc-row__el--ok" href="#">
+										<svg class="icon">
+											<use xlink:href="#soc-ok"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+							<div class="enter-account">
+								<div class="veksel">
+									<svg class="icon">
+										<use xlink:href="#uzor"></use>
+									</svg>
+								</div>
+								<div class="enter-account__text">Нет аккаунта?
+									<span>Зерегистрируйтесь</span>
 								</div>
 							</div>
 						</div>
-						<div class="main-page__first-section-info">
-							<div class="item-block" style="background-image:url('img/tea.jpg');">
-								<div class="filter"></div>
-								<div class="item-block__info">
-									<div class="item-block__name">Сангрия</div>
-									<div class="item-block__cost">159 Р.</div>
+					</div>
+					<div class="module" data-module="cart">
+						<div class="module-reg module__cont">
+							<h1>Корзина</h1>
+						</div>
+					</div>
+					<!--block module end-->
+					<div class="main-page">
+						<div class="main-page__first-section">
+							<div class="main-page__first-section-about">
+								<div class="main-page__first-section-slider owl-carousel">
+									<div class="main-page__first-section-slider__el" style="background-image:url('img/slide-item-1.jpg');">
+										<!--.filter-->
+									</div>
+									<div class="main-page__first-section-slider__el" style="background-image:url('img/slide-item-1.jpg');">
+										<!--.filter-->
+									</div>
 								</div>
 							</div>
-							<div class="item-slider item-slider--review">
-								<a class="item-slider__link" href="#">Все отзывы</a>
+							<div class="main-page__first-section-info">
+								<div class="item-block" style="background-image:url('img/tea.jpg');">
+									<div class="filter"></div>
+									<div class="item-block__info">
+										<div class="item-block__name">Сангрия</div>
+										<div class="item-block__cost">159 Р.</div>
+									</div>
+								</div>
+								<div class="item-slider item-slider--review">
+									<a class="item-slider__link" href="#">Все отзывы</a>
+									<div class="item-slider__nav">
+										<div class="item-slider__nav-prev">
+											<svg class="slider-control">
+												<use xlink:href="#arrow-left"></use>
+											</svg>
+										</div>
+										<div class="item-slider__nav-next">
+											<svg class="slider-control">
+												<use xlink:href="#arrow-right"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="line-title-wrap">
+										<div class="line-title-el"></div>
+										<div class="line-title">Отзывы</div>
+										<div class="line-title-el"></div>
+									</div>
+									<div class="item-slider__wrap owl-carousel">
+										<div class="item-slider__el">
+											<div class="item-slider__info">
+												<div class="item-slider_title">Спасибо! Всё было вкусно!!!</div>
+												<div class="item-slider_text">Добрый день. Спасибо большое всей команде вы превзошли все наши ожидания! Мало того что приготовили и привезли 8 пицц менее</div>
+											</div>
+										</div>
+										<div class="item-slider__el">
+											<div class="item-slider__info">
+												<div class="item-slider_title">Спасибо! Всё было вкусно!!!</div>
+												<div class="item-slider_text">Добрый день. Спасибо большое всей команде вы превзошли все наши ожидания! Мало того что приготовили и привезли 8 пицц менее чем за 2 часа ...</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="main-page__second-section">
+							<div class="item-slider item-slider--news">
+								<a class="item-slider__link" href="#">Все новости</a>
 								<div class="item-slider__nav">
 									<div class="item-slider__nav-prev">
 										<svg class="slider-control">
@@ -115,77 +204,41 @@
 								<div class="item-slider__wrap owl-carousel">
 									<div class="item-slider__el">
 										<div class="item-slider__info">
-											<div class="item-slider_title">Спасибо! Всё было вкусно!!!</div>
+											<div class="item-slider_title">Новое меню</div>
 											<div class="item-slider_text">Добрый день. Спасибо большое всей команде вы превзошли все наши ожидания! Мало того что приготовили и привезли 8 пицц менее</div>
 										</div>
 									</div>
 									<div class="item-slider__el">
 										<div class="item-slider__info">
-											<div class="item-slider_title">Спасибо! Всё было вкусно!!!</div>
+											<div class="item-slider_title">Новое меню</div>
 											<div class="item-slider_text">Добрый день. Спасибо большое всей команде вы превзошли все наши ожидания! Мало того что приготовили и привезли 8 пицц менее чем за 2 часа ...</div>
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-					</div>
-					<div class="main-page__second-section">
-						<div class="item-slider item-slider--news">
-							<a class="item-slider__link" href="#">Все новости</a>
-							<div class="item-slider__nav">
-								<div class="item-slider__nav-prev">
-									<svg class="slider-control">
-										<use xlink:href="#arrow-left"></use>
-									</svg>
-								</div>
-								<div class="item-slider__nav-next">
-									<svg class="slider-control">
-										<use xlink:href="#arrow-right"></use>
-									</svg>
-								</div>
-							</div>
-							<div class="line-title-wrap">
-								<div class="line-title-el"></div>
-								<div class="line-title">Отзывы</div>
-								<div class="line-title-el"></div>
-							</div>
-							<div class="item-slider__wrap owl-carousel">
-								<div class="item-slider__el">
-									<div class="item-slider__info">
-										<div class="item-slider_title">Новое меню</div>
-										<div class="item-slider_text">Добрый день. Спасибо большое всей команде вы превзошли все наши ожидания! Мало того что приготовили и привезли 8 пицц менее</div>
-									</div>
-								</div>
-								<div class="item-slider__el">
-									<div class="item-slider__info">
-										<div class="item-slider_title">Новое меню</div>
-										<div class="item-slider_text">Добрый день. Спасибо большое всей команде вы превзошли все наши ожидания! Мало того что приготовили и привезли 8 пицц менее чем за 2 часа ...</div>
-									</div>
+							<div class="item-block" style="background-image:url('img/vok.jpg');">
+								<div class="filter"></div>
+								<div class="item-block__info">
+									<div class="item-block__name">Морской салат,
+										<br>с жареными креветками</div>
+									<div class="item-block__cost">159 Р.</div>
 								</div>
 							</div>
 						</div>
-						<div class="item-block" style="background-image:url('img/vok.jpg');">
-							<div class="filter"></div>
-							<div class="item-block__info">
-								<div class="item-block__name">Морской салат,
-									<br>с жареными креветками</div>
-								<div class="item-block__cost">159 Р.</div>
-							</div>
-						</div>
-					</div>
-					<div class="restorans" style="background-image:url('img/restorante.jpg');">
-						<div class="restorans-wrap">
-							<div class="restorans-cont">
-								<div class="restorans-title">
-									<div class="line-title-wrap">
-										<div class="line-title-el"></div>
-										<div class="line-title">Наши рестораны</div>
-										<div class="line-title-el"></div>
+						<div class="restorans" style="background-image:url('img/restorante.jpg');">
+							<div class="restorans-wrap">
+								<div class="restorans-cont">
+									<div class="restorans-title">
+										<div class="line-title-wrap">
+											<div class="line-title-el"></div>
+											<div class="line-title">Наши рестораны</div>
+											<div class="line-title-el"></div>
+										</div>
 									</div>
-								</div>
-								<div class="restorans-row">
-									<a class="restorans-btn btn--md btn--light" href="#">Интерьер</a>
-									<a class="restorans-btn btn--md btn--light" href="#">На карте</a>
+									<div class="restorans-row">
+										<a class="restorans-btn btn--md btn--light" href="#">Интерьер</a>
+										<a class="restorans-btn btn--md btn--light" href="#">На карте</a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -195,16 +248,23 @@
 			<!--block toolbar-->
 			<div class="toolbar">
 				<div class="toolbar-wrap">
-					<div class="toolbar-enter">
-						<svg class="icon">
-							<use xlink:href="#account-key"></use>
-						</svg>
-						<!--icon for login user-->
-						<!--<svg class="icon">-->
-						<!--	<use xlink:href="#account"></use>-->
-						<!--</svg>-->
+					<div class="toolbar-enter get-module" data-module="enter">
+						<div class="toolbar-enter-icon--open">
+							<svg class="icon">
+								<use xlink:href="#account-key"></use>
+							</svg>
+							<!--icon for login user-->
+							<!--<svg class="icon">-->
+							<!--	<use xlink:href="#account"></use>-->
+							<!--</svg>-->
+						</div>
+						<div class="toolbar-enter-icon--close">
+							<svg class="icon ">
+								<use xlink:href="#close"></use>
+							</svg>
+						</div>
 					</div>
-					<div class="toolbar-cart">
+					<div class="toolbar-cart get-module" data-module="cart">
 						<div class="toolbar-cart__icon">
 							<svg class="icon">
 								<use xlink:href="#cart"></use>
