@@ -17,9 +17,9 @@
 		<meta name="description" itemprop="description" content="" />
 		<!--build:css css/vendor.css-->
 		<link rel="stylesheet" href="bower/normalize.css/normalize.css" />
-		<!--link(rel="stylesheet", href="bower/flexbox-grid-stylus/dist/flexbox-grid.min.css")-->
-		<!--link(rel="stylesheet", href="bower/components-font-awesome/css/font-awesome.css")-->
+		<!--link(rel="stylesheet", href="bower/jquery-nice-select/css/nice-select.css")-->
 		<link rel="stylesheet" href="bower/owl.carousel/dist/assets/owl.carousel.css" />
+		<link rel="stylesheet" href="bower/select2/dist/css/select2.min.css" />
 		<!--endbuild-->
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/style-edit.css" />
@@ -72,23 +72,60 @@
 				<textarea name="" cols="30" rows="10" placeholder="Text"></textarea>
 			</div>
 			<hr class="elements-hr" />
-			<!--.elements-checkbox-block-->
-			<!---->
-			<!--	+checkbox('Наименование услуги','disable')-->
-			<!--	br-->
-			<!--	+checkbox('Наименование услуги')-->
-			<!--	br-->
-			<!--	+radio('Наименование услуги')-->
-			<!--	br-->
-			<!--	+radio('Наименование услуги','disable')-->
-			<!--	br-->
-			<!---->
-			<!--.element-select-->
-			<!--	select.select-beauty-->
-			<!--		option(value="1" data-display="Выберите налог") Нет-->
-			<!--		option(value="2") Новый налог 1-->
-			<!--		option(value="3") Новый налог 2-->
-			<!--		option(value="4") Новый налог 3-->
+			<div class="elements-checkbox-block">
+				<div class="check-el">
+					<label class="style-label style-label--checkbox style-label--disable">
+						<input class="sytle-input" type="checkbox" />
+						<div class="sytle-input-element">
+							<svg class="icon-check">
+								<use xlink:href="#checked"></use>
+							</svg>
+						</div>
+						<div class="sytle-input-text">Наименование услуги</div>
+					</label>
+				</div>
+				<br/>
+				<div class="check-el">
+					<label class="style-label style-label--checkbox">
+						<input class="sytle-input" type="checkbox" />
+						<div class="sytle-input-element">
+							<svg class="icon-check">
+								<use xlink:href="#checked"></use>
+							</svg>
+						</div>
+						<div class="sytle-input-text">Наименование услуги</div>
+					</label>
+				</div>
+				<br/>
+				<div class="check-el">
+					<label class="style-label style-label--radio">
+						<input class="sytle-input" type="radio" name="group" />
+						<div class="sytle-input-element">
+							<div class="icon-radio"></div>
+						</div>
+						<div class="sytle-input-text">Наименование услуги</div>
+					</label>
+				</div>
+				<br/>
+				<div class="check-el">
+					<label class="style-label style-label--radio">
+						<input class="sytle-input" type="radio" name="group" />
+						<div class="sytle-input-element">
+							<div class="icon-radio"></div>
+						</div>
+						<div class="sytle-input-text">Наименование услуги</div>
+					</label>
+				</div>
+				<br/>
+			</div>
+			<div class="element-select">
+				<select class="select-beauty">
+					<option value="1" data-display="Выберите налог">Нет</option>
+					<option value="2">Новый налог 1</option>
+					<option value="3">Новый налог 2</option>
+					<option value="4">Новый налог 3</option>
+				</select>
+			</div>
 			<hr class="elements-hr" />
 			<div class="elements-icr-block">
 				<div class="incr">
@@ -166,6 +203,12 @@
 				</div>
 				<div class="element-list-svg__icon">
 					<svg class="icon-el">
+						<use xlink:href="#checked"></use>
+					</svg>
+					<div class="element-list-svg__name">checked</div>
+				</div>
+				<div class="element-list-svg__icon">
+					<svg class="icon-el">
 						<use xlink:href="#close-round"></use>
 					</svg>
 					<div class="element-list-svg__name">close-round</div>
@@ -208,6 +251,12 @@
 				</div>
 				<div class="element-list-svg__icon">
 					<svg class="icon-el">
+						<use xlink:href="#small-arrow-down"></use>
+					</svg>
+					<div class="element-list-svg__name">small-arrow-down</div>
+				</div>
+				<div class="element-list-svg__icon">
+					<svg class="icon-el">
 						<use xlink:href="#soc-facebook"></use>
 					</svg>
 					<div class="element-list-svg__name">soc-facebook</div>
@@ -242,6 +291,8 @@
 		<script src="bower/jquery/dist/jquery.js"></script>
 		<script src="bower/owl.carousel/dist/owl.carousel.min.js"></script>
 		<script src="bower/svg4everybody/dist/svg4everybody.js"></script>
+		<!--script(src='bower/jquery-nice-select/js/jquery.nice-select.min.js')-->
+		<script src="bower/select2/dist/js/select2.min.js"></script>
 		<script src="js/jquery.smoothscroll.js"></script>
 		<!-- endbuild-->
 		<script src="js/script.js"></script>

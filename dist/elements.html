@@ -67,23 +67,79 @@
 				<textarea name="" cols="30" rows="10" placeholder="Text"></textarea>
 			</div>
 			<hr class="elements-hr" />
-			<!--.elements-checkbox-block-->
-			<!---->
-			<!--	+checkbox('Наименование услуги','disable')-->
-			<!--	br-->
-			<!--	+checkbox('Наименование услуги')-->
-			<!--	br-->
-			<!--	+radio('Наименование услуги')-->
-			<!--	br-->
-			<!--	+radio('Наименование услуги','disable')-->
-			<!--	br-->
-			<!---->
-			<!--.element-select-->
-			<!--	select.select-beauty-->
-			<!--		option(value="1" data-display="Выберите налог") Нет-->
-			<!--		option(value="2") Новый налог 1-->
-			<!--		option(value="3") Новый налог 2-->
-			<!--		option(value="4") Новый налог 3-->
+			<div class="elements-checkbox-block">
+				<div class="check-el">
+					<label class="style-label style-label--checkbox style-label--disable">
+						<input class="sytle-input" type="checkbox" />
+						<div class="sytle-input-element">
+							<svg class="icon-check">
+								<use xlink:href="#checked"></use>
+							</svg>
+						</div>
+						<div class="sytle-input-text">Наименование услуги</div>
+					</label>
+				</div>
+				<br/>
+				<div class="check-el">
+					<label class="style-label style-label--checkbox">
+						<input class="sytle-input" type="checkbox" />
+						<div class="sytle-input-element">
+							<svg class="icon-check">
+								<use xlink:href="#checked"></use>
+							</svg>
+						</div>
+						<div class="sytle-input-text">Наименование услуги</div>
+					</label>
+				</div>
+				<br/>
+				<div class="check-el">
+					<label class="style-label style-label--radio">
+						<input class="sytle-input" type="radio" name="group" />
+						<div class="sytle-input-element">
+							<div class="icon-radio"></div>
+						</div>
+						<div class="sytle-input-text">Наименование услуги</div>
+					</label>
+				</div>
+				<br/>
+				<div class="check-el">
+					<label class="style-label style-label--radio">
+						<input class="sytle-input" type="radio" name="group" />
+						<div class="sytle-input-element">
+							<div class="icon-radio"></div>
+						</div>
+						<div class="sytle-input-text">Наименование услуги</div>
+					</label>
+				</div>
+				<br/>
+			</div>
+			<div class="element-select">
+				<select class="select-beauty">
+					<option value="1" data-display="Выберите налог">Нет</option>
+					<option value="2">Новый налог 1</option>
+					<option value="3">Новый налог 2</option>
+					<option value="4">Новый налог 3</option>
+				</select>
+			</div>
+			<hr class="elements-hr" />
+			<div class="elements-icr-block">
+				<div class="incr">
+					<div class="incr__minus incr__nav">
+						<svg class="icon">
+							<use xlink:href="#minus"></use>
+						</svg>
+					</div>
+					<div class="incr__val">
+						<span>1</span>
+						<div class="incr__val-coner"></div>
+					</div>
+					<div class="incr__plus incr__nav">
+						<svg class="icon">
+							<use xlink:href="#plus"></use>
+						</svg>
+					</div>
+				</div>
+			</div>
 			<hr class="elements-hr" />
 			<div class="element-list-svg">
 				<div class="element-list-svg__icon">
@@ -142,6 +198,18 @@
 				</div>
 				<div class="element-list-svg__icon">
 					<svg class="icon-el">
+						<use xlink:href="#checked"></use>
+					</svg>
+					<div class="element-list-svg__name">checked</div>
+				</div>
+				<div class="element-list-svg__icon">
+					<svg class="icon-el">
+						<use xlink:href="#close-round"></use>
+					</svg>
+					<div class="element-list-svg__name">close-round</div>
+				</div>
+				<div class="element-list-svg__icon">
+					<svg class="icon-el">
 						<use xlink:href="#close"></use>
 					</svg>
 					<div class="element-list-svg__name">close</div>
@@ -160,9 +228,27 @@
 				</div>
 				<div class="element-list-svg__icon">
 					<svg class="icon-el">
+						<use xlink:href="#minus"></use>
+					</svg>
+					<div class="element-list-svg__name">minus</div>
+				</div>
+				<div class="element-list-svg__icon">
+					<svg class="icon-el">
 						<use xlink:href="#phone"></use>
 					</svg>
 					<div class="element-list-svg__name">phone</div>
+				</div>
+				<div class="element-list-svg__icon">
+					<svg class="icon-el">
+						<use xlink:href="#plus"></use>
+					</svg>
+					<div class="element-list-svg__name">plus</div>
+				</div>
+				<div class="element-list-svg__icon">
+					<svg class="icon-el">
+						<use xlink:href="#small-arrow-down"></use>
+					</svg>
+					<div class="element-list-svg__name">small-arrow-down</div>
 				</div>
 				<div class="element-list-svg__icon">
 					<svg class="icon-el">

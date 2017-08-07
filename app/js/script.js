@@ -1,5 +1,32 @@
 $(document).ready(function(){
 
+	//tab
+	$('.tab__el').click(function(){
+		var currentTab = $(this).data('tab');
+		$('.tab__el').removeClass('tab__el--active');
+		$(this).addClass('tab__el--active')
+		$('.tab__cont').each(function(){
+			if($(this).data('tab') == currentTab ){
+				$(this).removeClass('tab__cont--hide');
+			} else {
+				$(this).addClass('tab__cont--hide');
+			}
+		})
+	})
+	//tab end
+
+	//init nice select
+	$("select").select2({
+	  minimumResultsForSearch: Infinity,
+	  placeholder: "Выберите значение",
+	});
+	// //add icon caret
+	$('b[role="presentation"]').hide();
+	$('.select2-selection__arrow').append('<svg class="icon-select-arrow"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#small-arrow-down"></use></svg>');
+	
+	
+	//init nice select-end
+
 	//show message cart empty
 	var emptyCart = function(){
 		var numberItems = $('.cart__row').length;
@@ -26,6 +53,13 @@ $(document).ready(function(){
 					var $input = $(this).parent().find('.incr__val span');
 					var count = parseInt($input.html()) - 1;
 					count = count < 1 ? 0 : count;
+					$input.html(count);
+			});
+
+		$('.incr__minus.incr--one').click(function () {
+					var $input = $(this).parent().find('.incr__val span');
+					var count = parseInt($input.html()) - 1;
+					count = count < 2 ? 1 : count;
 					$input.html(count);
 			});
 

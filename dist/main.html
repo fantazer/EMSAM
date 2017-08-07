@@ -221,7 +221,7 @@
 									<span>4 500 р.</span>
 								</div>
 								<div class="cart-get">
-									<div class="cart-get__el">Оформить заказ</div>
+									<div class="cart-get__el get-module" data-module="order">Оформить заказ</div>
 								</div>
 							</div>
 							<div class="cart-info">
@@ -245,6 +245,107 @@
 								<input type="password" placeholder="Повторите пароль" />
 								<div class="reg-get">
 									<div class="reg-get__el">Зарегистрироваться</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="module" data-module="order">
+						<div class="module-order module__cont">
+							<div class="form-title">Оформление заказа</div>
+							<form action="#">
+								<input type="text" placeholder="Ваше имя" />
+								<input type="text" placeholder="Tелефон" />
+								<div class="pay-type">
+									<div class="pay-type__el">
+										<div class="check-el">
+											<label class="style-label style-label--radio">
+												<input class="sytle-input" type="radio" name="group" />
+												<div class="sytle-input-element">
+													<div class="icon-radio"></div>
+												</div>
+												<div class="sytle-input-text">Наличными</div>
+											</label>
+										</div>
+									</div>
+									<div class="pay-type__el">
+										<div class="check-el">
+											<label class="style-label style-label--radio">
+												<input class="sytle-input" type="radio" name="group" />
+												<div class="sytle-input-element">
+													<div class="icon-radio"></div>
+												</div>
+												<div class="sytle-input-text">По карте</div>
+											</label>
+										</div>
+									</div>
+									<div class="pay-type__el">
+										<div class="check-el">
+											<label class="style-label style-label--radio">
+												<input class="sytle-input" type="radio" name="group" />
+												<div class="sytle-input-element">
+													<div class="icon-radio"></div>
+												</div>
+												<div class="sytle-input-text">Онлайн</div>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="tab">
+									<div class="tab__el tab__el--active" data-tab="self">С собой</div>
+									<div class="tab__el" data-tab="deliver">Доставка</div>
+								</div>
+								<div class="tab__cont" data-tab="self">
+									<p>нет информации</p>
+								</div>
+								<div class="tab__cont tab__cont--hide" data-tab="deliver">
+									<select>
+										<option></option>
+										<option>Москва</option>
+										<option>Волгоград</option>
+										<option>Екатеренбург</option>
+									</select>
+								</div>
+								<div class="person">
+									<div class="person__text">Количество персон</div>
+									<div class="person__incr">
+										<div class="elements-icr-block">
+											<div class="incr incr--one">
+												<div class="incr__minus incr__nav incr--one">
+													<svg class="icon">
+														<use xlink:href="#minus"></use>
+													</svg>
+												</div>
+												<div class="incr__val">
+													<span>1</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#plus"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<textarea name="text" cols="30" rows="10" placeholder="Комментарий к заказу"></textarea>
+								<div class="confirm">
+									<div class="check-el">
+										<label class="style-label style-label--checkbox">
+											<input class="sytle-input" type="checkbox" />
+											<div class="sytle-input-element">
+												<svg class="icon-check">
+													<use xlink:href="#checked"></use>
+												</svg>
+											</div>
+											<div class="sytle-input-text">Я даю согласие на
+												<a href="#">хранение, обработку и использование своих персональных данных</a>
+											</div>
+										</label>
+									</div>
+								</div>
+								<div class="order-get">
+									<div class="order-get__el">Оформить заказ</div>
 								</div>
 							</form>
 						</div>

@@ -51,23 +51,22 @@ include block_html/_svg.pug
 		textarea(name="", cols="30", rows="10" placeholder="Text")
 	hr.elements-hr
 
-	//.elements-checkbox-block
-	//
-	//	+checkbox('Наименование услуги','disable')
-	//	br
-	//	+checkbox('Наименование услуги')
-	//	br
-	//	+radio('Наименование услуги')
-	//	br
-	//	+radio('Наименование услуги','disable')
-	//	br
-	//
-	//.element-select
-	//	select.select-beauty
-	//		option(value="1" data-display="Выберите налог") Нет
-	//		option(value="2") Новый налог 1
-	//		option(value="3") Новый налог 2
-	//		option(value="4") Новый налог 3
+	.elements-checkbox-block
+		+checkbox('Наименование услуги','disable')
+		br
+		+checkbox('Наименование услуги')
+		br
+		+radio('Наименование услуги')
+		br
+		+radio('Наименование услуги','disable')
+		br
+
+	.element-select
+		select.select-beauty
+			option(value="1" data-display="Выберите налог") Нет
+			option(value="2") Новый налог 1
+			option(value="3") Новый налог 2
+			option(value="4") Новый налог 3
 	hr.elements-hr
 	+incr()
 	hr.elements-hr

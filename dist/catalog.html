@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="format-detection" content="telephone=no" />
+		<!--colors-tabs-->
+		<meta name="theme-color" content="#000" />
+		<meta name="msapplication-navbutton-color" content="#000" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="#000" />
+		<!--icons-->
+		<link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico" />
+		<link type="image/x-icon" rel="icon" href="img/favicon.ico" />
+		<!--SEO-->
+		<title>Document</title>
+		<meta name="description" itemprop="description" content="" />
+		<link rel="stylesheet" href="css/vendor.css">
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/style-edit.css" />
+	</head>
+	<!-- mixin nameMixin()-->
+	<!-- - var args = Array.prototype.slice.call(arguments)-->
+	<!-- - for item in args-->
+
+	<body>
+		<div class="page">
+			<!--block menu-->
+			<div class="menu">
+				<div class="menu-wrap">
+					<div class="menu-cont">
+						<a class="menu-logo" href="/">
+							<svg class="icon">
+								<use xlink:href="#apple"></use>
+							</svg>
+						</a>
+						<div class="menu-nav">
+							<a class="menu-nav__el" href="#">Меню</a>
+							<a class="menu-nav__el" href="#">Акции</a>
+							<a class="menu-nav__el" href="#">Доставка</a>
+							<a class="menu-nav__el" href="#">Отзывы</a>
+							<a class="menu-nav__el" href="#">О нас</a>
+						</div>
+						<div class="menu-info">
+							<div class="menu-info-hr"></div>
+							<a class="menu-phone" href="tel:8 (3435) 21-10-10">8 (3435) 21-10-10</a>
+							<div class="menu-timework">с 10:00 до 24:00</div>
+							<div class="soc-row">
+								<a class="soc-row__el soc-row__el--vk" href="#">
+									<svg class="icon">
+										<use xlink:href="#soc-vk"></use>
+									</svg>
+								</a>
+								<a class="soc-row__el soc-row__el--fb" href="#">
+									<svg class="icon">
+										<use xlink:href="#soc-facebook"></use>
+									</svg>
+								</a>
+								<a class="soc-row__el soc-row__el--ok" href="#">
+									<svg class="icon">
+										<use xlink:href="#soc-ok"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--block menu end-->
+			<div class="content">
+				<div class="content-filter"></div>
+				<div class="content-wrap">
+					<!--block module-->
+					<div class="module" data-module="enter">
+						<div class="module-auth module__cont">
+							<div class="form-title">Вход</div>
+							<form action="#">
+								<input type="text" placeholder="Ваше имя" />
+								<input type="password" placeholder="Пароль" />
+								<div class="enter-foget">
+									<div class="enter-foget__link">Забыли пароль?</div>
+									<div class="enter-foget__get">Войти</div>
+								</div>
+							</form>
+							<div class="enter-soc">
+								<div class="enter-soc__text">Вход через соц.сети</div>
+								<div class="soc-row">
+									<a class="soc-row__el soc-row__el--vk" href="#">
+										<svg class="icon">
+											<use xlink:href="#soc-vk"></use>
+										</svg>
+									</a>
+									<a class="soc-row__el soc-row__el--fb" href="#">
+										<svg class="icon">
+											<use xlink:href="#soc-facebook"></use>
+										</svg>
+									</a>
+									<a class="soc-row__el soc-row__el--ok" href="#">
+										<svg class="icon">
+											<use xlink:href="#soc-ok"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+							<div class="enter-account">
+								<div class="veksel">
+									<svg class="icon">
+										<use xlink:href="#uzor"></use>
+									</svg>
+								</div>
+								<div class="enter-account__text">Нет аккаунта?
+									<span class="get-module" data-module="reg">Зерегистрируйтесь</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="module" data-module="cart">
+						<div class="module-cart module__cont">
+							<div class="cart-empty cart-empty--hide">
+								<div class="cart-empty__icon">
+									<svg class="icon">
+										<use xlink:href="#cart-full"></use>
+									</svg>
+								</div>
+								<div class="form-title">Ваша корзина еще пуста.
+									<br> Самое время для покупок!</div>
+								<a class="cart-empty-get__el" href="#">Перейти в каталог</a>
+							</div>
+							<div class="cart-full">
+								<div class="form-title">Ваша корзина</div>
+								<div class="cart">
+									<div class="cart__row">
+										<div class="cart__name">Рокки Роутс 0</div>
+										<div class="cart__icr">
+											<div class="elements-icr-block">
+												<div class="incr">
+													<div class="incr__minus incr__nav">
+														<svg class="icon">
+															<use xlink:href="#minus"></use>
+														</svg>
+													</div>
+													<div class="incr__val">
+														<span>1</span>
+														<div class="incr__val-coner"></div>
+													</div>
+													<div class="incr__plus incr__nav">
+														<svg class="icon">
+															<use xlink:href="#plus"></use>
+														</svg>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="cart__cost">14580 р.</div>
+										<div class="cart__clear">
+											<svg class="icon">
+												<use xlink:href="#close"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="cart__row">
+										<div class="cart__name">Рокки Роутс 1</div>
+										<div class="cart__icr">
+											<div class="elements-icr-block">
+												<div class="incr">
+													<div class="incr__minus incr__nav">
+														<svg class="icon">
+															<use xlink:href="#minus"></use>
+														</svg>
+													</div>
+													<div class="incr__val">
+														<span>1</span>
+														<div class="incr__val-coner"></div>
+													</div>
+													<div class="incr__plus incr__nav">
+														<svg class="icon">
+															<use xlink:href="#plus"></use>
+														</svg>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="cart__cost">14580 р.</div>
+										<div class="cart__clear">
+											<svg class="icon">
+												<use xlink:href="#close"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="cart__row">
+										<div class="cart__name">Рокки Роутс 2</div>
+										<div class="cart__icr">
+											<div class="elements-icr-block">
+												<div class="incr">
+													<div class="incr__minus incr__nav">
+														<svg class="icon">
+															<use xlink:href="#minus"></use>
+														</svg>
+													</div>
+													<div class="incr__val">
+														<span>1</span>
+														<div class="incr__val-coner"></div>
+													</div>
+													<div class="incr__plus incr__nav">
+														<svg class="icon">
+															<use xlink:href="#plus"></use>
+														</svg>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="cart__cost">14580 р.</div>
+										<div class="cart__clear">
+											<svg class="icon">
+												<use xlink:href="#close"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+								<div class="cart-total">Сумма:
+									<span>4 500 р.</span>
+								</div>
+								<div class="cart-get">
+									<div class="cart-get__el get-module" data-module="order">Оформить заказ</div>
+								</div>
+							</div>
+							<div class="cart-info">
+								<div class="veksel">
+									<svg class="icon">
+										<use xlink:href="#uzor"></use>
+									</svg>
+								</div>
+								<div class="cart-info__text">Минимальная сумма заказа 500 р.</div>
+								<div class="cart-info__text">Принимаются к оплате VISA и MASTER CARD</div>
+							</div>
+						</div>
+					</div>
+					<div class="module" data-module="reg">
+						<div class="module-reg module__cont">
+							<div class="form-title">Регистрация</div>
+							<form action="#">
+								<input type="text" placeholder="Ваше имя" />
+								<input type="text" placeholder="Email или телефон" />
+								<input type="password" placeholder="Пароль" />
+								<input type="password" placeholder="Повторите пароль" />
+								<div class="reg-get">
+									<div class="reg-get__el">Зарегистрироваться</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="module" data-module="order">
+						<div class="module-order module__cont">
+							<div class="form-title">Оформление заказа</div>
+							<form action="#">
+								<input type="text" placeholder="Ваше имя" />
+								<input type="text" placeholder="Tелефон" />
+								<div class="pay-type">
+									<div class="pay-type__el">
+										<div class="check-el">
+											<label class="style-label style-label--radio">
+												<input class="sytle-input" type="radio" name="group" />
+												<div class="sytle-input-element">
+													<div class="icon-radio"></div>
+												</div>
+												<div class="sytle-input-text">Наличными</div>
+											</label>
+										</div>
+									</div>
+									<div class="pay-type__el">
+										<div class="check-el">
+											<label class="style-label style-label--radio">
+												<input class="sytle-input" type="radio" name="group" />
+												<div class="sytle-input-element">
+													<div class="icon-radio"></div>
+												</div>
+												<div class="sytle-input-text">По карте</div>
+											</label>
+										</div>
+									</div>
+									<div class="pay-type__el">
+										<div class="check-el">
+											<label class="style-label style-label--radio">
+												<input class="sytle-input" type="radio" name="group" />
+												<div class="sytle-input-element">
+													<div class="icon-radio"></div>
+												</div>
+												<div class="sytle-input-text">Онлайн</div>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="tab">
+									<div class="tab__el tab__el--active" data-tab="self">С собой</div>
+									<div class="tab__el" data-tab="deliver">Доставка</div>
+								</div>
+								<div class="tab__cont" data-tab="self">
+									<p>нет информации</p>
+								</div>
+								<div class="tab__cont tab__cont--hide" data-tab="deliver">
+									<select>
+										<option></option>
+										<option>Москва</option>
+										<option>Волгоград</option>
+										<option>Екатеренбург</option>
+									</select>
+								</div>
+								<div class="person">
+									<div class="person__text">Количество персон</div>
+									<div class="person__incr">
+										<div class="elements-icr-block">
+											<div class="incr incr--one">
+												<div class="incr__minus incr__nav incr--one">
+													<svg class="icon">
+														<use xlink:href="#minus"></use>
+													</svg>
+												</div>
+												<div class="incr__val">
+													<span>1</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#plus"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<textarea name="text" cols="30" rows="10" placeholder="Комментарий к заказу"></textarea>
+								<div class="confirm">
+									<div class="check-el">
+										<label class="style-label style-label--checkbox">
+											<input class="sytle-input" type="checkbox" />
+											<div class="sytle-input-element">
+												<svg class="icon-check">
+													<use xlink:href="#checked"></use>
+												</svg>
+											</div>
+											<div class="sytle-input-text">Я даю согласие на
+												<a href="#">хранение, обработку и использование своих персональных данных</a>
+											</div>
+										</label>
+									</div>
+								</div>
+								<div class="order-get">
+									<div class="order-get__el">Оформить заказ</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<!--block module end-->
+					<div class="catalog">
+						<div class="footer-cont">
+							<div class="catalog-title">Пицца</div>
+							<div class="catalog-wrap">
+								<div class="el">
+									<div class="el__img">
+										<div class="el__img-el" style="background-image:url('img/item.png');"></div>
+									</div>
+									<div class="el__title">Рокки Роутс</div>
+									<div class="el__text">Пицца соус, сыр моцарелла, сыр Фета, сыр дор блю, сыр пармезан, пепперони, салями, ветчина ...</div>
+									<div class="el__info">
+										<div class="el__weight">350 г.</div>
+										<div class="el__devider"></div>
+										<div class="el__cost">480 р.</div>
+									</div>
+									<div class="el__incr">
+										<div class="elements-icr-block">
+											<div class="incr">
+												<div class="incr__minus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#minus"></use>
+													</svg>
+												</div>
+												<div class="incr__val">
+													<span>0</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#plus"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="el">
+									<div class="el__img">
+										<div class="el__img-el" style="background-image:url('img/item.png');"></div>
+									</div>
+									<div class="el__title">Рокки Роутс</div>
+									<div class="el__text">Пицца соус, сыр моцарелла, сыр Фета, сыр дор блю, сыр пармезан, пепперони, салями, ветчина ...</div>
+									<div class="el__info">
+										<div class="el__weight">350 г.</div>
+										<div class="el__devider"></div>
+										<div class="el__cost">480 р.</div>
+									</div>
+									<div class="el__incr">
+										<div class="elements-icr-block">
+											<div class="incr">
+												<div class="incr__minus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#minus"></use>
+													</svg>
+												</div>
+												<div class="incr__val">
+													<span>0</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#plus"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="el">
+									<div class="el__img">
+										<div class="el__img-el" style="background-image:url('img/item.png');"></div>
+									</div>
+									<div class="el__title">Рокки Роутс</div>
+									<div class="el__text">Пицца соус, сыр моцарелла, сыр Фета, сыр дор блю, сыр пармезан, пепперони, салями, ветчина ...</div>
+									<div class="el__info">
+										<div class="el__weight">350 г.</div>
+										<div class="el__devider"></div>
+										<div class="el__cost">480 р.</div>
+									</div>
+									<div class="el__incr">
+										<div class="elements-icr-block">
+											<div class="incr">
+												<div class="incr__minus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#minus"></use>
+													</svg>
+												</div>
+												<div class="incr__val">
+													<span>0</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#plus"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="el">
+									<div class="el__img">
+										<div class="el__img-el" style="background-image:url('img/item.png');"></div>
+									</div>
+									<div class="el__title">Рокки Роутс</div>
+									<div class="el__text">Пицца соус, сыр моцарелла, сыр Фета, сыр дор блю, сыр пармезан, пепперони, салями, ветчина ...</div>
+									<div class="el__info">
+										<div class="el__weight">350 г.</div>
+										<div class="el__devider"></div>
+										<div class="el__cost">480 р.</div>
+									</div>
+									<div class="el__incr">
+										<div class="elements-icr-block">
+											<div class="incr">
+												<div class="incr__minus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#minus"></use>
+													</svg>
+												</div>
+												<div class="incr__val">
+													<span>0</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#plus"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="el">
+									<div class="el__img">
+										<div class="el__img-el" style="background-image:url('img/item.png');"></div>
+									</div>
+									<div class="el__title">Рокки Роутс</div>
+									<div class="el__text">Пицца соус, сыр моцарелла, сыр Фета, сыр дор блю, сыр пармезан, пепперони, салями, ветчина ...</div>
+									<div class="el__info">
+										<div class="el__weight">350 г.</div>
+										<div class="el__devider"></div>
+										<div class="el__cost">480 р.</div>
+									</div>
+									<div class="el__incr">
+										<div class="elements-icr-block">
+											<div class="incr">
+												<div class="incr__minus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#minus"></use>
+													</svg>
+												</div>
+												<div class="incr__val">
+													<span>0</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#plus"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="el">
+									<div class="el__img">
+										<div class="el__img-el" style="background-image:url('img/item.png');"></div>
+									</div>
+									<div class="el__title">Рокки Роутс</div>
+									<div class="el__text">Пицца соус, сыр моцарелла, сыр Фета, сыр дор блю, сыр пармезан, пепперони, салями, ветчина ...</div>
+									<div class="el__info">
+										<div class="el__weight">350 г.</div>
+										<div class="el__devider"></div>
+										<div class="el__cost">480 р.</div>
+									</div>
+									<div class="el__incr">
+										<div class="elements-icr-block">
+											<div class="incr">
+												<div class="incr__minus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#minus"></use>
+													</svg>
+												</div>
+												<div class="incr__val">
+													<span>0</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#plus"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="el">
+									<div class="el__img">
+										<div class="el__img-el" style="background-image:url('img/item.png');"></div>
+									</div>
+									<div class="el__title">Рокки Роутс</div>
+									<div class="el__text">Пицца соус, сыр моцарелла, сыр Фета, сыр дор блю, сыр пармезан, пепперони, салями, ветчина ...</div>
+									<div class="el__info">
+										<div class="el__weight">350 г.</div>
+										<div class="el__devider"></div>
+										<div class="el__cost">480 р.</div>
+									</div>
+									<div class="el__incr">
+										<div class="elements-icr-block">
+											<div class="incr">
+												<div class="incr__minus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#minus"></use>
+													</svg>
+												</div>
+												<div class="incr__val">
+													<span>0</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#plus"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="el">
+									<div class="el__img">
+										<div class="el__img-el" style="background-image:url('img/item.png');"></div>
+									</div>
+									<div class="el__title">Рокки Роутс</div>
+									<div class="el__text">Пицца соус, сыр моцарелла, сыр Фета, сыр дор блю, сыр пармезан, пепперони, салями, ветчина ...</div>
+									<div class="el__info">
+										<div class="el__weight">350 г.</div>
+										<div class="el__devider"></div>
+										<div class="el__cost">480 р.</div>
+									</div>
+									<div class="el__incr">
+										<div class="elements-icr-block">
+											<div class="incr">
+												<div class="incr__minus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#minus"></use>
+													</svg>
+												</div>
+												<div class="incr__val">
+													<span>0</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#plus"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="el el-big">
+									<div class="el-big__content">
+										<div class="el-big__recom">
+											<div class="line-title-wrap">
+												<div class="line-title-el"></div>
+												<div class="line-title">Рекомендуем</div>
+												<div class="line-title-el"></div>
+											</div>
+										</div>
+										<div class="el-big__title">Рокки Роутс</div>
+										<div class="el-big__text">Пицца соус, сыр моцарелла, сыр Фета, сыр дор блю, сыр пармезан, пепперони, салями, ветчина ...</div>
+										<div class="el-big__info">
+											<div class="el-big__weight">350 г.</div>
+											<div class="el-big__devider"></div>
+											<div class="el-big__cost">480 р.</div>
+										</div>
+										<div class="el-big__incr">
+											<div class="elements-icr-block">
+												<div class="incr">
+													<div class="incr__minus incr__nav">
+														<svg class="icon">
+															<use xlink:href="#minus"></use>
+														</svg>
+													</div>
+													<div class="incr__val">
+														<span>0</span>
+														<div class="incr__val-coner"></div>
+													</div>
+													<div class="incr__plus incr__nav">
+														<svg class="icon">
+															<use xlink:href="#plus"></use>
+														</svg>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="el-big__img">
+										<div class="el-big__img-el" style="background-image:url('img/item-big.png');"></div>
+									</div>
+								</div>
+								<div class="el">
+									<div class="el__img">
+										<div class="el__img-el" style="background-image:url('img/item.png');"></div>
+									</div>
+									<div class="el__title">Рокки Роутс</div>
+									<div class="el__text">Пицца соус, сыр моцарелла, сыр Фета, сыр дор блю, сыр пармезан, пепперони, салями, ветчина ...</div>
+									<div class="el__info">
+										<div class="el__weight">350 г.</div>
+										<div class="el__devider"></div>
+										<div class="el__cost">480 р.</div>
+									</div>
+									<div class="el__incr">
+										<div class="elements-icr-block">
+											<div class="incr">
+												<div class="incr__minus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#minus"></use>
+													</svg>
+												</div>
+												<div class="incr__val">
+													<span>0</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#plus"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="el">
+									<div class="el__img">
+										<div class="el__img-el" style="background-image:url('img/item.png');"></div>
+									</div>
+									<div class="el__title">Рокки Роутс</div>
+									<div class="el__text">Пицца соус, сыр моцарелла, сыр Фета, сыр дор блю, сыр пармезан, пепперони, салями, ветчина ...</div>
+									<div class="el__info">
+										<div class="el__weight">350 г.</div>
+										<div class="el__devider"></div>
+										<div class="el__cost">480 р.</div>
+									</div>
+									<div class="el__incr">
+										<div class="elements-icr-block">
+											<div class="incr">
+												<div class="incr__minus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#minus"></use>
+													</svg>
+												</div>
+												<div class="incr__val">
+													<span>0</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#plus"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="el">
+									<div class="el__img">
+										<div class="el__img-el" style="background-image:url('img/item.png');"></div>
+									</div>
+									<div class="el__title">Рокки Роутс</div>
+									<div class="el__text">Пицца соус, сыр моцарелла, сыр Фета, сыр дор блю, сыр пармезан, пепперони, салями, ветчина ...</div>
+									<div class="el__info">
+										<div class="el__weight">350 г.</div>
+										<div class="el__devider"></div>
+										<div class="el__cost">480 р.</div>
+									</div>
+									<div class="el__incr">
+										<div class="elements-icr-block">
+											<div class="incr">
+												<div class="incr__minus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#minus"></use>
+													</svg>
+												</div>
+												<div class="incr__val">
+													<span>0</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#plus"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="el">
+									<div class="el__img">
+										<div class="el__img-el" style="background-image:url('img/item.png');"></div>
+									</div>
+									<div class="el__title">Рокки Роутс</div>
+									<div class="el__text">Пицца соус, сыр моцарелла, сыр Фета, сыр дор блю, сыр пармезан, пепперони, салями, ветчина ...</div>
+									<div class="el__info">
+										<div class="el__weight">350 г.</div>
+										<div class="el__devider"></div>
+										<div class="el__cost">480 р.</div>
+									</div>
+									<div class="el__incr">
+										<div class="elements-icr-block">
+											<div class="incr">
+												<div class="incr__minus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#minus"></use>
+													</svg>
+												</div>
+												<div class="incr__val">
+													<span>0</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#plus"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="el">
+									<div class="el__img">
+										<div class="el__img-el" style="background-image:url('img/item.png');"></div>
+									</div>
+									<div class="el__title">Рокки Роутс</div>
+									<div class="el__text">Пицца соус, сыр моцарелла, сыр Фета, сыр дор блю, сыр пармезан, пепперони, салями, ветчина ...</div>
+									<div class="el__info">
+										<div class="el__weight">350 г.</div>
+										<div class="el__devider"></div>
+										<div class="el__cost">480 р.</div>
+									</div>
+									<div class="el__incr">
+										<div class="elements-icr-block">
+											<div class="incr">
+												<div class="incr__minus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#minus"></use>
+													</svg>
+												</div>
+												<div class="incr__val">
+													<span>0</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#plus"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="el">
+									<div class="el__img">
+										<div class="el__img-el" style="background-image:url('img/item.png');"></div>
+									</div>
+									<div class="el__title">Рокки Роутс</div>
+									<div class="el__text">Пицца соус, сыр моцарелла, сыр Фета, сыр дор блю, сыр пармезан, пепперони, салями, ветчина ...</div>
+									<div class="el__info">
+										<div class="el__weight">350 г.</div>
+										<div class="el__devider"></div>
+										<div class="el__cost">480 р.</div>
+									</div>
+									<div class="el__incr">
+										<div class="elements-icr-block">
+											<div class="incr">
+												<div class="incr__minus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#minus"></use>
+													</svg>
+												</div>
+												<div class="incr__val">
+													<span>0</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#plus"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="el">
+									<div class="el__img">
+										<div class="el__img-el" style="background-image:url('img/item.png');"></div>
+									</div>
+									<div class="el__title">Рокки Роутс</div>
+									<div class="el__text">Пицца соус, сыр моцарелла, сыр Фета, сыр дор блю, сыр пармезан, пепперони, салями, ветчина ...</div>
+									<div class="el__info">
+										<div class="el__weight">350 г.</div>
+										<div class="el__devider"></div>
+										<div class="el__cost">480 р.</div>
+									</div>
+									<div class="el__incr">
+										<div class="elements-icr-block">
+											<div class="incr">
+												<div class="incr__minus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#minus"></use>
+													</svg>
+												</div>
+												<div class="incr__val">
+													<span>0</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#plus"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="el">
+									<div class="el__img">
+										<div class="el__img-el" style="background-image:url('img/item.png');"></div>
+									</div>
+									<div class="el__title">Рокки Роутс</div>
+									<div class="el__text">Пицца соус, сыр моцарелла, сыр Фета, сыр дор блю, сыр пармезан, пепперони, салями, ветчина ...</div>
+									<div class="el__info">
+										<div class="el__weight">350 г.</div>
+										<div class="el__devider"></div>
+										<div class="el__cost">480 р.</div>
+									</div>
+									<div class="el__incr">
+										<div class="elements-icr-block">
+											<div class="incr">
+												<div class="incr__minus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#minus"></use>
+													</svg>
+												</div>
+												<div class="incr__val">
+													<span>0</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#plus"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="el el-big">
+									<div class="el-big__content">
+										<div class="el-big__recom">
+											<div class="line-title-wrap">
+												<div class="line-title-el"></div>
+												<div class="line-title">Рекомендуем</div>
+												<div class="line-title-el"></div>
+											</div>
+										</div>
+										<div class="el-big__title">Рокки Роутс</div>
+										<div class="el-big__text">Пицца соус, сыр моцарелла, сыр Фета, сыр дор блю, сыр пармезан, пепперони, салями, ветчина ...</div>
+										<div class="el-big__info">
+											<div class="el-big__weight">350 г.</div>
+											<div class="el-big__devider"></div>
+											<div class="el-big__cost">480 р.</div>
+										</div>
+										<div class="el-big__incr">
+											<div class="elements-icr-block">
+												<div class="incr">
+													<div class="incr__minus incr__nav">
+														<svg class="icon">
+															<use xlink:href="#minus"></use>
+														</svg>
+													</div>
+													<div class="incr__val">
+														<span>0</span>
+														<div class="incr__val-coner"></div>
+													</div>
+													<div class="incr__plus incr__nav">
+														<svg class="icon">
+															<use xlink:href="#plus"></use>
+														</svg>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="el-big__img">
+										<div class="el-big__img-el" style="background-image:url('img/item-big.png');"></div>
+									</div>
+								</div>
+								<div class="el">
+									<div class="el__img">
+										<div class="el__img-el" style="background-image:url('img/item.png');"></div>
+									</div>
+									<div class="el__title">Рокки Роутс</div>
+									<div class="el__text">Пицца соус, сыр моцарелла, сыр Фета, сыр дор блю, сыр пармезан, пепперони, салями, ветчина ...</div>
+									<div class="el__info">
+										<div class="el__weight">350 г.</div>
+										<div class="el__devider"></div>
+										<div class="el__cost">480 р.</div>
+									</div>
+									<div class="el__incr">
+										<div class="elements-icr-block">
+											<div class="incr">
+												<div class="incr__minus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#minus"></use>
+													</svg>
+												</div>
+												<div class="incr__val">
+													<span>0</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#plus"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="el">
+									<div class="el__img">
+										<div class="el__img-el" style="background-image:url('img/item.png');"></div>
+									</div>
+									<div class="el__title">Рокки Роутс</div>
+									<div class="el__text">Пицца соус, сыр моцарелла, сыр Фета, сыр дор блю, сыр пармезан, пепперони, салями, ветчина ...</div>
+									<div class="el__info">
+										<div class="el__weight">350 г.</div>
+										<div class="el__devider"></div>
+										<div class="el__cost">480 р.</div>
+									</div>
+									<div class="el__incr">
+										<div class="elements-icr-block">
+											<div class="incr">
+												<div class="incr__minus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#minus"></use>
+													</svg>
+												</div>
+												<div class="incr__val">
+													<span>0</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#plus"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="el">
+									<div class="el__img">
+										<div class="el__img-el" style="background-image:url('img/item.png');"></div>
+									</div>
+									<div class="el__title">Рокки Роутс</div>
+									<div class="el__text">Пицца соус, сыр моцарелла, сыр Фета, сыр дор блю, сыр пармезан, пепперони, салями, ветчина ...</div>
+									<div class="el__info">
+										<div class="el__weight">350 г.</div>
+										<div class="el__devider"></div>
+										<div class="el__cost">480 р.</div>
+									</div>
+									<div class="el__incr">
+										<div class="elements-icr-block">
+											<div class="incr">
+												<div class="incr__minus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#minus"></use>
+													</svg>
+												</div>
+												<div class="incr__val">
+													<span>0</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#plus"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="el">
+									<div class="el__img">
+										<div class="el__img-el" style="background-image:url('img/item.png');"></div>
+									</div>
+									<div class="el__title">Рокки Роутс</div>
+									<div class="el__text">Пицца соус, сыр моцарелла, сыр Фета, сыр дор блю, сыр пармезан, пепперони, салями, ветчина ...</div>
+									<div class="el__info">
+										<div class="el__weight">350 г.</div>
+										<div class="el__devider"></div>
+										<div class="el__cost">480 р.</div>
+									</div>
+									<div class="el__incr">
+										<div class="elements-icr-block">
+											<div class="incr">
+												<div class="incr__minus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#minus"></use>
+													</svg>
+												</div>
+												<div class="incr__val">
+													<span>0</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#plus"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="el">
+									<div class="el__img">
+										<div class="el__img-el" style="background-image:url('img/item.png');"></div>
+									</div>
+									<div class="el__title">Рокки Роутс</div>
+									<div class="el__text">Пицца соус, сыр моцарелла, сыр Фета, сыр дор блю, сыр пармезан, пепперони, салями, ветчина ...</div>
+									<div class="el__info">
+										<div class="el__weight">350 г.</div>
+										<div class="el__devider"></div>
+										<div class="el__cost">480 р.</div>
+									</div>
+									<div class="el__incr">
+										<div class="elements-icr-block">
+											<div class="incr">
+												<div class="incr__minus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#minus"></use>
+													</svg>
+												</div>
+												<div class="incr__val">
+													<span>0</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#plus"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="el">
+									<div class="el__img">
+										<div class="el__img-el" style="background-image:url('img/item.png');"></div>
+									</div>
+									<div class="el__title">Рокки Роутс</div>
+									<div class="el__text">Пицца соус, сыр моцарелла, сыр Фета, сыр дор блю, сыр пармезан, пепперони, салями, ветчина ...</div>
+									<div class="el__info">
+										<div class="el__weight">350 г.</div>
+										<div class="el__devider"></div>
+										<div class="el__cost">480 р.</div>
+									</div>
+									<div class="el__incr">
+										<div class="elements-icr-block">
+											<div class="incr">
+												<div class="incr__minus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#minus"></use>
+													</svg>
+												</div>
+												<div class="incr__val">
+													<span>0</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#plus"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="el">
+									<div class="el__img">
+										<div class="el__img-el" style="background-image:url('img/item.png');"></div>
+									</div>
+									<div class="el__title">Рокки Роутс</div>
+									<div class="el__text">Пицца соус, сыр моцарелла, сыр Фета, сыр дор блю, сыр пармезан, пепперони, салями, ветчина ...</div>
+									<div class="el__info">
+										<div class="el__weight">350 г.</div>
+										<div class="el__devider"></div>
+										<div class="el__cost">480 р.</div>
+									</div>
+									<div class="el__incr">
+										<div class="elements-icr-block">
+											<div class="incr">
+												<div class="incr__minus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#minus"></use>
+													</svg>
+												</div>
+												<div class="incr__val">
+													<span>0</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#plus"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="el">
+									<div class="el__img">
+										<div class="el__img-el" style="background-image:url('img/item.png');"></div>
+									</div>
+									<div class="el__title">Рокки Роутс</div>
+									<div class="el__text">Пицца соус, сыр моцарелла, сыр Фета, сыр дор блю, сыр пармезан, пепперони, салями, ветчина ...</div>
+									<div class="el__info">
+										<div class="el__weight">350 г.</div>
+										<div class="el__devider"></div>
+										<div class="el__cost">480 р.</div>
+									</div>
+									<div class="el__incr">
+										<div class="elements-icr-block">
+											<div class="incr">
+												<div class="incr__minus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#minus"></use>
+													</svg>
+												</div>
+												<div class="incr__val">
+													<span>0</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#plus"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="el el-big">
+									<div class="el-big__content">
+										<div class="el-big__recom">
+											<div class="line-title-wrap">
+												<div class="line-title-el"></div>
+												<div class="line-title">Рекомендуем</div>
+												<div class="line-title-el"></div>
+											</div>
+										</div>
+										<div class="el-big__title">Рокки Роутс</div>
+										<div class="el-big__text">Пицца соус, сыр моцарелла, сыр Фета, сыр дор блю, сыр пармезан, пепперони, салями, ветчина ...</div>
+										<div class="el-big__info">
+											<div class="el-big__weight">350 г.</div>
+											<div class="el-big__devider"></div>
+											<div class="el-big__cost">480 р.</div>
+										</div>
+										<div class="el-big__incr">
+											<div class="elements-icr-block">
+												<div class="incr">
+													<div class="incr__minus incr__nav">
+														<svg class="icon">
+															<use xlink:href="#minus"></use>
+														</svg>
+													</div>
+													<div class="incr__val">
+														<span>0</span>
+														<div class="incr__val-coner"></div>
+													</div>
+													<div class="incr__plus incr__nav">
+														<svg class="icon">
+															<use xlink:href="#plus"></use>
+														</svg>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="el-big__img">
+										<div class="el-big__img-el" style="background-image:url('img/item-big.png');"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--block footer-->
+						<div class="footer">
+							<div class="footer-menu">
+								<div class="footer-menu__el">
+									<a href="#">Пицца</a>
+								</div>
+								<div class="footer-menu__el">
+									<a href="#">Роллы</a>
+								</div>
+								<div class="footer-menu__el">
+									<a href="#">Горячее</a>
+								</div>
+								<div class="footer-menu__el">
+									<a href="#">Закуски</a>
+								</div>
+								<div class="footer-menu__el">
+									<a href="#">Детское</a>
+								</div>
+								<div class="footer-menu__el">
+									<a href="#">Супы</a>
+								</div>
+								<div class="footer-menu__el">
+									<a href="#">Салаты</a>
+								</div>
+								<div class="footer-menu__el">
+									<a href="#">Бизнес-ланчи</a>
+								</div>
+								<div class="footer-menu__el">
+									<a href="#">Десерты</a>
+								</div>
+								<div class="footer-menu__el">
+									<a href="#">Напитки</a>
+								</div>
+								<div class="footer-menu__el">
+									<a href="#">Торты</a>
+								</div>
+								<div class="footer-menu__el">
+									<a href="#">Сеты</a>
+								</div>
+								<div class="footer-menu__el">
+									<a href="#">Паста</a>
+								</div>
+								<div class="footer-menu__el">
+									<a href="#">Холодное</a>
+								</div>
+							</div>
+							<div class="footer-info">
+								<div class="footer-info__name">Сеть ресторанов “ЕмСам” - 2017 г</div>
+								<a class="footer-info__link" href="#">Политика конфиденциальности</a>
+								<a class="footer-info__logo" href="#">
+									<img src="img/logo-jq.png" alt="" />
+								</a>
+							</div>
+						</div>
+						<!--block footer end-->
+					</div>
+				</div>
+			</div>
+			<!--block toolbar-->
+			<div class="toolbar">
+				<div class="toolbar-wrap">
+					<div class="toolbar-enter get-module" data-module="enter">
+						<div class="toolbar-enter-icon--open">
+							<svg class="icon">
+								<use xlink:href="#account-key"></use>
+							</svg>
+							<!--icon for login user-->
+							<!--<svg class="icon">-->
+							<!--	<use xlink:href="#account"></use>-->
+							<!--</svg>-->
+						</div>
+						<div class="toolbar-enter-icon--close">
+							<svg class="icon ">
+								<use xlink:href="#close-round"></use>
+							</svg>
+						</div>
+					</div>
+					<div class="toolbar-cart get-module" data-module="cart">
+						<div class="toolbar-cart__icon">
+							<svg class="icon cart-close">
+								<use xlink:href="#cart"></use>
+							</svg>
+							<svg class="icon cart-open">
+								<use xlink:href="#close-round"></use>
+							</svg>
+							<div class="toolbar-cart__val">32</div>
+						</div>
+					</div>
+					<div class="toolbar-call">
+						<svg class="icon">
+							<use xlink:href="#phone"></use>
+						</svg>
+					</div>
+					<div class="toolbar-up">
+						<svg class="icon">
+							<use xlink:href="#arrow-top"></use>
+						</svg>
+					</div>
+				</div>
+			</div>
+			<!--block toolbar end-->
+		</div>
+		<!--block modal-->
+		<!--block modal end-->
+		<script src="js/combined.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/script-edit.js"></script>
+	</body>
+
+</html>

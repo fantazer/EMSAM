@@ -45,7 +45,7 @@ mixin module()
 				.cart-total Сумма:
 					span 4 500 р.
 				.cart-get
-					.cart-get__el Оформить заказ
+					.cart-get__el.get-module(data-module="order") Оформить заказ
 			.cart-info
 				.veksel
 					+icon("uzor","icon")
@@ -63,4 +63,51 @@ mixin module()
 				.reg-get
 					.reg-get__el Зарегистрироваться
 
+	.module(data-module="order")
+		.module-order.module__cont
+			.form-title Оформление заказа
+			form(action="#")
+				input(type="text" placeholder="Ваше имя" )
+				input(type="text" placeholder="Tелефон" )
+				.pay-type
+					.pay-type__el
+						+radio('Наличными')
+					.pay-type__el
+						+radio('По карте')
+					.pay-type__el
+						+radio('Онлайн')
+				.tab
+					.tab__el.tab__el--active(data-tab="self") С собой
+					.tab__el(data-tab="deliver") Доставка
+				.tab__cont(data-tab="self")
+					p нет информации
+				.tab__cont.tab__cont--hide(data-tab="deliver")
+					select
+						option
+						option Москва
+						option Волгоград
+						option Екатеренбург
+				.person
+					.person__text Количество персон
+					.person__incr
+						.elements-icr-block
+							.incr.incr--one
+								.incr__minus.incr__nav.incr--one
+									+icon("minus","icon")
+								.incr__val
+									span 1
+									.incr__val-coner
+								.incr__plus.incr__nav
+									+icon("plus","icon")
+				textarea(name="text", cols="30", rows="10" placeholder="Комментарий к заказу")
+				.confirm
+					.check-el
+						label.style-label.style-label--checkbox
+							input(type="checkbox").sytle-input
+							.sytle-input-element
+								+icon("checked","icon-check")
+							.sytle-input-text Я даю согласие на
+								a(href="#") хранение, обработку и использование своих персональных данных
+				.order-get
+					.order-get__el Оформить заказ
 	//block module end
