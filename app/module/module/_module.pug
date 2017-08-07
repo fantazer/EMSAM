@@ -4,8 +4,8 @@ mixin module()
 		.module-auth.module__cont
 			.form-title Вход
 			form(action="#")
-				input(type="text" placeholder="Username" )
-				input(type="password" placeholder="Passwords")
+				input(type="text" placeholder="Ваше имя" )
+				input(type="password" placeholder="Пароль")
 				.enter-foget
 					.enter-foget__link Забыли пароль?
 					.enter-foget__get Войти
@@ -22,8 +22,45 @@ mixin module()
 				.veksel
 					+icon("uzor","icon")
 				.enter-account__text Нет аккаунта?
-					span Зерегистрируйтесь
+					span.get-module(data-module="reg") Зерегистрируйтесь
+					
 	.module(data-module="cart")
+		.module-cart.module__cont
+			.cart-empty.cart-empty--hide
+				.cart-empty__icon
+					+icon("cart-full","icon")
+				.form-title Ваша корзина еще пуста.<br> Самое время для покупок!
+				a(href="#").cart-empty-get__el Перейти в каталог
+			.cart-full
+				.form-title Ваша корзина
+				.cart
+					- for (var i=0;i<3;i++)
+						.cart__row
+							.cart__name Рокки Роутс #{i}
+							.cart__icr
+								+incr()
+							.cart__cost 14580 р.
+							.cart__clear
+								+icon("close","icon")
+				.cart-total Сумма:
+					span 4 500 р.
+				.cart-get
+					.cart-get__el Оформить заказ
+			.cart-info
+				.veksel
+					+icon("uzor","icon")
+				.cart-info__text Минимальная сумма заказа 500 р.
+				.cart-info__text Принимаются к оплате VISA и MASTER CARD
+
+	.module(data-module="reg")
 		.module-reg.module__cont
-			h1 Корзина
+			.form-title Регистрация
+			form(action="#")
+				input(type="text" placeholder="Ваше имя" )
+				input(type="text" placeholder="Email или телефон" )
+				input(type="password" placeholder="Пароль")
+				input(type="password" placeholder="Повторите пароль")
+				.reg-get
+					.reg-get__el Зарегистрироваться
+
 	//block module end

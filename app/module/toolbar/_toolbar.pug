@@ -10,15 +10,17 @@ mixin toolbar()
 					//	<use xlink:href="#account"></use>
 					//</svg>
 				.toolbar-enter-icon--close
-					+icon("close","icon ")
+					+icon("close-round","icon ")
 			.toolbar-cart.get-module(data-module="cart")
 				.toolbar-cart__icon
-					+icon("cart","icon")
+					+icon("cart","icon cart-close")
+					+icon("close-round","icon cart-open")
 					.toolbar-cart__val 32
 			.toolbar-call
 				+icon("phone","icon")
 			.toolbar-up
 				+icon("arrow-top","icon")
+
 
 
 

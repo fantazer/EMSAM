@@ -1,0 +1,30 @@
+mixin footer()
+	//block footer
+	.footer
+		.footer-menu
+			-
+				var items = [
+					'Пицца',
+					'Роллы',
+					'Горячее',
+					'Закуски',
+					'Детское',
+					'Супы',
+					'Салаты',
+					'Бизнес-ланчи',
+					'Десерты',
+					'Напитки',
+					'Торты',
+					'Сеты',
+					'Паста',
+					'Холодное'
+				];
+			each item in items
+				.footer-menu__el
+					a(href="#") #{item}
+		.footer-info
+			.footer-info__name Сеть ресторанов “ЕмСам” - 2017 г
+			a(href="#").footer-info__link Политика конфиденциальности
+			a(href="#").footer-info__logo
+				img(src="img/logo-jq.png", alt="")
+	//block footer end

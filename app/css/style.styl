@@ -45,7 +45,7 @@ body
 	flex-shrink: 1
 	flex-basis: 0%
 	width: calc(100% - 385px - 95px)
-	max-width 1425px
+	max-width 1440px
 	overflow hidden
 	position: relative
 
@@ -236,7 +236,6 @@ body
 	opacity 1
 
 
-
 .toolbar-enter-icon--close
 	display: none
 
@@ -249,4 +248,250 @@ body
 			size 40px
 	.toolbar-enter-icon--open
 		display: none
+
+.incr
+	f()
+	justify-content: space-between
+	position relative
+	width 100px
+.incr__nav
+	flex(mid)
+	tr(background )
+	round()
+	size 30px
+	border 1px solid #dddddd
+	background white
+	.icon
+		size 12px
+		fill #b3b3b3
+	&:hover
+		cp()
+		background-color $green
+		border 0
+		.icon
+			fill white
+	&:active
+		background-color $red
+.incr__val
+	flex(mid)
+	background white
+	position relative
+	tr(all)
+	color #757575
+	font-family Lato
+	@extend .type--main
+	font-weight 400
+
+
+
+@keyframes bounceIn {
+	from {
+			transform: scale3d(1, 1, 1);
+	}
+
+	50% {
+			transform: scale3d(1.05, 1.05, 1.05);
+	}
+	to {
+			transform: scale3d(1, 1, 1);
+	}
+	//
+	//from {
+  //  opacity: 0;
+  //  transform: translate3d(0, -100%, 0);
+  //}
+	//
+  //to {
+  //  opacity: 1;
+  //  transform: none;
+  //}
+}
+
+.bounceIn
+	animation-name: bounceIn
+
+.animate-basket
+	animation: bounceIn 0.3s 2 ease-in-out
+
+.news-wrap
+	f()
+	align-items: stretch
+	fw()
+
+.news-el
+	width: calc(100% / 3 + 1px)
+	margin-left: -1px
+	border:1px solid $gray
+	border-top:0
+	&:hover
+		.news__img-el
+			transform scale(1.2)
+
+.news__img
+	height: 260px
+	overflow: hidden
+.news__img-el
+	width: 100%
+	height: 100%
+	transition all 1.5s
+	bg-full()
+
+.news__info
+	padding: 30px
+	padding-bottom: 45px
+	height: 100%
+	.line-title-wrap
+		margin-bottom: 30px
+
+//.news__date
+
+.news__title
+	font-family Oswald
+	font-size 24px
+	font-weight 300
+	width: 55%
+	margin-bottom: 20px
+	color black
+
+.news__text
+	@extend .type--main
+	font-weight 400
+	line-height 1.4
+	color #463e3c
+
+
+//.catalog
+.catalog-title
+	@extend .type--xl
+	text-align: center
+	font-family Oswald
+	padding: 35px
+	font-weight 300
+
+.catalog-wrap
+	f()
+	fw()
+	align-items: stretch
+
+.el
+	flex(mid)
+	fl()
+	cp()
+	width: calc(20% + 1px)
+	border 1px solid $gray
+	padding: 25px
+	margin-left: -1px
+	margin-top: -1px
+	position: relative
+	&:hover
+		.el__img
+			height: 0
+		.el__incr
+			display: block
+
+.el__img
+	//tr(all)
+	width: 100%
+	height: 100px
+
+.el__img-el
+	bg-full()
+	width: 100%
+	height: 100%
+	background-size: contain
+	margin-bottom: 20px
+
+.el__title
+	font-family Oswald
+	font-size 24px
+	font-weight 300
+	margin-bottom: 20px
+
+.el__text
+	text-align: center
+	width: 80%
+	margin-bottom: 40px
+
+.el__info
+	flex(mid)
+//.el__weight
+
+.el__devider
+	width: 1px
+	height: 20px
+	background: gray
+	margin:0 10px
+
+.el__cost
+	color $red
+
+.el__incr
+	margin-top: 40px
+	display: none
+
+.el--active
+	border 0px
+	&:before
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		top 0
+		left: 0
+		border 2px solid $green
+
+.el-big
+	@extend .el
+	flex(between)
+	width: calc(40% + 1px)
+	padding-bottom: 0
+	.el__img
+		margin-top: 0
+
+.el-big__content
+	flex(mid)
+	fl()
+
+
+.el-big__img
+	//tr(all)
+	width: 100%
+	height: 200px
+	margin-top: 20px
+
+.el-big__img-el
+	bg-full()
+	width: 100%
+	height: 100%
+	background-size: contain
+	margin-bottom: 20px
+
+.el-big__title
+	font-family Oswald
+	font-size 24px
+	font-weight 300
+	margin-bottom: 20px
+
+.el-big__text
+	text-align: center
+	width: 80%
+	margin-bottom: 20px
+
+.el-big__info
+	flex(mid)
+//.el-big__weight
+
+.el-big__devider
+	width: 1px
+	height: 20px
+	background: gray
+	margin:0 10px
+
+.el-big__cost
+	color $red
+
+.el-big__incr
+	margin-top: 20px
+.el-big__recom
+	margin-bottom: 20px
 @import "../module/**/*"

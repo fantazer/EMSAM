@@ -2,9 +2,13 @@
 	"block":{
 		"menu":"menu",
 		"toolbar":"toolbar",
-		"module":"module"
+		"module":"module",
+		"modal":"modal",
+		"footer":"footer"
 	},
 	"page":{
-		"index":"index"
+		"index":"index",
+		"news":"news",
+		"catalog":"catalog"
 	}
 }

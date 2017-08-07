@@ -39,6 +39,20 @@
 
 .toolbar-cart__icon
 	position: relative
+	.cart-open
+		display: none
+
+.toolbar-cart.get-module--active
+	background: $red
+	.icon
+		fill white
+	.toolbar-cart__val
+		background: white
+		color red
+	.cart-open
+		display: block
+	.cart-close
+		display: none
 //.icon
 .toolbar-cart__val
 	tr(all)
@@ -55,8 +69,22 @@
 	@extend .toolbar-icon
 	margin-top: auto
 	border-top:1px solid #e8d8d2
+	background: $red
+	.icon
+		fill white
 
 .toolbar-up
 	@extend .toolbar-icon
+	height: 0
+	padding: 0
+	.icon
+		display: none
+	tr(all)
+.toolbar-up--show
+	padding: 27px
+	.icon
+		display: block
+	height: auto
+	display: flex
 
 /*!block toolbar end */

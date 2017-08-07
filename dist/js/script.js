@@ -1,5 +1,148 @@
 $(document).ready(function(){
 
+	//show message cart empty
+	var emptyCart = function(){
+		var numberItems = $('.cart__row').length;
+		console.log(numberItems);
+		if(numberItems==0){
+			$('.cart-empty').removeClass('cart-empty--hide')
+			$('.cart-full').addClass('cart-empty--hide')
+		}
+	};
+	emptyCart();
+	//show message cart empty end
+
+	//cart clear
+	$('.cart__row .cart__clear').click(function () {
+			$(this).closest('.cart__row').remove();
+			emptyCart();
+	});
+	//cart clear end
+
+	//increment
+
+		//increment field
+		$('.incr__minus').click(function () {
+					var $input = $(this).parent().find('.incr__val span');
+					var count = parseInt($input.html()) - 1;
+					count = count < 1 ? 0 : count;
+					$input.html(count);
+			});
+
+		$('.incr__plus').click(function () {
+				var $input = $(this).parent().find('.incr__val span');
+				var count = parseInt($input.html()) + 1;
+				count = count > 100 ? 100 : count;
+				$input.html(count);
+		});
+
+		//increment field end
+
+		//check val in el < 0
+
+		 $('.el .incr__nav').add('.el-big .incr__nav').click(function () {
+		 	$(this).closest('.el').addClass('el--active');
+		 	currentIncr = $(this).closest('.incr').find('.incr__val span').html()*1;
+		 	if(currentIncr == 0){
+		 		$(this).closest('.el').removeClass('el--active');
+		 		$(this).closest('.incr').find('.incr__val span').html(0)
+		 	}
+
+		 });
+		//check val in el < 0 end
+
+		//animate cart on add
+		$('.incr__nav').click(function () {
+			$('.toolbar-cart__icon').addClass('animate-basket');
+			setTimeout(function(){
+					$('.toolbar-cart__icon').removeClass('animate-basket');
+				}, 400);
+		});
+		//animate cart on add end
+
+
+
+		//remove item in basket by decrement
+		var Incr;
+
+		$('.cart__row .incr__nav').click(function () {
+			Incr = $(this).closest('.incr').find('.incr__val span').html()*1;
+			if(Incr == 0){
+				$(this).closest('.cart__row').remove();
+			}
+			emptyCart()
+		});
+		//remove item in basket by decrement end
+	//increment-end
+
+	//arrow scroll
+	var scrollTop = 750;
+	$(window).scroll(function() {
+		var scroll = $(this).scrollTop();
+		if ( scroll >= scrollTop ) {
+				//var heightHeader=$('.header-main-wrap').height();
+				$('.toolbar-up').addClass('toolbar-up--show');
+			}
+			else {
+					$('.toolbar-up').removeClass('toolbar-up--show');
+			}
+	});
+
+	$('.toolbar-up').click(function() {
+    $('html, body').animate({scrollTop: 0},800);
+    return false;
+  });
+	//arrow scroll end
+
+	//animate module
+	var hideModule = function () {
+		$('.module__cont').removeClass('module__cont--open');
+		//$('.module').removeClass('module--open');
+		$('.content-filter').removeClass('content-filter--open');
+	};
+
+	var fixWindowSize = function () {
+		$('body').addClass('fix-scroll');
+		$('.content-filter').addClass('content-filter--open');
+	};
+
+	$('.get-module').click(function(event){
+
+			var currentModule = $(this).attr('data-module');
+			$('.get-module').not(this).removeClass('get-module--active');
+
+
+			hideModule();
+			if(!$(this).hasClass('get-module--active')){
+				$(this).addClass('get-module--active');
+				$('.module').each(function () {
+					if ($(this).attr('data-module')==currentModule){
+						$('.module').not(this).removeClass('module--open');
+						$(this).addClass('module--open');
+						$(this).find('.module__cont').toggleClass('module__cont--open');
+						event.stopPropagation();
+					}
+				});
+				fixWindowSize();
+			} else {
+				$(this).removeClass('get-module--active');
+
+				hideModule();
+			}
+	});
+
+	$('.module__cont').on("click", function (event) {
+		event.stopPropagation();
+	});
+	$(document).on("click", function () {
+			hideModule();
+			//$('.module').removeClass('module--open');
+			$('html, body').removeClass('fix-scroll');
+			$('.get-module').removeClass('get-module--active');
+	});
+
+	//animate module end
+	
 	$(".main-page__first-section-slider").owlCarousel({
 	 items : 1,
 	 //autoHeight : true,
@@ -7,10 +150,6 @@ $(document).ready(function(){
 	 autoplay : false,
 	 nav:false,
 	 stagePadding: 0
-	 /*navText:[
-			'<svg class="slider-control"><use xlink:href="#arrow-left"></use></svg>',
-			'<svg class="slider-control"><use xlink:href="#arrow-right"></use></svg>'
-	 ]*/
 	 }
 	);
 

@@ -1,0 +1,66 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+menu()
+	.content
+		.content-filter
+		.content-wrap
+			+module()
+			.catalog
+				.footer-cont
+					.catalog-title Пицца
+					.catalog-wrap
+						- for (var j=0;j<3;j++)
+							- for (var i=0;i< 8;i++)
+								.el
+									.el__img
+										.el__img-el(style="background-image:url('img/item.png')")
+									.el__title Рокки Роутс
+									.el__text Пицца соус, сыр моцарелла, сыр Фета, сыр дор блю, сыр пармезан, пепперони, салями, ветчина ...
+									.el__info
+										.el__weight 350 г.
+										.el__devider
+										.el__cost 480 р.
+									.el__incr
+										.elements-icr-block
+											.incr
+												.incr__minus.incr__nav
+													+icon("minus","icon")
+												.incr__val
+													span 0
+													.incr__val-coner
+												.incr__plus.incr__nav
+													+icon("plus","icon")
+							.el.el-big
+								.el-big__content
+									.el-big__recom
+										.line-title-wrap
+											.line-title-el
+											.line-title Рекомендуем
+											.line-title-el
+									.el-big__title Рокки Роутс
+									.el-big__text Пицца соус, сыр моцарелла, сыр Фета, сыр дор блю, сыр пармезан, пепперони, салями, ветчина ...
+									.el-big__info
+										.el-big__weight 350 г.
+										.el-big__devider
+										.el-big__cost 480 р.
+									.el-big__incr
+										.elements-icr-block
+											.incr
+												.incr__minus.incr__nav
+													+icon("minus","icon")
+												.incr__val
+													span 0
+													.incr__val-coner
+												.incr__plus.incr__nav
+													+icon("plus","icon")
+								.el-big__img
+									.el-big__img-el(style="background-image:url('img/item-big.png')")
+
+
+				+footer()
+	+toolbar()
++modal()
+
+include ./block_html/_script.pug

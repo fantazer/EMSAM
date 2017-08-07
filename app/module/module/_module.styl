@@ -76,4 +76,75 @@
 		@extend .link--main
 		cp()
 
+
+.cart
+	margin-bottom: 7%
+
+.cart__row
+	flex(between)
+	padding: 25px 0
+	border-bottom:1px solid $gray
+
+.cart__name
+	color #463e3c
+	@extend .type--main
+	width: 40%
+
+.cart__cost
+	font-weight:700
+
+.cart__clear
+	.icon
+		&:hover
+			opacity 1
+		cp()
+		size 18px
+		opacity 0.5
+
+.cart-total
+	font-family Oswald
+	@extend .type--lg
+	font-weight 300
+	text-align: center
+	margin-bottom: 7%
+	span
+		color $red
+
+.cart-get
+	flex(mid)
+	margin-bottom: 7%
+
+.cart-get__el
+	@extend .btn--md
+	@extend .btn--green
+
+.cart-info
+	.veksel
+		margin-bottom: 3%
+.cart-info__text
+	text-align: center
+
+.cart-empty
+	flex(mid)
+	fl()
+	margin-bottom: 7%
+
+.cart-empty-get__el
+	@extend .btn--md
+	@extend .btn--light
+
+.cart-empty__icon
+	margin-bottom: 7%
+
+.cart-empty--hide
+	display: none
+
+.reg-get
+	flex(mid)
+	margin-top: 7%
+
+.reg-get__el
+	@extend .btn--md
+	@extend .btn--green
+
 /*!block module end */
