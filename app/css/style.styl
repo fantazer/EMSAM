@@ -602,7 +602,96 @@ body
 		align-items: flex-start
 		.sytle-input-text
 			width: 90%
+
 .order-get__el
 	@extend .btn--md
 	@extend .btn--green
+
+.modal-layer
+	width: 100%
+	height: 100vh
+	position: fixed
+	z-index 1000
+	top 0
+	left 0
+	visibility: hidden
+	transition all 1s // duration for fade
+	opacity 0
+
+.modal-layer-show
+	visibility: visible
+	opacity 1
+
+.modal-cont
+	flex(mid)
+	width: 100%
+	height: 100%
+	position: relative
+
+.modal-filter
+	position: absolute
+	top: 0
+	left: 0
+	background: rgba(0, 0, 0, 0.6)
+	width: 100%
+	height: 100%
+
+
+.modal
+	background: white
+	position: relative
+	width: 400px
+	display: none
+
+.modal__show
+	display: block
+
+
+/*.modal-close
+	position: absolute
+	top: 30px
+	right: 30px
+	cp()
+	.icon
+		size 24px
+		fill rgba(0, 0, 0, 0.42)*/
+
+.modal-open
+	overflow-x: hidden
+	overflow-y: scroll
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	width: 100%
+
+
+.modal-content
+	flex(mid)
+	fl()
+	padding 45px
+	padding-top: 0px
+	text-align: center
+
+.modal-icon-head
+	margin-bottom: 10px
+	transform translateY(-10px)
+	.icon
+		size 80px
+
+.modal-title
+	font-family Oswald
+	@extend .type--lg
+	font-weight 300
+	margin-bottom: 30px
+
+.modal-text
+	margin-bottom: 30px
+	@extend .type--main
+
+.modal-btn
+	@extend .btn--md
+	@extend .btn--green
+
 @import "../module/**/*"

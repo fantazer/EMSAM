@@ -60,7 +60,7 @@ mixin module()
 				input(type="text" placeholder="Email или телефон" )
 				input(type="password" placeholder="Пароль")
 				input(type="password" placeholder="Повторите пароль")
-				.reg-get
+				.reg-get.modal-get(data-modal="regTrue")
 					.reg-get__el Зарегистрироваться
 
 	.module(data-module="order")
@@ -71,7 +71,12 @@ mixin module()
 				input(type="text" placeholder="Tелефон" )
 				.pay-type
 					.pay-type__el
-						+radio('Наличными')
+						label.style-label.style-label--radio
+							input(type="radio" name="group" checked).sytle-input
+							.sytle-input-element
+								.icon-radio
+							.sytle-input-text Наличными
+
 					.pay-type__el
 						+radio('По карте')
 					.pay-type__el
@@ -109,5 +114,24 @@ mixin module()
 							.sytle-input-text Я даю согласие на
 								a(href="#") хранение, обработку и использование своих персональных данных
 				.order-get
-					.order-get__el Оформить заказ
+					.order-get__el.modal-get(data-modal="orderTrue") Оформить заказ
+
+	.modal-layer
+		.modal-cont
+			.modal-filter
+			.modal-wrap
+				.modal(data-modal="orderTrue")
+					.modal-content
+						.modal-icon-head
+							+icon("apple","icon")
+						.modal-title Спасибо! <br> Ваш заказ принят :)
+						.modal-text Вы можете проследить за ним <br> в личном кабинете
+						.modal-btn.modal-close Хорошо
+				.modal(data-modal="regTrue")
+					.modal-content
+						.modal-icon-head
+							+icon("mail","icon")
+						.modal-title Ура! Вы успешно <br>	зарегистрированы :)
+						.modal-text Мы отправили письмо на Вашу почту
+						.modal-btn.modal-close Хорошо
 	//block module end

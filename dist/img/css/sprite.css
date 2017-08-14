@@ -8,7 +8,7 @@
     display: inline-block;
     background-image: url("../svg/sprite.svg");
     background-repeat: no-repeat;
-    background-size: 51.2em 437.1em;
+    background-size: 51.2em 466em;
 }
 
 .no-svg .icon:before {
@@ -125,8 +125,17 @@
 
 
 
-  .icon.mail:before {
+  .icon.logo:before {
       background-position: 0em -269em;
+      width: 28.9em;
+      height: 28.9em;
+  }
+
+
+
+
+  .icon.mail:before {
+      background-position: 0em -297.9em;
       width: 19.3217em;
       height: 21.1846em;
   }
@@ -135,7 +144,7 @@
 
 
   .icon.menu:before {
-      background-position: 0em -290.2em;
+      background-position: 0em -319.1em;
       width: 6.3652999999999995em;
       height: 1.1em;
   }
@@ -144,7 +153,7 @@
 
 
   .icon.minus:before {
-      background-position: 0em -291.3em;
+      background-position: 0em -320.2em;
       width: 4.2em;
       height: 4.2em;
   }
@@ -153,7 +162,7 @@
 
 
   .icon.phone:before {
-      background-position: 0em -295.5em;
+      background-position: 0em -324.4em;
       width: 9.4489em;
       height: 9.4861em;
   }
@@ -162,7 +171,7 @@
 
 
   .icon.plus:before {
-      background-position: 0em -305em;
+      background-position: 0em -333.9em;
       width: 4.2em;
       height: 4.2em;
   }
@@ -171,7 +180,7 @@
 
 
   .icon.small-arrow-down:before {
-      background-position: 0em -309.2em;
+      background-position: 0em -338.1em;
       width: 12.9em;
       height: 12.9em;
   }
@@ -180,7 +189,7 @@
 
 
   .icon.soc-facebook:before {
-      background-position: 0em -322.1em;
+      background-position: 0em -351em;
       width: 51.2em;
       height: 51.2em;
   }
@@ -189,7 +198,7 @@
 
 
   .icon.soc-ok:before {
-      background-position: 0em -373.3em;
+      background-position: 0em -402.2em;
       width: 9.5481em;
       height: 9.5481em;
   }
@@ -198,7 +207,7 @@
 
 
   .icon.soc-vk:before {
-      background-position: 0em -382.9em;
+      background-position: 0em -411.8em;
       width: 51.2em;
       height: 51.2em;
   }
@@ -207,7 +216,7 @@
 
 
   .icon.uzor:before {
-      background-position: 0em -434.1em;
+      background-position: 0em -463em;
       width: 8.7134em;
       height: 2.9791em;
   }

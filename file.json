@@ -9,6 +9,9 @@
 	"page":{
 		"index":"index",
 		"news":"news",
-		"catalog":"catalog"
+		"catalog":"catalog",
+		"item":"item",
+		"news-item":"news-item",
+		"cabinet":"cabinet"
 	}
 }
