@@ -1,0 +1,18 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+menu()
+	.content
+		.content-filter
+		.content-wrap
+			+module()
+			.content-frame
+				.content-frame__left
+					h1 i am content
+				.content-frame__right
+					h1 i am content
+	+toolbar()
++modal()
+
+include ./block_html/_script.pug
