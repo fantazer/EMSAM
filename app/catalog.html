@@ -20,6 +20,7 @@
 		<!--link(rel="stylesheet", href="bower/jquery-nice-select/css/nice-select.css")-->
 		<link rel="stylesheet" href="bower/owl.carousel/dist/assets/owl.carousel.css" />
 		<link rel="stylesheet" href="bower/select2/dist/css/select2.min.css" />
+		<!--link(rel="stylesheet", href="bower/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css")-->
 		<!--endbuild-->
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/style-edit.css" />
@@ -40,7 +41,7 @@
 							</svg>
 						</a>
 						<div class="menu-nav">
-							<a class="menu-nav__el" href="#">Меню</a>
+							<div class="menu-nav__el get-module" data-module="menu">Меню</div>
 							<a class="menu-nav__el" href="#">Акции</a>
 							<a class="menu-nav__el" href="#">Доставка</a>
 							<a class="menu-nav__el" href="#">Отзывы</a>
@@ -359,7 +360,7 @@
 								<div class="descript__col">
 									<div class="item-info__image" style="background-image:url('img/item-info-img.jpg');"></div>
 								</div>
-								<div class="descript__col">
+								<div class="descript__col descript__col--item-description">
 									<div class="item-info__content">
 										<div class="item-info__content-close">
 											<svg class="icon">
@@ -416,6 +417,120 @@
 												</svg>
 											</a>
 										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="module" data-module="news-item">
+						<div class="module-descript module__cont">
+							<div class="descript__cont">
+								<div class="descript__col">
+									<div class="item-info__image" style="background-image:url('img/item-info-img.jpg');"></div>
+								</div>
+								<div class="descript__col descript__col--description">
+									<div class="item-info__content-close">
+										<svg class="icon">
+											<use xlink:href="#close-round"></use>
+										</svg>
+									</div>
+									<div class="item-info__content">
+										<div class="item-info__title">1+1=3 или время пить фрукты!</div>
+										<div class="veksel">
+											<svg class="icon">
+												<use xlink:href="#uzor"></use>
+											</svg>
+										</div>
+										<div class="item-info__text">
+											<p>Лето наступает! 1 июня в сети ресторанов "ЕМ САМ" наступает ВРЕМЯ ПИТЬ ФРУКТЫ! "Sherbets Time!" Освежающие фруктовые щербеты на любой вкус! Ищите во всех ресторанах "ЕМ САМ".</p>
+											<p>Человек может не пить 3 дня. А может пить! Каждый день в сети ресторанов "ЕМ САМ" действует акция "1+1=3". За каждые две кружки фирменного пива "ЕМ САМ" третья - в подарок! ИЛИ при заказе 2-х кружек фирменного пива "ЕМ САМ" вы получите картофель
+												фри в ПОДАРОК!</p>
+											<p>Лето наступает! 1 июня в сети ресторанов "ЕМ САМ" наступает ВРЕМЯ ПИТЬ ФРУКТЫ! "Sherbets Time!" Освежающие фруктовые щербеты на любой вкус! Ищите во всех ресторанах "ЕМ САМ".</p>
+											<p>Человек может не пить 3 дня. А может пить! Каждый день в сети ресторанов "ЕМ САМ" действует акция "1+1=3". За каждые две кружки фирменного пива "ЕМ САМ" третья - в подарок! ИЛИ при заказе 2-х кружек фирменного пива "ЕМ САМ" вы получите картофель
+												фри в ПОДАРОК!</p>
+										</div>
+										<div class="soc-row">
+											<a class="soc-row__el soc-row__el--vk" href="#">
+												<svg class="icon">
+													<use xlink:href="#soc-vk"></use>
+												</svg>
+											</a>
+											<a class="soc-row__el soc-row__el--fb" href="#">
+												<svg class="icon">
+													<use xlink:href="#soc-facebook"></use>
+												</svg>
+											</a>
+											<a class="soc-row__el soc-row__el--ok" href="#">
+												<svg class="icon">
+													<use xlink:href="#soc-ok"></use>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="module" data-module="menu">
+						<div class="module-descript module__cont">
+							<div class="descript__cont">
+								<div class="descript__col">
+									<div class="item-info__content-close">
+										<svg class="icon">
+											<use xlink:href="#close-round"></use>
+										</svg>
+									</div>
+									<div class="menu-info-cont">
+										<div class="menu-title">Меню ресторана</div>
+										<div class="veksel">
+											<svg class="icon">
+												<use xlink:href="#uzor"></use>
+											</svg>
+										</div>
+										<div class="menu-info-wrap">
+											<div class="menu-info__el">Сеты</div>
+											<div class="menu-info__el">Роллы</div>
+											<div class="menu-info__el">Запечённые роллы</div>
+											<div class="menu-info__el">Горячие роллы</div>
+											<div class="menu-info__el">Закуски</div>
+											<div class="menu-info__el">Бургеры</div>
+											<div class="menu-info__el">Салаты</div>
+											<div class="menu-info__el">Супы</div>
+											<div class="menu-info__el">Хлеб</div>
+											<div class="menu-info__el">Паста, лапша</div>
+											<div class="menu-info__el">Пицца</div>
+											<div class="menu-info__el">Блюда из курицы</div>
+											<div class="menu-info__el">Блюда из свинины</div>
+											<div class="menu-info__el">Блюда из мяса</div>
+											<div class="menu-info__el">Блюда из рыбы</div>
+											<div class="menu-info__el">Гарниры</div>
+											<div class="menu-info__el">Десерты</div>
+											<div class="menu-info__el">Чай и кофе</div>
+											<div class="menu-info__el">Безалкогольные напитки</div>
+											<div class="menu-info__el">Вот такие пироги!</div>
+											<div class="menu-info__el">Соки, смузи</div>
+											<div class="menu-info__el">Время пить фрукты!</div>
+											<div class="menu-info__el">Алкогольные напитки</div>
+											<div class="menu-info__el">Детское меню</div>
+											<div class="menu-info__el">Бизнес-ланч</div>
+										</div>
+									</div>
+								</div>
+								<div class="descript__col descript__col--recomend">
+									<div class="menu-recommed">
+										<div class="line-title-wrap">
+											<div class="line-title-el"></div>
+											<div class="line-title">Рекомендуем</div>
+											<div class="line-title-el"></div>
+										</div>
+										<div class="menu-recommed__title">Пицца “Смак”</div>
+										<div class="menu-recommed__text">Пицца соус, сыр моцарелла, сыр Фета, сыр дор блю, сыр пармезан, пепперони, салями, ветчина</div>
+										<div class="el__info">
+											<div class="el__weight">350 г.</div>
+											<div class="el__devider"></div>
+											<div class="el__cost">480 р.</div>
+										</div>
+										<div class="menu-recommed__img" style="background-image:url('img/pizza.png');"></div>
 									</div>
 								</div>
 							</div>
@@ -725,8 +840,8 @@
 												<div class="line-title-el"></div>
 											</div>
 										</div>
-										<div class="el-big__title">Рокки Роутс</div>
-										<div class="el-big__text">Пицца соус, сыр моцарелла, сыр Фета, сыр дор блю, сыр пармезан, пепперони, салями, ветчина ...</div>
+										<div class="el-big__title get-module" data-module="item-description">Рокки Роутс</div>
+										<div class="el-big__text get-module" data-module="item-description">Пицца соус, сыр моцарелла, сыр Фета, сыр дор блю, сыр пармезан, пепперони, салями, ветчина ...</div>
 										<div class="el-big__info">
 											<div class="el-big__weight">350 г.</div>
 											<div class="el-big__devider"></div>
@@ -1022,8 +1137,8 @@
 												<div class="line-title-el"></div>
 											</div>
 										</div>
-										<div class="el-big__title">Рокки Роутс</div>
-										<div class="el-big__text">Пицца соус, сыр моцарелла, сыр Фета, сыр дор блю, сыр пармезан, пепперони, салями, ветчина ...</div>
+										<div class="el-big__title get-module" data-module="item-description">Рокки Роутс</div>
+										<div class="el-big__text get-module" data-module="item-description">Пицца соус, сыр моцарелла, сыр Фета, сыр дор блю, сыр пармезан, пепперони, салями, ветчина ...</div>
 										<div class="el-big__info">
 											<div class="el-big__weight">350 г.</div>
 											<div class="el-big__devider"></div>
@@ -1319,8 +1434,8 @@
 												<div class="line-title-el"></div>
 											</div>
 										</div>
-										<div class="el-big__title">Рокки Роутс</div>
-										<div class="el-big__text">Пицца соус, сыр моцарелла, сыр Фета, сыр дор блю, сыр пармезан, пепперони, салями, ветчина ...</div>
+										<div class="el-big__title get-module" data-module="item-description">Рокки Роутс</div>
+										<div class="el-big__text get-module" data-module="item-description">Пицца соус, сыр моцарелла, сыр Фета, сыр дор блю, сыр пармезан, пепперони, салями, ветчина ...</div>
 										<div class="el-big__info">
 											<div class="el-big__weight">350 г.</div>
 											<div class="el-big__devider"></div>
@@ -1464,6 +1579,7 @@
 		<!--script(src='bower/jquery-nice-select/js/jquery.nice-select.min.js')-->
 		<script src="bower/select2/dist/js/select2.min.js"></script>
 		<script src="js/jquery.smoothscroll.js"></script>
+		<!--script(src='bower/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js')-->
 		<!-- endbuild-->
 		<script src="js/script.js"></script>
 		<script src="js/script-edit.js"></script>

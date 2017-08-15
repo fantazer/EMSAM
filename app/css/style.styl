@@ -44,7 +44,7 @@ body
 	flex-grow: 1
 	flex-shrink: 1
 	flex-basis: 0%
-	width: calc(100% - 385px - 95px)
+	width: calc(100% - 300px - 95px)
 	max-width 1440px
 	overflow hidden
 	position: relative
@@ -325,6 +325,7 @@ body
 	margin-left: -1px
 	border:1px solid $gray
 	border-top:0
+	cp()
 	&:hover
 		.news__img-el
 			transform scale(1.2)
@@ -469,17 +470,22 @@ body
 	height: 100%
 	background-size: contain
 	margin-bottom: 20px
+	background-position: center bottom
 
 .el-big__title
 	font-family Oswald
 	font-size 24px
 	font-weight 300
 	margin-bottom: 20px
+	&:hover
+		cursor pointer!important
 
 .el-big__text
 	text-align: center
 	width: 80%
 	margin-bottom: 20px
+	&:hover
+		cursor pointer
 
 .el-big__info
 	flex(mid)
@@ -590,10 +596,18 @@ body
 	flex(between)
 	margin-bottom: 5%
 
+.block-overflow
+	max-height 1000px
+	overflow-y auto
+
 .module-order
+	@extend .block-overflow
 	textarea
 		width: 100%
 		margin-bottom: 3%
+
+.module-cart
+	@extend .block-overflow
 
 .order-get
 	flex(mid)
@@ -711,22 +725,22 @@ body
 	width: 100%
 	height: 100%
 
+.descript__col--description
+	@extend .block-overflow
+	padding: 100px 5% 30px 5%
 .item-info__content
-	flex(mid)
-	fl()
-	height: 100%
-	padding: 0 15%
+	position: relative
 	.veksel
 		margin: 30px 0
-	.soc-row
-		margin-top: 20%
 	.item-info__incr
 		display: none
+		margin-bottom: 10%
 
 .item-info__title
 	@extend .type--xl
 	font-family Oswald
 	font-weight:300
+	text-align: center
 
 //.icon
 .item-info__text
@@ -734,7 +748,9 @@ body
 	font-weight 400
 	text-align: center
 	line-height:1.6
-	margin-bottom: 20%
+	margin-bottom: 30px
+	p
+		text-align: left
 .el__info
 	font-family Oswald
 	@extend .type--lg
@@ -745,6 +761,7 @@ body
 .item-info__get
 	@extend .btn--md
 	@extend .btn--green
+	margin-bottom: 10%
 //.item-info__incr
 //.elements-icr-block
 //.incr
@@ -771,8 +788,6 @@ body
 .descript__col
 	height: 100%
 	width: 50%
-
-.item-info__content
 	position: relative
 
 .item-info__content-close
@@ -780,6 +795,7 @@ body
 	top 5%
 	right: 5%
 	cp()
+	z-index 5
 	.icon
 		tr(all)
 		size 30px
@@ -787,4 +803,68 @@ body
 		&:hover
 			fill black
 
+
+.mCSB_container
+	margin-right: 0
+
+.mCSB_scrollTools
+	display: none!important
+
+.descript__col--item-description
+	.item-info__content
+		padding: 15%
+		height: 100%
+		flex(mid)
+		fl()
+
+.menu-info-cont
+	height: 100%
+	padding: 15%
+	width: 100%
+
+.menu-title
+	text-align: center
+	font-family Oswald
+	@extend .type--lg
+	font-weight 300
+
+.veksel
+	margin-top: 10px
+	margin-bottom: 10vh
+
+.menu-info-wrap
+	flex(between)
+	fw()
+
+.menu-info__el
+	margin-bottom: 2vh
+	width: 50%
+	color $link-color
+	@extend .type--main
+
+.descript__col--recomend
+	background: #e5e1e0
+
+.menu-recommed
+	flex(mid)
+	fl()
+	width: 60%
+	margin: 0 auto
+	height: 100%
+	.el__info
+		margin-bottom: 20px
+
+.menu-recommed__title
+	font-family Oswald
+	@extend .type--lg
+	margin: 20px 0
+
+.menu-recommed__text
+	text-align: center
+	margin-bottom: 20px
+
+.menu-recommed__img
+	round()
+	padding: 30%
+	bg-full()
 @import "../module/**/*"

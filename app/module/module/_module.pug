@@ -121,7 +121,7 @@ mixin module()
 			.descript__cont
 				.descript__col
 					.item-info__image(style="background-image:url('img/item-info-img.jpg')")
-				.descript__col
+				.descript__col.descript__col--item-description
 					.item-info__content
 						.item-info__content-close
 							+icon("close-round","icon")
@@ -143,6 +143,88 @@ mixin module()
 								+icon("soc-facebook","icon")
 							a(href="#").soc-row__el.soc-row__el--ok
 								+icon("soc-ok","icon")
+
+	.module(data-module="news-item")
+		.module-descript.module__cont
+			.descript__cont
+				.descript__col
+					.item-info__image(style="background-image:url('img/item-info-img.jpg')")
+				.descript__col.descript__col--description
+					.item-info__content-close
+						+icon("close-round","icon")
+					.item-info__content
+						.item-info__title 1+1=3 или время пить фрукты!
+						.veksel
+							+icon("uzor","icon")
+						.item-info__text
+							p Лето наступает! 1 июня в сети ресторанов "ЕМ САМ" наступает ВРЕМЯ ПИТЬ ФРУКТЫ! "Sherbets Time!" Освежающие фруктовые щербеты на любой вкус! Ищите во всех ресторанах "ЕМ САМ".
+							p Человек может не пить 3 дня. А может пить! Каждый день в сети ресторанов "ЕМ САМ" действует акция "1+1=3". За каждые две кружки фирменного пива "ЕМ САМ" третья - в подарок! ИЛИ при заказе 2-х кружек фирменного пива "ЕМ САМ" вы получите картофель фри в ПОДАРОК!
+							p Лето наступает! 1 июня в сети ресторанов "ЕМ САМ" наступает ВРЕМЯ ПИТЬ ФРУКТЫ! "Sherbets Time!" Освежающие фруктовые щербеты на любой вкус! Ищите во всех ресторанах "ЕМ САМ".
+							p Человек может не пить 3 дня. А может пить! Каждый день в сети ресторанов "ЕМ САМ" действует акция "1+1=3". За каждые две кружки фирменного пива "ЕМ САМ" третья - в подарок! ИЛИ при заказе 2-х кружек фирменного пива "ЕМ САМ" вы получите картофель фри в ПОДАРОК!
+
+						.soc-row
+							a(href="#").soc-row__el.soc-row__el--vk
+								+icon("soc-vk","icon")
+							a(href="#").soc-row__el.soc-row__el--fb
+								+icon("soc-facebook","icon")
+							a(href="#").soc-row__el.soc-row__el--ok
+								+icon("soc-ok","icon")
+
+	.module(data-module="menu")
+		.module-descript.module__cont
+			.descript__cont
+				.descript__col
+					.item-info__content-close
+						+icon("close-round","icon")
+					.menu-info-cont
+						.menu-title Меню ресторана
+						.veksel
+							+icon("uzor","icon")
+						.menu-info-wrap
+								-
+									var items = [
+										'Сеты',
+										'Роллы',
+										'Запечённые роллы',
+										'Горячие роллы',
+										'Закуски',
+										'Бургеры',
+										'Салаты',
+										'Супы',
+										'Хлеб',
+										'Паста, лапша',
+										'Пицца',
+										'Блюда из курицы',
+										'Блюда из свинины',
+										'Блюда из мяса',
+										'Блюда из рыбы',
+										'Гарниры',
+										'Десерты',
+										'Чай и кофе',
+										'Безалкогольные напитки',
+										'Вот такие пироги!',
+										'Соки, смузи',
+										'Время пить фрукты!',
+										'Алкогольные напитки',
+										'Детское меню',
+										'Бизнес-ланч'
+										];
+								each item in items
+									.menu-info__el #{item}
+
+				.descript__col.descript__col--recomend
+					.menu-recommed
+						.line-title-wrap
+							.line-title-el
+							.line-title Рекомендуем
+							.line-title-el
+						.menu-recommed__title Пицца “Смак”
+						.menu-recommed__text Пицца соус, сыр моцарелла, сыр Фета, сыр дор блю, сыр пармезан, пепперони, салями, ветчина
+						.el__info
+							.el__weight 350 г.
+							.el__devider
+							.el__cost 480 р.
+						.menu-recommed__img(style="background-image:url('img/pizza.png')")
 
 	.modal-layer
 		.modal-cont

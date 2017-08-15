@@ -6,9 +6,9 @@ mixin menu()
 				a(href="/").menu-logo
 					+icon("logo","icon")
 				.menu-nav
+					.menu-nav__el.get-module(data-module="menu") Меню
 					-
 						var items = [
-							'Меню',
 							'Акции',
 							'Доставка',
 							'Отзывы',
