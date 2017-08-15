@@ -31,7 +31,7 @@
 					<div class="menu-cont">
 						<a class="menu-logo" href="/">
 							<svg class="icon">
-								<use xlink:href="#apple"></use>
+								<use xlink:href="#logo"></use>
 							</svg>
 						</a>
 						<div class="menu-nav">
@@ -243,7 +243,7 @@
 								<input type="text" placeholder="Email или телефон" />
 								<input type="password" placeholder="Пароль" />
 								<input type="password" placeholder="Повторите пароль" />
-								<div class="reg-get">
+								<div class="reg-get modal-get" data-modal="regTrue">
 									<div class="reg-get__el">Зарегистрироваться</div>
 								</div>
 							</form>
@@ -257,15 +257,13 @@
 								<input type="text" placeholder="Tелефон" />
 								<div class="pay-type">
 									<div class="pay-type__el">
-										<div class="check-el">
-											<label class="style-label style-label--radio">
-												<input class="sytle-input" type="radio" name="group" />
-												<div class="sytle-input-element">
-													<div class="icon-radio"></div>
-												</div>
-												<div class="sytle-input-text">Наличными</div>
-											</label>
-										</div>
+										<label class="style-label style-label--radio">
+											<input class="sytle-input" type="radio" name="group" checked="checked" />
+											<div class="sytle-input-element">
+												<div class="icon-radio"></div>
+											</div>
+											<div class="sytle-input-text">Наличными</div>
+										</label>
 									</div>
 									<div class="pay-type__el">
 										<div class="check-el">
@@ -345,9 +343,111 @@
 									</div>
 								</div>
 								<div class="order-get">
-									<div class="order-get__el">Оформить заказ</div>
+									<div class="order-get__el modal-get" data-modal="orderTrue">Оформить заказ</div>
 								</div>
 							</form>
+						</div>
+					</div>
+					<div class="module" data-module="item-description">
+						<div class="module-descript module__cont">
+							<div class="descript__cont">
+								<div class="descript__col">
+									<div class="item-info__image" style="background-image:url('img/item-info-img.jpg');"></div>
+								</div>
+								<div class="descript__col">
+									<div class="item-info__content">
+										<div class="item-info__content-close">
+											<svg class="icon">
+												<use xlink:href="#close-round"></use>
+											</svg>
+										</div>
+										<div class="item-info__title">Фирменные блинчики</div>
+										<div class="veksel">
+											<svg class="icon">
+												<use xlink:href="#uzor"></use>
+											</svg>
+										</div>
+										<div class="item-info__text">Пицца соус, сыр моцарелла, сыр Фета, сыр дор блю, сыр пармезан, пепперони, салями, ветчина</div>
+										<div class="el__info">
+											<div class="el__weight">350 г.</div>
+											<div class="el__devider"></div>
+											<div class="el__cost">480 р.</div>
+										</div>
+										<div class="item-info__get">Добавить к корзину</div>
+										<div class="item-info__incr">
+											<div class="elements-icr-block">
+												<div class="incr">
+													<div class="incr__minus incr__nav">
+														<svg class="icon">
+															<use xlink:href="#minus"></use>
+														</svg>
+													</div>
+													<div class="incr__val">
+														<span>1</span>
+														<div class="incr__val-coner"></div>
+													</div>
+													<div class="incr__plus incr__nav">
+														<svg class="icon">
+															<use xlink:href="#plus"></use>
+														</svg>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="soc-row">
+											<a class="soc-row__el soc-row__el--vk" href="#">
+												<svg class="icon">
+													<use xlink:href="#soc-vk"></use>
+												</svg>
+											</a>
+											<a class="soc-row__el soc-row__el--fb" href="#">
+												<svg class="icon">
+													<use xlink:href="#soc-facebook"></use>
+												</svg>
+											</a>
+											<a class="soc-row__el soc-row__el--ok" href="#">
+												<svg class="icon">
+													<use xlink:href="#soc-ok"></use>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-layer">
+						<div class="modal-cont">
+							<div class="modal-filter"></div>
+							<div class="modal-wrap">
+								<div class="modal" data-modal="orderTrue">
+									<div class="modal-content">
+										<div class="modal-icon-head">
+											<svg class="icon">
+												<use xlink:href="#apple"></use>
+											</svg>
+										</div>
+										<div class="modal-title">Спасибо!
+											<br> Ваш заказ принят :)</div>
+										<div class="modal-text">Вы можете проследить за ним
+											<br> в личном кабинете</div>
+										<div class="modal-btn modal-close">Хорошо</div>
+									</div>
+								</div>
+								<div class="modal" data-modal="regTrue">
+									<div class="modal-content">
+										<div class="modal-icon-head">
+											<svg class="icon">
+												<use xlink:href="#mail"></use>
+											</svg>
+										</div>
+										<div class="modal-title">Ура! Вы успешно
+											<br> зарегистрированы :)</div>
+										<div class="modal-text">Мы отправили письмо на Вашу почту</div>
+										<div class="modal-btn modal-close">Хорошо</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 					<!--block module end-->

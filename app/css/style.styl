@@ -211,6 +211,8 @@ body
 	//background: rgba(0, 0, 0, 0.62)
 	z-index 200
 	transform translateX(100%)
+	f()
+	justify-content: flex-end
 .fix-scroll
 	position: fixed
 	overflow-y:scroll
@@ -376,7 +378,6 @@ body
 .el
 	flex(mid)
 	fl()
-	cp()
 	width: calc(20% + 1px)
 	border 1px solid $gray
 	padding: 25px
@@ -402,12 +403,15 @@ body
 	margin-bottom: 20px
 
 .el__title
+	cp()
 	font-family Oswald
 	font-size 24px
 	font-weight 300
 	margin-bottom: 20px
+	z-index 2
 
 .el__text
+	cp()
 	text-align: center
 	width: 80%
 	margin-bottom: 40px
@@ -693,5 +697,94 @@ body
 .modal-btn
 	@extend .btn--md
 	@extend .btn--green
+
+.content-frame
+	f()
+	height: 100%
+
+.content-frame__col
+	width: 50%
+	height: 100vh
+
+.item-info__image
+	bg-full()
+	width: 100%
+	height: 100%
+
+.item-info__content
+	flex(mid)
+	fl()
+	height: 100%
+	padding: 0 15%
+	.veksel
+		margin: 30px 0
+	.soc-row
+		margin-top: 20%
+	.item-info__incr
+		display: none
+
+.item-info__title
+	@extend .type--xl
+	font-family Oswald
+	font-weight:300
+
+//.icon
+.item-info__text
+	@extend .type--main
+	font-weight 400
+	text-align: center
+	line-height:1.6
+	margin-bottom: 20%
+.el__info
+	font-family Oswald
+	@extend .type--lg
+	margin-bottom: 5%
+//.el__weight
+//.el__devider
+//.el__cost
+.item-info__get
+	@extend .btn--md
+	@extend .btn--green
+//.item-info__incr
+//.elements-icr-block
+//.incr
+//.incr__minus
+//.incr__nav
+//.incr__val
+//.incr__val-coner
+//.incr__plus
+//.soc-row
+//.soc-row__el
+//.soc-row__el--vk
+//.soc-row__el--fb
+//.soc-row__el--ok
+
+.descript__cont
+	f()
+	height: 100%
+	width: 100%
+
+.module-descript.module__cont
+	width: 100%
+	padding: 0
+
+.descript__col
+	height: 100%
+	width: 50%
+
+.item-info__content
+	position: relative
+
+.item-info__content-close
+	position: absolute
+	top 5%
+	right: 5%
+	cp()
+	.icon
+		tr(all)
+		size 30px
+		fill $gray
+		&:hover
+			fill black
 
 @import "../module/**/*"

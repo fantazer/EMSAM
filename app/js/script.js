@@ -194,12 +194,14 @@ $(document).ready(function(){
 	});
 	$(document).on("click", function () {
 			hideModule();
-
 			$('.module').removeClass('module--open');
-
 			$('.get-module').removeClass('get-module--active');
 	});
 
+		// close description
+		$('.item-info__content-close').click(function(){
+			hideModule();
+		});
 	//animate module end
 
 	//modal
@@ -280,6 +282,23 @@ $(document).ready(function(){
 
 	initSlider('.item-slider--review');
 	initSlider('.item-slider--news');
+
+
+	//show description incr
+		$('.item-info__get').click(function(){
+			$(this).hide();
+			$('.item-info__incr').show();
+		});
+		$('.item-info__content .incr__nav').click(function(){
+			var itemSize = $(this).closest('.incr').find('span').html();
+			if(itemSize == 0){
+				$('.item-info__get').show();
+				$('.item-info__incr').hide();
+				$(this).closest('.incr').find('span').html('1')
+			}
+		});
+	//show description incr end
+
 	/* ###### For only ies  ######*/
 	//if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)){
 	//	//code

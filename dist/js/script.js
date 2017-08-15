@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+
+
 	//tab
 	$('.tab__el').click(function(){
 		var currentTab = $(this).data('tab');
@@ -23,8 +25,8 @@ $(document).ready(function(){
 	// //add icon caret
 	$('b[role="presentation"]').hide();
 	$('.select2-selection__arrow').append('<svg class="icon-select-arrow"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#small-arrow-down"></use></svg>');
-	
-	
+
+
 	//init nice select-end
 
 	//show message cart empty
@@ -129,15 +131,37 @@ $(document).ready(function(){
 	//arrow scroll end
 
 	//animate module
+	var scrollPos = 0;
 	var hideModule = function () {
 		$('.module__cont').removeClass('module__cont--open');
 		//$('.module').removeClass('module--open');
 		$('.content-filter').removeClass('content-filter--open');
+		if($('.get-module').hasClass('get-module--active')){
+					$('body').css({
+            overflow: '',
+            position: '',
+            top: ''
+        }).scrollTop(scrollPos);
+        $('.module').add('.menu').add('.toolbar').css({
+            top : 0
+        });
+			}
 	};
 
 	var fixWindowSize = function () {
-		$('body').addClass('fix-scroll');
+		scrollPos = $('body').scrollTop();
+    $('body').css({
+            overflow: 'hidden',
+            position: 'fixed',
+            overflowY: 'scroll',
+            top : -scrollPos,
+            width:'100%'
+        });
 		$('.content-filter').addClass('content-filter--open');
+		$('.module').add('.menu').add('.toolbar').css({
+            top : scrollPos
+        });
+
 	};
 
 	$('.get-module').click(function(event){
@@ -171,12 +195,63 @@ $(document).ready(function(){
 	$(document).on("click", function () {
 			hideModule();
 			$('.module').removeClass('module--open');
-			$('html, body').removeClass('fix-scroll');
 			$('.get-module').removeClass('get-module--active');
 	});
 
+		// close description
+		$('.item-info__content-close').click(function(){
+			hideModule();
+		});
 	//animate module end
-	
+
+	//modal
+	var closeModal = function () {
+  	$('.modal-layer').removeClass('modal-layer-show');
+  	$("body").removeClass("modal-fix");
+  	$('body').css({
+            overflow: '',
+            position: '',
+            top: ''
+        }).scrollTop(scrollPos);
+	};
+
+	$('.modal-close , .modal-filter').click(function (){
+		closeModal();
+	});
+
+
+	$('.modal-get').add('.show-modal').click(function (){
+		hideModule();
+		if(!$('.modal-layer').hasClass('modal-layer-show')){
+			$('.modal-layer').addClass('modal-layer-show');
+		}
+		if(!$("body").hasClass("modal-fix")){
+			$("body").addClass("modal-fix");
+			 scrollPos = $('body').scrollTop();
+        $('body').css({
+            overflow: 'hidden',
+            position: 'fixed',
+            overflowY: 'scroll',
+            top : -scrollPos,
+            width:'100%'
+        });
+		}
+		var currentModal = $(this).data("modal");
+		$('.modal').each(function () {
+			if ($(this).data('modal')===currentModal){
+				$(this).addClass('modal__show')
+			} else {
+				$(this).removeClass('modal__show')
+			}
+		});
+
+	});
+
+	$('.toggle-close-modal').click(function (){
+		closeModal();
+	});
+	//modal end
+
 	$(".main-page__first-section-slider").owlCarousel({
 	 items : 1,
 	 //autoHeight : true,
@@ -207,6 +282,23 @@ $(document).ready(function(){
 
 	initSlider('.item-slider--review');
 	initSlider('.item-slider--news');
+
+
+	//show description incr
+		$('.item-info__get').click(function(){
+			$(this).hide();
+			$('.item-info__incr').show();
+		});
+		$('.item-info__content .incr__nav').click(function(){
+			var itemSize = $(this).closest('.incr').find('span').html();
+			if(itemSize == 0){
+				$('.item-info__get').show();
+				$('.item-info__incr').hide();
+				$(this).closest('.incr').find('span').html('1')
+			}
+		});
+	//show description incr end
+
 	/* ###### For only ies  ######*/
 	//if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)){
 	//	//code
@@ -223,7 +315,7 @@ $(document).ready(function(){
 		$('body').prepend('<div class="old-browser"><div class="old-browser-text"> Браузер не поддерживается =(</div></div>');
 	}
 
-	//for init SVG 
+	//for init SVG
 	svg4everybody();
 	// ==== clear storage =====
 	 localStorage.clear();
@@ -234,7 +326,7 @@ $(document).ready(function(){
 	 });
 	// ==== clear storage end =====
 
-	
+
 	/* ###### For SlideToggle Elements  ######*/
 	/*var hideToggle = function(targetClick,toggleEl) {
 		$(targetClick).click(function(event){
@@ -271,7 +363,7 @@ $(document).ready(function(){
 		}
 	});*/
 
-	
+
 })
 
 //cash SVG

@@ -8,10 +8,31 @@ include block_html/_include.pug
 		.content-wrap
 			+module()
 			.content-frame
-				.content-frame__left
-					h1 i am content
-				.content-frame__right
-					h1 i am content
+				.content-frame__left.content-frame__col
+					.item-info__image(style="background-image:url('img/item-info-img.jpg')")
+				.content-frame__right.content-frame__col
+					.item-info__content
+						.item-info__title Фирменные блинчики
+						.veksel
+							+icon("uzor","icon")
+						.item-info__text Пицца соус, сыр моцарелла, сыр Фета, сыр дор блю, сыр пармезан, пепперони, салями, ветчина
+						.el__info
+							.el__weight 350 г.
+							.el__devider
+							.el__cost 480 р.
+						.item-info__get Добавить к корзину
+						.item-info__incr
+							+incr(1)
+						.soc-row
+							a(href="#").soc-row__el.soc-row__el--vk
+								+icon("soc-vk","icon")
+							a(href="#").soc-row__el.soc-row__el--fb
+								+icon("soc-facebook","icon")
+							a(href="#").soc-row__el.soc-row__el--ok
+								+icon("soc-ok","icon")
+
+
+
 	+toolbar()
 +modal()
 
