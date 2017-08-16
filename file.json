@@ -10,8 +10,6 @@
 		"index":"index",
 		"news":"news",
 		"catalog":"catalog",
-		"item":"item",
-		"news-item":"news-item",
 		"cabinet":"cabinet"
 	}
 }

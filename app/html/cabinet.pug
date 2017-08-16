@@ -1,0 +1,51 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+menu()
+	.content
+		.content-filter
+		.content-wrap
+			+module()
+			.content-frame
+				.content-frame__left.content-frame__col
+					.user
+						.user-filter
+						.user-info
+							.user__avatar(style="background-image:url('img/user.jpg')")
+							.user__name Иванова
+							.user__name Екатерина
+						.user-contact
+							.user__phone 8 965 890 7634
+							.user__adress г. Нижний Тагил, ул. Вагоностроителей, 26а
+
+				.content-frame__right.content-frame__col
+					.user-block
+						.user-block__title История заказов
+						.veksel
+							+icon("uzor","icon")
+						.user-order
+							.user-order__status
+								.user-order__date 28.05.2017
+								.user-order__info.user-order__info--orange Готовим
+							- for (var i=0;i<3;i++)
+								.user__row
+									.user__row-title Рокки Роутс #{i+1}
+									.user__row-dot
+									.user__row-value 450 руб
+
+						.user-order
+							.user-order__status
+								.user-order__date 28.05.2017
+								.user-order__info Доставлен
+							- for (var i=0;i<3;i++)
+								.user__row
+									.user__row-title Рокки Роутс #{i + 1}
+									.user__row-dot
+									.user__row-value 450 руб
+
+						.user-order__repeat Повторить заказ
+	+toolbar()
++modal()
+
+include ./block_html/_script.pug

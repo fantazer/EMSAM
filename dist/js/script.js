@@ -201,6 +201,7 @@ $(document).ready(function(){
 		// close description
 		$('.item-info__content-close').click(function(){
 			hideModule();
+			$('.module').removeClass('module--open');
 		});
 	//animate module end
 
@@ -314,6 +315,13 @@ $(document).ready(function(){
 		$('body').empty();
 		$('body').prepend('<div class="old-browser"><div class="old-browser-text"> Браузер не поддерживается =(</div></div>');
 	}
+
+
+	// init custom scroll
+	/*$(".descript__col--description").mCustomScrollbar({
+		autoDraggerLength: false // size druger
+	});*/
+	// init custom scroll end
 
 	//for init SVG
 	svg4everybody();
