@@ -456,6 +456,7 @@ body
 .el-big__content
 	flex(mid)
 	fl()
+	z-index 1
 
 
 .el-big__img
@@ -922,14 +923,14 @@ body
 	@extend .type--main
 	line-height: 1.6
 
-.user-block
+.info-block
 	padding: 10%
 	height: 100%
 	@extend .block-overflow
 	.veksel
 		margin: 20px 0
 
-.user-block__title
+.info-block__title
 	@extend .type--xl
 	font-family Oswald
 	font-weight:300
@@ -974,10 +975,79 @@ body
 	display: table
 	margin-bottom: 10px
 
+
+.book-order__info--orange
+	color #ebab7c
+
+.book__row-title,.book__row-dot,.book__row-value
+	display table-cell
+
+.book__row-title, .book__row-value
+	white-space nowrap
+
+.book__row-dot
+	border-bottom 1px dashed #eaeaea
+	width 100%
+
+.book__row
+	display: table
+	margin-bottom: 10px
+
 .user__row-title
 	padding-right: 10px
 
 .user__row-value
 	@extend .type--main
+
+
+//.delivery
+.delivery-time
+	margin-bottom: 5px
+	font-family Oswald
+	@extend .type--lg
+	span
+		display: inline-block
+		margin-right: 20px
+
+.delivery-time__text
+	margin-bottom: 30px
+
+.map-zone
+	padding-bottom: 5vh
+	margin-bottom: 7vh
+	margin-top: 5vh
+	border-bottom:1px solid #ebebeb
+
+.map-zone__row
+	f()
+	justify-content: space-between
+	margin-bottom: 3vh
+
+.map-zone__mark
+	width: 40px
+
+.map-zone__color
+	size 20px
+	round()
+	margin-top: 10px
+
+.map-zone__color--blue
+	background: #68bba6
+
+.map-zone__info
+	width: calc(100% - 60px)
+
+.map-zone__color--green
+	background: #aed354
+
+.map-zone__color--yellow
+	background: #eec147
+
+.map-zone__color--orange
+	background: #ee7447
+
+.map-zone__color--red
+	background: #ee4748
+//.map-zone__text
 
 @import "../module/**/*"
