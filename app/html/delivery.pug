@@ -1,0 +1,100 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+menu()
+	.content
+		.content-filter
+		.content-wrap
+			+module()
+			.content-frame
+				.content-frame__left.content-frame__col
+					.user
+						.user-filter
+				.content-frame__right.content-frame__col
+					.info-block
+						.info-block__title Доставка
+						.veksel
+							+icon("uzor","icon")
+						.delivery
+							.delivery-time
+								span ВС-ЧТ
+								| с 10:00 до 23:00
+							.delivery-time__text (Строителей - до 22:00)
+
+							.delivery-time
+								span ПТ-СБ
+								| с 10:00 до 00:00
+							.delivery-time__text (Строителей, Черноисточинское шоссе, 17 - до 23:00)
+
+						.map-zone
+							.map-zone__row
+								.map-zone__mark
+									.map-zone__color.map-zone__color--blue
+								.map-zone__info
+									.book__row
+										.book__row-title От 650 руб.
+										.book__row-dot
+										.book__row-value Бесплатно
+									.book__row
+										.book__row-title До 650 руб.
+										.book__row-dot
+										.book__row-value 90 руб.
+
+							.map-zone__row
+								.map-zone__mark
+									.map-zone__color.map-zone__color--green
+								.map-zone__info
+									.book__row
+										.book__row-title От 1300 руб.
+										.book__row-dot
+										.book__row-value Бесплатно
+									.book__row
+										.book__row-title До 1300 руб.
+										.book__row-dot
+										.book__row-value 130 руб.
+
+							.map-zone__row
+								.map-zone__mark
+									.map-zone__color.map-zone__color--yellow
+								.map-zone__info
+									.book__row
+										.book__row-title От 1500 руб.
+										.book__row-dot
+										.book__row-value Бесплатно
+									.book__row
+										.book__row-title До 1500 руб.
+										.book__row-dot
+										.book__row-value 150 руб.
+
+							.map-zone__row
+								.map-zone__mark
+									.map-zone__color.map-zone__color--orange
+								.map-zone__info
+									.book__row
+										.book__row-title От 2000 руб.
+										.book__row-dot
+										.book__row-value Бесплатно
+									.book__row
+										.book__row-title До 2000 руб.
+										.book__row-dot
+										.book__row-value 200 руб.
+
+							.map-zone__row
+								.map-zone__mark
+									.map-zone__color.map-zone__color--red
+								.map-zone__info
+									.map-zone__text Доставка за счёт предприятия не осуществляется! Стоимость и возможность доставки обговариваются с доставщиком по факту!
+						.map-cost
+							p Условия доставки бизнес-ланчей!
+							p Бизнес-ланчи на доставку или при заказе с собой стоят:
+							p Бизнес-ланч ЯПОНСКИЙ - 270 рублей
+							p Бизнес-ланч /салат + суп/ - 190 рублей
+							p Бизнес-ланч /салат + основное/ - 250 рублей
+							p Бизнес-ланч /суп + основное/ - 250 рублей
+							p Бизнес-ланч /салат + суп + основное/ - 280 рублей
+
+	+toolbar()
++modal()
+
+include ./block_html/_script.pug

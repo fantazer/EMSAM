@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="format-detection" content="telephone=no" />
+		<!--colors-tabs-->
+		<meta name="theme-color" content="#000" />
+		<meta name="msapplication-navbutton-color" content="#000" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="#000" />
+		<!--icons-->
+		<link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico" />
+		<link type="image/x-icon" rel="icon" href="img/favicon.ico" />
+		<!--SEO-->
+		<title>Document</title>
+		<meta name="description" itemprop="description" content="" />
+		<!--build:css css/vendor.css-->
+		<link rel="stylesheet" href="bower/normalize.css/normalize.css" />
+		<!--link(rel="stylesheet", href="bower/jquery-nice-select/css/nice-select.css")-->
+		<link rel="stylesheet" href="bower/owl.carousel/dist/assets/owl.carousel.css" />
+		<link rel="stylesheet" href="bower/select2/dist/css/select2.min.css" />
+		<!--link(rel="stylesheet", href="bower/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css")-->
+		<!--endbuild-->
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/style-edit.css" />
+	</head>
+	<!-- mixin nameMixin()-->
+	<!-- - var args = Array.prototype.slice.call(arguments)-->
+	<!-- - for item in args-->
+
+	<body>
+		<div class="page">
+			<!--block menu-->
+			<div class="menu">
+				<div class="menu-wrap">
+					<div class="menu-cont">
+						<a class="menu-logo" href="/">
+							<svg class="icon">
+								<use xlink:href="#logo"></use>
+							</svg>
+						</a>
+						<div class="menu-nav">
+							<div class="menu-nav__el get-module" data-module="menu">Меню</div>
+							<a class="menu-nav__el" href="#">Акции</a>
+							<a class="menu-nav__el" href="#">Доставка</a>
+							<a class="menu-nav__el" href="#">Отзывы</a>
+							<a class="menu-nav__el" href="#">О нас</a>
+						</div>
+						<div class="menu-info">
+							<div class="menu-info-hr"></div>
+							<a class="menu-phone" href="tel:8 (3435) 21-10-10">8 (3435) 21-10-10</a>
+							<div class="menu-timework">с 10:00 до 24:00</div>
+							<div class="soc-row">
+								<a class="soc-row__el soc-row__el--vk" href="#">
+									<svg class="icon">
+										<use xlink:href="#soc-vk"></use>
+									</svg>
+								</a>
+								<a class="soc-row__el soc-row__el--fb" href="#">
+									<svg class="icon">
+										<use xlink:href="#soc-facebook"></use>
+									</svg>
+								</a>
+								<a class="soc-row__el soc-row__el--ok" href="#">
+									<svg class="icon">
+										<use xlink:href="#soc-ok"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--block menu end-->
+			<div class="content">
+				<div class="content-filter"></div>
+				<div class="content-wrap">
+					<!--block module-->
+					<div class="module" data-module="enter">
+						<div class="module-auth module__cont">
+							<div class="form-title">Вход</div>
+							<form action="#">
+								<input type="text" placeholder="Ваше имя" />
+								<input type="password" placeholder="Пароль" />
+								<div class="enter-foget">
+									<div class="enter-foget__link">Забыли пароль?</div>
+									<div class="enter-foget__get">Войти</div>
+								</div>
+							</form>
+							<div class="enter-soc">
+								<div class="enter-soc__text">Вход через соц.сети</div>
+								<div class="soc-row">
+									<a class="soc-row__el soc-row__el--vk" href="#">
+										<svg class="icon">
+											<use xlink:href="#soc-vk"></use>
+										</svg>
+									</a>
+									<a class="soc-row__el soc-row__el--fb" href="#">
+										<svg class="icon">
+											<use xlink:href="#soc-facebook"></use>
+										</svg>
+									</a>
+									<a class="soc-row__el soc-row__el--ok" href="#">
+										<svg class="icon">
+											<use xlink:href="#soc-ok"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+							<div class="enter-account">
+								<div class="veksel">
+									<svg class="icon">
+										<use xlink:href="#uzor"></use>
+									</svg>
+								</div>
+								<div class="enter-account__text">Нет аккаунта?
+									<span class="get-module" data-module="reg">Зерегистрируйтесь</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="module" data-module="cart">
+						<div class="module-cart module__cont">
+							<div class="cart-empty cart-empty--hide">
+								<div class="cart-empty__icon">
+									<svg class="icon">
+										<use xlink:href="#cart-full"></use>
+									</svg>
+								</div>
+								<div class="form-title">Ваша корзина еще пуста.
+									<br> Самое время для покупок!</div>
+								<a class="cart-empty-get__el" href="#">Перейти в каталог</a>
+							</div>
+							<div class="cart-full">
+								<div class="form-title">Ваша корзина</div>
+								<div class="cart">
+									<div class="cart__row">
+										<div class="cart__name">Рокки Роутс 0</div>
+										<div class="cart__icr">
+											<div class="elements-icr-block">
+												<div class="incr">
+													<div class="incr__minus incr__nav">
+														<svg class="icon">
+															<use xlink:href="#minus"></use>
+														</svg>
+													</div>
+													<div class="incr__val">
+														<span>1</span>
+														<div class="incr__val-coner"></div>
+													</div>
+													<div class="incr__plus incr__nav">
+														<svg class="icon">
+															<use xlink:href="#plus"></use>
+														</svg>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="cart__cost">14580 р.</div>
+										<div class="cart__clear">
+											<svg class="icon">
+												<use xlink:href="#close"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="cart__row">
+										<div class="cart__name">Рокки Роутс 1</div>
+										<div class="cart__icr">
+											<div class="elements-icr-block">
+												<div class="incr">
+													<div class="incr__minus incr__nav">
+														<svg class="icon">
+															<use xlink:href="#minus"></use>
+														</svg>
+													</div>
+													<div class="incr__val">
+														<span>1</span>
+														<div class="incr__val-coner"></div>
+													</div>
+													<div class="incr__plus incr__nav">
+														<svg class="icon">
+															<use xlink:href="#plus"></use>
+														</svg>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="cart__cost">14580 р.</div>
+										<div class="cart__clear">
+											<svg class="icon">
+												<use xlink:href="#close"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="cart__row">
+										<div class="cart__name">Рокки Роутс 2</div>
+										<div class="cart__icr">
+											<div class="elements-icr-block">
+												<div class="incr">
+													<div class="incr__minus incr__nav">
+														<svg class="icon">
+															<use xlink:href="#minus"></use>
+														</svg>
+													</div>
+													<div class="incr__val">
+														<span>1</span>
+														<div class="incr__val-coner"></div>
+													</div>
+													<div class="incr__plus incr__nav">
+														<svg class="icon">
+															<use xlink:href="#plus"></use>
+														</svg>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="cart__cost">14580 р.</div>
+										<div class="cart__clear">
+											<svg class="icon">
+												<use xlink:href="#close"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+								<div class="cart-total">Сумма:
+									<span>4 500 р.</span>
+								</div>
+								<div class="cart-get">
+									<div class="cart-get__el get-module" data-module="order">Оформить заказ</div>
+								</div>
+							</div>
+							<div class="cart-info">
+								<div class="veksel">
+									<svg class="icon">
+										<use xlink:href="#uzor"></use>
+									</svg>
+								</div>
+								<div class="cart-info__text">Минимальная сумма заказа 500 р.</div>
+								<div class="cart-info__text">Принимаются к оплате VISA и MASTER CARD</div>
+							</div>
+						</div>
+					</div>
+					<div class="module" data-module="reg">
+						<div class="module-reg module__cont">
+							<div class="form-title">Регистрация</div>
+							<form action="#">
+								<input type="text" placeholder="Ваше имя" />
+								<input type="text" placeholder="Email или телефон" />
+								<input type="password" placeholder="Пароль" />
+								<input type="password" placeholder="Повторите пароль" />
+								<div class="reg-get modal-get" data-modal="regTrue">
+									<div class="reg-get__el">Зарегистрироваться</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="module" data-module="order">
+						<div class="module-order module__cont">
+							<div class="form-title">Оформление заказа</div>
+							<form action="#">
+								<input type="text" placeholder="Ваше имя" />
+								<input type="text" placeholder="Tелефон" />
+								<div class="pay-type">
+									<div class="pay-type__el">
+										<label class="style-label style-label--radio">
+											<input class="sytle-input" type="radio" name="group" checked="checked" />
+											<div class="sytle-input-element">
+												<div class="icon-radio"></div>
+											</div>
+											<div class="sytle-input-text">Наличными</div>
+										</label>
+									</div>
+									<div class="pay-type__el">
+										<div class="check-el">
+											<label class="style-label style-label--radio">
+												<input class="sytle-input" type="radio" name="group" />
+												<div class="sytle-input-element">
+													<div class="icon-radio"></div>
+												</div>
+												<div class="sytle-input-text">По карте</div>
+											</label>
+										</div>
+									</div>
+									<div class="pay-type__el">
+										<div class="check-el">
+											<label class="style-label style-label--radio">
+												<input class="sytle-input" type="radio" name="group" />
+												<div class="sytle-input-element">
+													<div class="icon-radio"></div>
+												</div>
+												<div class="sytle-input-text">Онлайн</div>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="tab">
+									<div class="tab__el tab__el--active" data-tab="self">С собой</div>
+									<div class="tab__el" data-tab="deliver">Доставка</div>
+								</div>
+								<div class="tab__cont" data-tab="self">
+									<p>нет информации</p>
+								</div>
+								<div class="tab__cont tab__cont--hide" data-tab="deliver">
+									<select>
+										<option></option>
+										<option>Москва</option>
+										<option>Волгоград</option>
+										<option>Екатеренбург</option>
+									</select>
+								</div>
+								<div class="person">
+									<div class="person__text">Количество персон</div>
+									<div class="person__incr">
+										<div class="elements-icr-block">
+											<div class="incr incr--one">
+												<div class="incr__minus incr__nav incr--one">
+													<svg class="icon">
+														<use xlink:href="#minus"></use>
+													</svg>
+												</div>
+												<div class="incr__val">
+													<span>1</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">
+													<svg class="icon">
+														<use xlink:href="#plus"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<textarea name="text" cols="30" rows="10" placeholder="Комментарий к заказу"></textarea>
+								<div class="confirm">
+									<div class="check-el">
+										<label class="style-label style-label--checkbox">
+											<input class="sytle-input" type="checkbox" />
+											<div class="sytle-input-element">
+												<svg class="icon-check">
+													<use xlink:href="#checked"></use>
+												</svg>
+											</div>
+											<div class="sytle-input-text">Я даю согласие на
+												<a href="#">хранение, обработку и использование своих персональных данных</a>
+											</div>
+										</label>
+									</div>
+								</div>
+								<div class="order-get">
+									<div class="order-get__el modal-get" data-modal="orderTrue">Оформить заказ</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="module" data-module="item-description">
+						<div class="module-descript module__cont">
+							<div class="descript__cont">
+								<div class="descript__col">
+									<div class="item-info__image" style="background-image:url('img/item-info-img.jpg');"></div>
+								</div>
+								<div class="descript__col descript__col--item-description">
+									<div class="item-info__content">
+										<div class="item-info__content-close">
+											<svg class="icon">
+												<use xlink:href="#close-round"></use>
+											</svg>
+										</div>
+										<div class="item-info__title">Фирменные блинчики</div>
+										<div class="veksel">
+											<svg class="icon">
+												<use xlink:href="#uzor"></use>
+											</svg>
+										</div>
+										<div class="item-info__text">Пицца соус, сыр моцарелла, сыр Фета, сыр дор блю, сыр пармезан, пепперони, салями, ветчина</div>
+										<div class="el__info">
+											<div class="el__weight">350 г.</div>
+											<div class="el__devider"></div>
+											<div class="el__cost">480 р.</div>
+										</div>
+										<div class="item-info__get">Добавить к корзину</div>
+										<div class="item-info__incr">
+											<div class="elements-icr-block">
+												<div class="incr">
+													<div class="incr__minus incr__nav">
+														<svg class="icon">
+															<use xlink:href="#minus"></use>
+														</svg>
+													</div>
+													<div class="incr__val">
+														<span>1</span>
+														<div class="incr__val-coner"></div>
+													</div>
+													<div class="incr__plus incr__nav">
+														<svg class="icon">
+															<use xlink:href="#plus"></use>
+														</svg>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="soc-row">
+											<a class="soc-row__el soc-row__el--vk" href="#">
+												<svg class="icon">
+													<use xlink:href="#soc-vk"></use>
+												</svg>
+											</a>
+											<a class="soc-row__el soc-row__el--fb" href="#">
+												<svg class="icon">
+													<use xlink:href="#soc-facebook"></use>
+												</svg>
+											</a>
+											<a class="soc-row__el soc-row__el--ok" href="#">
+												<svg class="icon">
+													<use xlink:href="#soc-ok"></use>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="module" data-module="news-item">
+						<div class="module-descript module__cont">
+							<div class="descript__cont">
+								<div class="descript__col">
+									<div class="item-info__image" style="background-image:url('img/item-info-img.jpg');"></div>
+								</div>
+								<div class="descript__col descript__col--description">
+									<div class="item-info__content-close">
+										<svg class="icon">
+											<use xlink:href="#close-round"></use>
+										</svg>
+									</div>
+									<div class="item-info__content">
+										<div class="item-info__title">1+1=3 или время пить фрукты!</div>
+										<div class="veksel">
+											<svg class="icon">
+												<use xlink:href="#uzor"></use>
+											</svg>
+										</div>
+										<div class="item-info__text">
+											<p>Лето наступает! 1 июня в сети ресторанов "ЕМ САМ" наступает ВРЕМЯ ПИТЬ ФРУКТЫ! "Sherbets Time!" Освежающие фруктовые щербеты на любой вкус! Ищите во всех ресторанах "ЕМ САМ".</p>
+											<p>Человек может не пить 3 дня. А может пить! Каждый день в сети ресторанов "ЕМ САМ" действует акция "1+1=3". За каждые две кружки фирменного пива "ЕМ САМ" третья - в подарок! ИЛИ при заказе 2-х кружек фирменного пива "ЕМ САМ" вы получите картофель
+												фри в ПОДАРОК!</p>
+											<p>Лето наступает! 1 июня в сети ресторанов "ЕМ САМ" наступает ВРЕМЯ ПИТЬ ФРУКТЫ! "Sherbets Time!" Освежающие фруктовые щербеты на любой вкус! Ищите во всех ресторанах "ЕМ САМ".</p>
+											<p>Человек может не пить 3 дня. А может пить! Каждый день в сети ресторанов "ЕМ САМ" действует акция "1+1=3". За каждые две кружки фирменного пива "ЕМ САМ" третья - в подарок! ИЛИ при заказе 2-х кружек фирменного пива "ЕМ САМ" вы получите картофель
+												фри в ПОДАРОК!</p>
+										</div>
+										<div class="soc-row">
+											<a class="soc-row__el soc-row__el--vk" href="#">
+												<svg class="icon">
+													<use xlink:href="#soc-vk"></use>
+												</svg>
+											</a>
+											<a class="soc-row__el soc-row__el--fb" href="#">
+												<svg class="icon">
+													<use xlink:href="#soc-facebook"></use>
+												</svg>
+											</a>
+											<a class="soc-row__el soc-row__el--ok" href="#">
+												<svg class="icon">
+													<use xlink:href="#soc-ok"></use>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="module" data-module="menu">
+						<div class="module-descript module__cont">
+							<div class="descript__cont">
+								<div class="descript__col">
+									<div class="item-info__content-close">
+										<svg class="icon">
+											<use xlink:href="#close-round"></use>
+										</svg>
+									</div>
+									<div class="menu-info-cont">
+										<div class="menu-title">Меню ресторана</div>
+										<div class="veksel">
+											<svg class="icon">
+												<use xlink:href="#uzor"></use>
+											</svg>
+										</div>
+										<div class="menu-info-wrap">
+											<a class="menu-info__el" href="#">Сеты</a>
+											<a class="menu-info__el" href="#">Роллы</a>
+											<a class="menu-info__el" href="#">Запечённые роллы</a>
+											<a class="menu-info__el" href="#">Горячие роллы</a>
+											<a class="menu-info__el" href="#">Закуски</a>
+											<a class="menu-info__el" href="#">Бургеры</a>
+											<a class="menu-info__el" href="#">Салаты</a>
+											<a class="menu-info__el" href="#">Супы</a>
+											<a class="menu-info__el" href="#">Хлеб</a>
+											<a class="menu-info__el" href="#">Паста, лапша</a>
+											<a class="menu-info__el" href="#">Пицца</a>
+											<a class="menu-info__el" href="#">Блюда из курицы</a>
+											<a class="menu-info__el" href="#">Блюда из свинины</a>
+											<a class="menu-info__el" href="#">Блюда из мяса</a>
+											<a class="menu-info__el" href="#">Блюда из рыбы</a>
+											<a class="menu-info__el" href="#">Гарниры</a>
+											<a class="menu-info__el" href="#">Десерты</a>
+											<a class="menu-info__el" href="#">Чай и кофе</a>
+											<a class="menu-info__el" href="#">Безалкогольные напитки</a>
+											<a class="menu-info__el" href="#">Вот такие пироги!</a>
+											<a class="menu-info__el" href="#">Соки, смузи</a>
+											<a class="menu-info__el" href="#">Время пить фрукты!</a>
+											<a class="menu-info__el" href="#">Алкогольные напитки</a>
+											<a class="menu-info__el" href="#">Детское меню</a>
+											<a class="menu-info__el" href="#">Бизнес-ланч</a>
+										</div>
+									</div>
+								</div>
+								<div class="descript__col descript__col--recomend">
+									<div class="menu-recommed">
+										<div class="line-title-wrap">
+											<div class="line-title-el"></div>
+											<div class="line-title">Рекомендуем</div>
+											<div class="line-title-el"></div>
+										</div>
+										<div class="menu-recommed__title">Пицца “Смак”</div>
+										<div class="menu-recommed__text">Пицца соус, сыр моцарелла, сыр Фета, сыр дор блю, сыр пармезан, пепперони, салями, ветчина</div>
+										<div class="el__info">
+											<div class="el__weight">350 г.</div>
+											<div class="el__devider"></div>
+											<div class="el__cost">480 р.</div>
+										</div>
+										<div class="menu-recommed__img" style="background-image:url('img/pizza.png');"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-layer">
+						<div class="modal-cont">
+							<div class="modal-filter"></div>
+							<div class="modal-wrap">
+								<div class="modal" data-modal="orderTrue">
+									<div class="modal-content">
+										<div class="modal-icon-head">
+											<svg class="icon">
+												<use xlink:href="#apple"></use>
+											</svg>
+										</div>
+										<div class="modal-title">Спасибо!
+											<br> Ваш заказ принят :)</div>
+										<div class="modal-text">Вы можете проследить за ним
+											<br> в личном кабинете</div>
+										<div class="modal-btn modal-close">Хорошо</div>
+									</div>
+								</div>
+								<div class="modal" data-modal="regTrue">
+									<div class="modal-content">
+										<div class="modal-icon-head">
+											<svg class="icon">
+												<use xlink:href="#mail"></use>
+											</svg>
+										</div>
+										<div class="modal-title">Ура! Вы успешно
+											<br> зарегистрированы :)</div>
+										<div class="modal-text">Мы отправили письмо на Вашу почту</div>
+										<div class="modal-btn modal-close">Хорошо</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--block module end-->
+					<div class="content-frame">
+						<div class="content-frame__left content-frame__col">
+							<div class="user">
+								<div class="user-filter"></div>
+								<div class="user-info">
+									<div class="user__avatar" style="background-image:url('img/user.jpg');"></div>
+									<div class="user__name">Иванова</div>
+									<div class="user__name">Екатерина</div>
+								</div>
+								<div class="user-contact">
+									<div class="user__phone">8 965 890 7634</div>
+									<div class="user__adress">г. Нижний Тагил, ул. Вагоностроителей, 26а</div>
+								</div>
+							</div>
+						</div>
+						<div class="content-frame__right content-frame__col">
+							<div class="info-block">
+								<div class="info-block__title">История заказов</div>
+								<div class="veksel">
+									<svg class="icon">
+										<use xlink:href="#uzor"></use>
+									</svg>
+								</div>
+								<div class="user-order">
+									<div class="user-order__status">
+										<div class="user-order__date">28.05.2017</div>
+										<div class="user-order__info user-order__info--orange">Готовим</div>
+									</div>
+									<div class="user__row">
+										<div class="user__row-title">Рокки Роутс 1</div>
+										<div class="user__row-dot"></div>
+										<div class="user__row-value">450 руб</div>
+									</div>
+									<div class="user__row">
+										<div class="user__row-title">Рокки Роутс 2</div>
+										<div class="user__row-dot"></div>
+										<div class="user__row-value">450 руб</div>
+									</div>
+									<div class="user__row">
+										<div class="user__row-title">Рокки Роутс 3</div>
+										<div class="user__row-dot"></div>
+										<div class="user__row-value">450 руб</div>
+									</div>
+								</div>
+								<div class="user-order">
+									<div class="user-order__status">
+										<div class="user-order__date">28.05.2017</div>
+										<div class="user-order__info">Доставлен</div>
+									</div>
+									<div class="user__row">
+										<div class="user__row-title">Рокки Роутс 1</div>
+										<div class="user__row-dot"></div>
+										<div class="user__row-value">450 руб</div>
+									</div>
+									<div class="user__row">
+										<div class="user__row-title">Рокки Роутс 2</div>
+										<div class="user__row-dot"></div>
+										<div class="user__row-value">450 руб</div>
+									</div>
+									<div class="user__row">
+										<div class="user__row-title">Рокки Роутс 3</div>
+										<div class="user__row-dot"></div>
+										<div class="user__row-value">450 руб</div>
+									</div>
+								</div>
+								<div class="user-order__repeat">Повторить заказ</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--block toolbar-->
+			<div class="toolbar">
+				<div class="toolbar-wrap">
+					<div class="toolbar-enter get-module" data-module="enter">
+						<div class="toolbar-enter-icon--open">
+							<svg class="icon">
+								<use xlink:href="#account-key"></use>
+							</svg>
+							<!--icon for login user-->
+							<!--<svg class="icon">-->
+							<!--	<use xlink:href="#account"></use>-->
+							<!--</svg>-->
+						</div>
+						<div class="toolbar-enter-icon--close">
+							<svg class="icon ">
+								<use xlink:href="#close-round"></use>
+							</svg>
+						</div>
+					</div>
+					<div class="toolbar-cart get-module" data-module="cart">
+						<div class="toolbar-cart__icon">
+							<svg class="icon cart-close">
+								<use xlink:href="#cart"></use>
+							</svg>
+							<svg class="icon cart-open">
+								<use xlink:href="#close-round"></use>
+							</svg>
+							<div class="toolbar-cart__val">32</div>
+						</div>
+					</div>
+					<div class="toolbar-call">
+						<svg class="icon">
+							<use xlink:href="#phone"></use>
+						</svg>
+					</div>
+					<div class="toolbar-up">
+						<svg class="icon">
+							<use xlink:href="#arrow-top"></use>
+						</svg>
+					</div>
+				</div>
+			</div>
+			<!--block toolbar end-->
+		</div>
+		<!--block modal-->
+		<!--block modal end-->
+		<!--build:js js/combined.js-->
+		<script src="bower/jquery/dist/jquery.js"></script>
+		<script src="bower/owl.carousel/dist/owl.carousel.min.js"></script>
+		<script src="bower/svg4everybody/dist/svg4everybody.js"></script>
+		<!--script(src='bower/jquery-nice-select/js/jquery.nice-select.min.js')-->
+		<script src="bower/select2/dist/js/select2.min.js"></script>
+		<script src="js/jquery.smoothscroll.js"></script>
+		<!--script(src='bower/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js')-->
+		<!-- endbuild-->
+		<script src="js/script.js"></script>
+		<script src="js/script-edit.js"></script>
+	</body>
+
+</html>
