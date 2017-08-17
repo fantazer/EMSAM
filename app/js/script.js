@@ -130,9 +130,26 @@ $(document).ready(function(){
   });
 	//arrow scroll end
 
+	//100vh tab size
+	function setHeight(el) {
+	   var windowHeight = $(window).height(),
+	       $block = $(el);
+	    if(windowHeight < 768) {
+	         $block.css({'height': windowHeight  + 'px'})
+	    } else {
+	       $block.css({'height': ''})
+	    }
+	}
+	$(window).on('resize orientationchange', function(){
+		setHeight('.module');
+	});
+
+	//100vh tab size end
+
 	//animate module
 	var scrollPos = 0;
 	var hideModule = function () {
+		setHeight('.module');
 		$('.module__cont').removeClass('module__cont--open');
 		//$('.module').removeClass('module--open');
 		$('.content-filter').removeClass('content-filter--open');
@@ -165,12 +182,12 @@ $(document).ready(function(){
 	};
 
 	$('.get-module').click(function(event){
-
 			var currentModule = $(this).attr('data-module');
 			$('.get-module').not(this).removeClass('get-module--active');
-
-
 			hideModule();
+
+			setHeight('.module');
+
 			if(!$(this).hasClass('get-module--active')){
 				$(this).addClass('get-module--active');
 				$('.module').each(function () {
@@ -298,6 +315,10 @@ $(document).ready(function(){
 				$(this).closest('.incr').find('span').html('1')
 			}
 		});
+
+
+
+
 	//show description incr end
 
 	/* ###### For only ies  ######*/

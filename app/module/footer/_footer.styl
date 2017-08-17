@@ -1,10 +1,14 @@
 .footer
+	+below(768px)
+		padding: 20px
 	margin-top: 5%
 	f()
 	justify-content: space-between
 	padding: 5%
 
 .footer-menu
+	+below(768px)
+		display: none
 	f()
 	fw()
 	width: 50%
@@ -15,7 +19,11 @@
 	a
 		display: inline-block
 		br-animate(#4d342c,1px)
+
 .footer-info
+	+below(768px)
+		flex(mid)
+		width: 100%
 	f()
 	fl()
 	align-items: flex-end
@@ -30,4 +38,6 @@
 	br-animate(#4d342c,1px)
 
 .footer-info__logo
+	+below(768px)
+		margin: 20px 0
 	margin-top: auto

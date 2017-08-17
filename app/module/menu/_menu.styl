@@ -1,9 +1,16 @@
 /*! block menu*/
 .menu
+	+below(1280px)
+		width: 250px
+	+below(1024px)
+		display: none
 	position: relative
 	width: 385px
-
 .menu-wrap
+	+below(1280px)
+		width: 250px
+	+below(1024px)
+		width: 100%
 	position: fixed
 	width: 385px
 	height: 100%
@@ -16,7 +23,7 @@
 	flex(mid)
 
 .menu-logo
-	size 30%
+	size 45%
 	margin-bottom: 5vh
 	.icon
 		size 100%
@@ -27,6 +34,8 @@
 	fl()
 
 .menu-nav__el
+	+below(1280px)
+		font-size: 14px
 	@extend .type--md
 	up()
 	tr(all)
@@ -91,5 +100,35 @@
 		.icon
 			fill #d99a34
 
+.mobile-nav
+	+above(1025px)
+		display: none
+	padding: 15px
+	background: white
+	f()
+	align-items: center
+	position: fixed
+	top 0
+	left: 0
+	width: 100%
+	z-index 210
+	box-shadow 0px 1px 3px #717171
+
+.mobile-nav__toggle
+	padding-right: 15px
+	cp()
+	.icon
+		size 25px
+
+.mobile-nav__logo
+	font-size: 16px
+	font-weight 600
+	color black
+
+.mobile-nav__cart
+	margin-left: auto
+	cp()
+	.icon
+		size 25px
 
 /*!block menu end */

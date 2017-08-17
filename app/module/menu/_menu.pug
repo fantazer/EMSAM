@@ -1,5 +1,11 @@
 mixin menu()
 	//block menu
+	.mobile-nav
+		.mobile-nav__toggle.get-module(data-module="cart")
+			+icon("menu","icon")
+		a(href="/").mobile-nav__logo ЕмСам
+		.mobile-nav__cart
+			+icon("cart","icon")
 	.menu
 		.menu-wrap
 			.menu-cont
