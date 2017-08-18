@@ -103,7 +103,7 @@
 .mobile-nav
 	+above(1025px)
 		display: none
-	padding: 15px
+	height: 58px
 	background: white
 	f()
 	align-items: center
@@ -115,7 +115,7 @@
 	box-shadow 0px 1px 3px #717171
 
 .mobile-nav__toggle
-	padding-right: 15px
+	padding:0 15px
 	cp()
 	.icon
 		size 25px
@@ -126,9 +126,76 @@
 	color black
 
 .mobile-nav__cart
-	margin-left: auto
+	flex(mid)
 	cp()
+	size 58px
 	.icon
 		size 25px
+	.icon.cart-open
+		display: none
 
+.mobile-nav__account
+	flex(mid)
+	cp()
+	size 58px
+	margin-left: auto
+	.icon
+		size 25px
+	.icon.account-open
+		display: none
+
+
+.person__incr
+	.incr
+		margin-bottom: 0
+
+
+.mobile-nav__account.get-module--active
+	background: $red
+	size 58px
+	flex(mid)
+	.icon.account-close
+		display: none
+	.icon.account-open
+		display: block
+		fill white!important
+		size 25px
+
+.mobile-nav__cart.get-module--active
+	background: $red
+	size 58px
+	flex(mid)
+	.icon.cart-close
+		display: none
+	.icon.cart-open
+		display: block
+		fill white!important
+		size 25px
+
+.mobile-nav__toggle
+	size 58px
+	flex(mid)
+	margin-right: 10px
+	.icon.menu-open
+		display: none
+	.icon.menu-back
+		display: none
+.mobile-nav__toggle.get-module--active
+	background: $red
+	size 58px
+	flex(mid)
+	.icon.menu-close
+		display: none
+	.icon.menu-open
+		display: block
+		fill white!important
+		size 25px
+
+.mobile-nav__toggle--back
+	.icon.menu-open
+		display: none
+	.icon.menu-close
+		display: none
+	.icon.menu-back
+		display: block
 /*!block menu end */

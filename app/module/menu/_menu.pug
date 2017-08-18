@@ -1,11 +1,18 @@
 mixin menu()
 	//block menu
 	.mobile-nav
-		.mobile-nav__toggle.get-module(data-module="cart")
-			+icon("menu","icon")
+		.mobile-nav__toggle.get-module(data-module="mobile-menu")
+			+icon("menu","icon menu-close")
+			+icon("close","icon menu-open")
+			svg(class='icon menu-back get-module' data-module="mobile-menu")
+				use(xlink:href="#arrow-left")
 		a(href="/").mobile-nav__logo ЕмСам
-		.mobile-nav__cart
-			+icon("cart","icon")
+		.mobile-nav__account.get-module(data-module="enter")
+			+icon("account","icon account-close")
+			+icon("close","icon account-open")
+		.mobile-nav__cart.get-module(data-module="cart")
+			+icon("cart","icon cart-close")
+			+icon("close","icon cart-open")
 	.menu
 		.menu-wrap
 			.menu-cont

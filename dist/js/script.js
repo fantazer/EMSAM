@@ -2,6 +2,7 @@ $(document).ready(function(){
 
 
 
+
 	//tab
 	$('.tab__el').click(function(){
 		var currentTab = $(this).data('tab');
@@ -130,11 +131,30 @@ $(document).ready(function(){
   });
 	//arrow scroll end
 
+	//100vh tab size
+	function setHeight(el) {
+	   var windowHeight = $(window).height(),
+	       $block = $(el);
+	    if(windowHeight < 768) {
+	         $block.css({'height': windowHeight  + 'px'})
+	    } else {
+	       $block.css({'height': ''})
+	    }
+	}
+	$(window).on('resize orientationchange', function(){
+		setHeight('.module');
+		//setHeight('.main-page__first-section-slider');
+	});
+	//setHeight('.main-page__first-section-slider');
+
+	//100vh tab size end
+
 	//animate module
 	var scrollPos = 0;
 	var hideModule = function () {
+		setHeight('.module');
 		$('.module__cont').removeClass('module__cont--open');
-		//$('.module').removeClass('module--open');
+		$('.mobile-nav__toggle').removeClass('mobile-nav__toggle--back');
 		$('.content-filter').removeClass('content-filter--open');
 		if($('.get-module').hasClass('get-module--active')){
 					$('body').css({
@@ -165,12 +185,13 @@ $(document).ready(function(){
 	};
 
 	$('.get-module').click(function(event){
-
+			$('.module__cont').removeClass('module__cont--open');
 			var currentModule = $(this).attr('data-module');
 			$('.get-module').not(this).removeClass('get-module--active');
-
-
 			hideModule();
+
+			setHeight('.module');
+
 			if(!$(this).hasClass('get-module--active')){
 				$(this).addClass('get-module--active');
 				$('.module').each(function () {
@@ -256,7 +277,7 @@ $(document).ready(function(){
 	$(".main-page__first-section-slider").owlCarousel({
 	 items : 1,
 	 //autoHeight : true,
-	 dots: false,
+	 dots: true,
 	 autoplay : false,
 	 nav:false,
 	 stagePadding: 0
@@ -298,6 +319,27 @@ $(document).ready(function(){
 				$(this).closest('.incr').find('span').html('1')
 			}
 		});
+
+	//set active class on mobile menu
+	 $('.enter-account__text .get-module').click(function(){
+			$('.mobile-nav__account').addClass('get-module--active')
+		});
+
+		$('.cart-get__el').click(function(){
+			$('.mobile-nav__cart').addClass('get-module--active')
+		});
+		$('.icon.menu-back').click(function(){
+			$('.mobile-nav__toggle').addClass('get-module--active')
+		});
+	//set active class on mobile menu end
+
+	//toggle icon mobile menu
+		$('.mobile-menu-get-full').click(function(){
+			$('.mobile-nav__toggle').addClass('mobile-nav__toggle--back');
+		});
+	//toggle icon mobile menu end
+
+
 	//show description incr end
 
 	/* ###### For only ies  ######*/
@@ -335,41 +377,6 @@ $(document).ready(function(){
 	// ==== clear storage end =====
 
 
-	/* ###### For SlideToggle Elements  ######*/
-	/*var hideToggle = function(targetClick,toggleEl) {
-		$(targetClick).click(function(event){
-				event.stopPropagation();
-				$(toggleEl).slideToggle("fast");
-		});
-		$(toggleEl).on("click", function (event) {
-			event.stopPropagation();
-		});
-		$(document).on("click", function () {
-				$(toggleEl).hide();
-		});
-	}
-	hideToggle('.icon-bars','.top-menu_link');*/
-
-
-	/* ###### init RangeSLider  ######*/
-	/* ###### bower i --save-dev nouislider  ######*/
-	/* ###### https://gist.github.com/fantazer/2bdc4e6a63708e143718ffa7c32eae17  ######*/
-
-	/*var slider = document.getElementById('rangeSlider'); //Элемент
-
-	noUiSlider.create(slider, {
-		start: [0, 100],
-		connect: true,
-		step: 10,
-		range: {
-			'min': 0,
-			'max': 100,
-		},
-		pips: { // Show a scale with the slider
-			mode: 'steps',
-			density: 4
-		}
-	});*/
 
 
 })

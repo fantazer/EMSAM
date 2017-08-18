@@ -11,10 +11,9 @@ include block_html/_include.pug
 				.main-page__first-section
 					.main-page__first-section-about
 						.main-page__first-section-slider.owl-carousel
+							- for (var i=0;i<4;i++)
 								.main-page__first-section-slider__el(style="background-image:url('img/slide-item-1.jpg')")
-									//.filter
-								.main-page__first-section-slider__el(style="background-image:url('img/slide-item-1.jpg')")
-									//.filter
+
 					.main-page__first-section-info
 						.item-block(style="background-image:url('img/tea.jpg')")
 							.filter

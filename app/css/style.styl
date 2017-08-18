@@ -40,8 +40,7 @@ body
 
 .page
 	+below(1024px)
-		fw()
-		fl()
+		display: block
 		padding-top: 58px
 	display flex
 	min-height 100vh
@@ -70,8 +69,33 @@ body
 		width: 100%
 	width: 50%
 
-//.main-page__first-section-slider
-	//height: 100vh
+.main-page__first-section-slider
+	.owl-dots
+		width 100%
+		flex(mid)
+		position: absolute
+		z-index 20
+		bottom 10%
+	.owl-dot
+		round()
+		margin 5px
+		width 12px
+		height 12px
+		background #949190
+	.owl-dot.active
+		background none
+		size 14px
+		border 1px solid white
+		position: relative
+		&:before
+			content ''
+			round()
+			background: white
+			position: absolute
+			size 8px
+			top 2px
+			left 2px
+
 .main-page__first-section-info
 	+below(768px)
 		width: 100%
@@ -92,10 +116,13 @@ body
 		order 2
 .main-page__first-section-slider__el
 	+below(768px)
-		height 100vh
-		min-height 450px
+		height: auto
+		height calc(100vh - 105px)
+		min-height 400px
+		background-position: top center
 	position: relative
 	bg-full()
+	//background-size:contain
 	width: 100%
 	min-height 600px
 	height: 100vh
@@ -178,6 +205,7 @@ body
 	.line-title-wrap
 		position: absolute
 		top 10%
+		left 0
 		width: 100%
 
 .item-slider__nav-prev
@@ -261,6 +289,7 @@ body
 			margin-right: 20px
 
 .module
+	visibility: hidden
 	+below(768px)
 		max-height 800px
 		overflow-y auto
@@ -272,7 +301,7 @@ body
 	height: 100vh
 	//background: rgba(0, 0, 0, 0.62)
 	z-index 220
-	transform translateX(100%)
+	/*transform translateX(100%)*/
 	f()
 	justify-content: flex-end
 
@@ -285,6 +314,7 @@ body
 
 .module--open
 	transform translateX(0%)
+	visibility visible
 
 .content-filter
 	position: absolute
@@ -658,9 +688,16 @@ body
 	size 15px
 
 .pay-type
+	+below(1440px)
+		fw()
 	flex(between)
 	margin-bottom: 5%
 .pay-type__el
+	+below(1440px)
+		width: auto
+		flex-grow: 1
+		.sytle-input-text
+			font-size: 11px
 	width: 30%
 
 .tab
@@ -953,6 +990,11 @@ body
 		flex(mid)
 		fl()
 
+.descript__cont-module-menu
+	+below(1024px)
+		.item-info__content-close
+			display: none
+
 .menu-info-cont
 	+below(1280px)
 		padding: 10%
@@ -1209,5 +1251,40 @@ body
 
 .page-open-modal
 	padding-top: 0
+
+.descript__col--recomend
+	+below(768px)
+		display: none
+
+.mobile-menu
+	flex(mid)
+	fl()
+	height: 100%
+
+.mobile-menu__logo
+	flex(mid)
+	margin-bottom: 20px
+	margin-top: -30%
+	.icon
+		size 40%
+.mobile-menu__wrap
+	fl()
+	flex(mid)
+
+.mobile-menu__el
+	+below(1280px)
+		font-size: 18px
+	@extend .type--md
+	up()
+	tr(all)
+	br-animate(#4d342c,2px)
+	cp()
+	font-weight:700
+	color #956c5f
+	text-align: center
+	margin-bottom: 3vh
+	&:hover
+		color #4d342c
+
 
 @import "../module/**/*"

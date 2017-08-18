@@ -172,7 +172,7 @@ mixin module()
 
 	.module(data-module="menu")
 		.module-descript.module__cont
-			.descript__cont
+			.descript__cont.descript__cont-module-menu
 				.descript__col
 					.item-info__content-close
 						+icon("close-round","icon")
@@ -225,6 +225,25 @@ mixin module()
 							.el__devider
 							.el__cost 480 р.
 						.menu-recommed__img(style="background-image:url('img/pizza.png')")
+
+	.module(data-module="mobile-menu")
+		.module-mobile-nav.module__cont
+			.mobile-menu
+				.mobile-menu__logo
+					+icon("logo","icon")
+				.mobile-menu__wrap
+					.mobile-menu__el.mobile-menu-get-full.get-module(data-module="menu") Меню
+					-
+						var items = [
+						'Акции',
+						'Доставка',
+						'Отзывы',
+						'О нас'
+						];
+					each item in items
+						a(href="#").mobile-menu__el #{item}
+
+
 
 	.modal-layer
 		.modal-cont

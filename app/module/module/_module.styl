@@ -14,9 +14,11 @@
 			margin-bottom: 5%
 
 .module__cont
+	+below(768px)
+		transform rotateY(90deg)
 	height: 100%
-	transition all 1s
 	transform translateX(200%)
+	transition all .8s
 	@extend .module-el
 
 
@@ -31,8 +33,12 @@
 	+below(768px)
 		padding-bottom: 80px
 		overflow-y auto
+		transform rotateY(0deg)
 	transform translateX(0%)
-	transition all 1s
+
+.module__cont.module__cont--open
+	transition all 1.2s
+	transition-delay .2s
 
 .enter-foget__link
 	@extend .link--main
@@ -118,9 +124,10 @@
 	font-weight:700
 
 .cart__clear
-	position: absolute
-	top 10px
-	right: 10px
+	+below(768px)
+		position: absolute
+		top 10px
+		right: 10px
 	.icon
 		&:hover
 			opacity 1
