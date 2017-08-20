@@ -21,6 +21,7 @@
 		<link rel="stylesheet" href="bower/owl.carousel/dist/assets/owl.carousel.css" />
 		<link rel="stylesheet" href="bower/select2/dist/css/select2.min.css" />
 		<!--link(rel="stylesheet", href="bower/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css")-->
+		<link rel="stylesheet" href="bower/perfect-scrollbar/css/perfect-scrollbar.css" />
 		<!--endbuild-->
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/style-edit.css" />
@@ -33,15 +34,33 @@
 		<div class="page">
 			<!--block menu-->
 			<div class="mobile-nav">
-				<div class="mobile-nav__toggle get-module" data-module="cart">
-					<svg class="icon">
+				<div class="mobile-nav__toggle get-module" data-module="mobile-menu">
+					<svg class="icon menu-close">
 						<use xlink:href="#menu"></use>
+					</svg>
+					<svg class="icon menu-open">
+						<use xlink:href="#close"></use>
+					</svg>
+					<svg class="icon menu-back get-module" data-module="mobile-menu">
+						<use xlink:href="#arrow-left"></use>
 					</svg>
 				</div>
 				<a class="mobile-nav__logo" href="/">ЕмСам</a>
-				<div class="mobile-nav__cart">
-					<svg class="icon">
+				<div class="mobile-nav__account get-module" data-module="enter">
+					<svg class="icon account-close">
+						<use xlink:href="#account"></use>
+					</svg>
+					<svg class="icon account-open">
+						<use xlink:href="#close"></use>
+					</svg>
+				</div>
+				<div class="mobile-nav__cart get-module" data-module="cart">
+					<div class="mobile-nav__cart-val">23</div>
+					<svg class="icon cart-close">
 						<use xlink:href="#cart"></use>
+					</svg>
+					<svg class="icon cart-open">
+						<use xlink:href="#close"></use>
 					</svg>
 				</div>
 			</div>
@@ -486,7 +505,7 @@
 					</div>
 					<div class="module" data-module="menu">
 						<div class="module-descript module__cont">
-							<div class="descript__cont">
+							<div class="descript__cont descript__cont-module-menu">
 								<div class="descript__col">
 									<div class="item-info__content-close">
 										<svg class="icon">
@@ -545,6 +564,24 @@
 										</div>
 										<div class="menu-recommed__img" style="background-image:url('img/pizza.png');"></div>
 									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="module" data-module="mobile-menu">
+						<div class="module-mobile-nav module__cont">
+							<div class="mobile-menu">
+								<div class="mobile-menu__logo">
+									<svg class="icon">
+										<use xlink:href="#logo"></use>
+									</svg>
+								</div>
+								<div class="mobile-menu__wrap">
+									<div class="mobile-menu__el mobile-menu-get-full get-module" data-module="menu">Меню</div>
+									<a class="mobile-menu__el" href="#">Акции</a>
+									<a class="mobile-menu__el" href="#">Доставка</a>
+									<a class="mobile-menu__el" href="#">Отзывы</a>
+									<a class="mobile-menu__el" href="#">О нас</a>
 								</div>
 							</div>
 						</div>
@@ -791,6 +828,8 @@
 		<!--script(src='bower/jquery-nice-select/js/jquery.nice-select.min.js')-->
 		<script src="bower/select2/dist/js/select2.min.js"></script>
 		<script src="js/jquery.smoothscroll.js"></script>
+		<script src="bower/perfect-scrollbar/js/perfect-scrollbar.jquery.js"></script>
+		<!--script(src="js/perfect-scrollbar.jquery.js")-->
 		<!--script(src='bower/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js')-->
 		<!-- endbuild-->
 		<script src="js/script.js"></script>

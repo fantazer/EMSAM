@@ -487,12 +487,17 @@ body
 	+below(1600px)
 		width: calc(100% / 3 + 1px)
 		flex-grow 1
+		height: 400px
+	+below(1280px)
+		height: auto
 	+below(768px)
 		width: calc(50% + 1px)
 	+below(640px)
 		width: 100%
+	height: 500px
 	flex(mid)
 	fl()
+	overflow hidden
 	width: calc(20% + 1px)
 	border 1px solid $gray
 	padding: 25px
@@ -500,15 +505,20 @@ body
 	margin-top: -1px
 	position: relative
 	&:hover
-		.el__img
-			+below(768px)
-				height: 100px
-			height: 0
-		.el__incr
-			display: block
+		+above(1280px)
+			.el__img
+				transform translateY(-200px)
+				+below(768px)
+					height: 100px
+				//height: 0
+			.el__incr
+				display: block
+			.el__title
+				margin-top: -120px
 
 .el__img
-	//tr(all)
+	transform translateY(0px)
+	transition all .8s
 	width: 100%
 	height: 100px
 
@@ -521,11 +531,13 @@ body
 
 .el__title
 	cp()
+	transition all .8s
 	font-family Oswald
 	font-size 24px
 	font-weight 300
 	margin-bottom: 20px
 	z-index 2
+	margin-top:0
 
 .el__text
 	+below(768px)
@@ -573,6 +585,7 @@ body
 	flex(between)
 	width: calc(40% + 1px)
 	padding-bottom: 0
+	height: auto !important
 	.el__img
 		margin-top: 0
 
@@ -939,6 +952,7 @@ body
 		fw()
 		height: auto
 	f()
+	position: relative
 	height: 100%
 	width: 100%
 
@@ -997,7 +1011,8 @@ body
 
 .menu-info-cont
 	+below(1280px)
-		padding: 10%
+		padding: 6%
+		min-height 500px
 	height: 100%
 	padding: 15%
 	width: 100%
@@ -1262,6 +1277,8 @@ body
 	height: 100%
 
 .mobile-menu__logo
+	+below(768px)
+		margin-top: -10px
 	flex(mid)
 	margin-bottom: 20px
 	margin-top: -30%
@@ -1287,4 +1304,13 @@ body
 		color #4d342c
 
 
+
+.ps-container > .ps-scrollbar-x-rail > .ps-scrollbar-x {
+  transition: .2s linear left;
+  /* maybe other vendor-prefixed transitions */
+}
+.ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y {
+  transition: .2s linear top;
+  /* maybe other vendor-prefixed transitions */
+}
 @import "../module/**/*"

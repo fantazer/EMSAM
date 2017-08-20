@@ -129,10 +129,26 @@
 	flex(mid)
 	cp()
 	size 58px
+	position: relative
 	.icon
 		size 25px
 	.icon.cart-open
 		display: none
+
+.mobile-nav__cart-val
+	position: absolute
+	padding: 2px 4px
+	background: $red
+	color white
+	font-size: 10px
+	br(10px)
+	top 10px
+	right: 5px
+
+.mobile-nav__cart.get-module--active
+	.mobile-nav__cart-val
+		background: white
+		color $red
 
 .mobile-nav__account
 	flex(mid)

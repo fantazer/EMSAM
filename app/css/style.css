@@ -1568,6 +1568,7 @@ body {
 }
 .el,
 .el-big {
+  height: 500px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1583,6 +1584,7 @@ body {
   -webkit-flex-flow: column;
       -ms-flex-flow: column;
           flex-flow: column;
+  overflow: hidden;
   width: -webkit-calc(20% + 1px);
   width: calc(20% + 1px);
   border: 1px solid #dedede;
@@ -1600,6 +1602,13 @@ body {
     -webkit-flex-grow: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
+    height: 400px;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .el,
+  .el-big {
+    height: auto;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -1615,21 +1624,34 @@ body {
     width: 100%;
   }
 }
-.el:hover .el__img,
-.el-big:hover .el__img {
-  height: 0;
+@media only screen and (min-width: 1280px) {
+  .el:hover .el__img,
+  .el-big:hover .el__img {
+    -webkit-transform: translateY(-200px);
+        -ms-transform: translateY(-200px);
+            transform: translateY(-200px);
+  }
+  .el:hover .el__incr,
+  .el-big:hover .el__incr {
+    display: block;
+  }
+  .el:hover .el__title,
+  .el-big:hover .el__title {
+    margin-top: -120px;
+  }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 1280px) and (max-width: 768px) {
   .el:hover .el__img,
   .el-big:hover .el__img {
     height: 100px;
   }
 }
-.el:hover .el__incr,
-.el-big:hover .el__incr {
-  display: block;
-}
 .el__img {
+  -webkit-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-transition: all 0.8s;
+          transition: all 0.8s;
   width: 100%;
   height: 100px;
 }
@@ -1643,11 +1665,14 @@ body {
   margin-bottom: 20px;
 }
 .el__title {
+  -webkit-transition: all 0.8s;
+          transition: all 0.8s;
   font-family: Oswald;
   font-size: 24px;
   font-weight: 300;
   margin-bottom: 20px;
   z-index: 2;
+  margin-top: 0;
 }
 .el__title:hover {
   cursor: pointer;
@@ -1726,6 +1751,7 @@ body {
   width: -webkit-calc(40% + 1px);
   width: calc(40% + 1px);
   padding-bottom: 0;
+  height: auto !important;
 }
 @media only screen and (max-width: 1600px) {
   .el-big {
@@ -2218,6 +2244,7 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   height: 100%;
   width: 100%;
 }
@@ -2327,7 +2354,8 @@ body {
 }
 @media only screen and (max-width: 1280px) {
   .menu-info-cont {
-    padding: 10%;
+    padding: 6%;
+    min-height: 500px;
   }
 }
 .menu-info-cont .veksel {
@@ -2720,6 +2748,11 @@ body {
   margin-bottom: 20px;
   margin-top: -30%;
 }
+@media only screen and (max-width: 768px) {
+  .mobile-menu__logo {
+    margin-top: -10px;
+  }
+}
 .mobile-menu__logo .icon {
   width: 40%;
   height: 40%;
@@ -2774,6 +2807,16 @@ body {
 }
 .mobile-menu__el:hover {
   color: #4d342c;
+}
+.ps-container > .ps-scrollbar-x-rail > .ps-scrollbar-x {
+  -webkit-transition: 0.2s linear left;
+          transition: 0.2s linear left;
+/* maybe other vendor-prefixed transitions */
+}
+.ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y {
+  -webkit-transition: 0.2s linear top;
+          transition: 0.2s linear top;
+/* maybe other vendor-prefixed transitions */
 }
 .footer {
   margin-top: 5%;
@@ -3159,6 +3202,7 @@ body {
           align-items: center;
   width: 58px;
   height: 58px;
+  position: relative;
 }
 .mobile-nav__cart:hover {
   cursor: pointer;
@@ -3169,6 +3213,21 @@ body {
 }
 .mobile-nav__cart .icon.cart-open {
   display: none;
+}
+.mobile-nav__cart-val {
+  position: absolute;
+  padding: 2px 4px;
+  background: #ed4849;
+  color: #fff;
+  font-size: 10px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  top: 10px;
+  right: 5px;
+}
+.mobile-nav__cart.get-module--active .mobile-nav__cart-val {
+  background: #fff;
+  color: #ed4849;
 }
 .mobile-nav__account {
   display: -webkit-box;
@@ -3778,6 +3837,11 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+@media only screen and (max-width: 1280px) {
+  .toolbar-up--show {
+    padding: 18px;
+  }
 }
 .toolbar-up--show .icon {
   display: block;
