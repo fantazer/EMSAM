@@ -339,13 +339,9 @@ $(document).ready(function(){
 		});
 	//toggle icon mobile menu end
 
-
-	//show description incr end
-
-	/* ###### For only ies  ######*/
-	//if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)){
-	//	//code
-	//}
+	//template scroll bar
+	$('.module__cont, .descript__cont , .info-block').perfectScrollbar();
+	//template scroll bar end
 
 	//message for old IE
 	function isIE () {

@@ -137,7 +137,22 @@ body
 
 .item-block
 	position: relative
+	overflow hidden
+	display: block
+	&:hover
+		.item-block__img
+			transform scale(1.3) rotate(10deg)
+
+.item-block__img
 	bg-full()
+	transition all 1.8s
+	position: absolute
+	top 0
+	left: 0
+	height: 100%
+	width: 100%
+	cp()
+
 
 .item-block__name
 	+below(1280px)
@@ -429,7 +444,7 @@ body
 	cp()
 	&:hover
 		.news__img-el
-			transform scale(1.2)
+			transform scale(1.3) rotate(5deg)
 
 .news__img
 	height: 260px
@@ -507,7 +522,7 @@ body
 	&:hover
 		+above(1280px)
 			.el__img
-				transform translateY(-200px)
+				transform translateY(-240px)
 				+below(768px)
 					height: 100px
 				//height: 0
@@ -976,12 +991,17 @@ body
 		size 40px
 		flex(mid)
 		background: $red
+	tr(all)
+	cp()
 	position: absolute
 	top 5%
 	right: 5%
-	cp()
 	z-index 5
+	&:hover
+		.icon
+			transform rotate(360deg)
 	.icon
+		transform rotate(0deg)
 		tr(all)
 		size 30px
 		fill $gray
