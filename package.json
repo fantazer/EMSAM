@@ -51,5 +51,7 @@
     "vinyl-ftp": "^0.4.4",
     "wiredep": "^4.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "gulp-if": "^2.0.2"
+  }
 }

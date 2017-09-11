@@ -1,8 +1,6 @@
 $(document).ready(function(){
 
 
-
-
 	//tab
 	$('.tab__el').click(function(){
 		var currentTab = $(this).data('tab');

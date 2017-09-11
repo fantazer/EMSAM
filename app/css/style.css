@@ -1035,9 +1035,28 @@ body {
 }
 .item-block {
   position: relative;
+  overflow: hidden;
+  display: block;
+}
+.item-block:hover .item-block__img {
+  -webkit-transform: scale(1.3) rotate(10deg);
+      -ms-transform: scale(1.3) rotate(10deg);
+          transform: scale(1.3) rotate(10deg);
+}
+.item-block__img {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  -webkit-transition: all 1.8s;
+          transition: all 1.8s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.item-block__img:hover {
+  cursor: pointer;
 }
 .item-block__name {
   font-size: 24px;
@@ -1497,9 +1516,9 @@ body {
   cursor: pointer;
 }
 .news-el:hover .news__img-el {
-  -webkit-transform: scale(1.2);
-      -ms-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.3) rotate(5deg);
+      -ms-transform: scale(1.3) rotate(5deg);
+          transform: scale(1.3) rotate(5deg);
 }
 .news__img {
   height: 260px;
@@ -1627,9 +1646,9 @@ body {
 @media only screen and (min-width: 1280px) {
   .el:hover .el__img,
   .el-big:hover .el__img {
-    -webkit-transform: translateY(-200px);
-        -ms-transform: translateY(-200px);
-            transform: translateY(-200px);
+    -webkit-transform: translateY(-240px);
+        -ms-transform: translateY(-240px);
+            transform: translateY(-240px);
   }
   .el:hover .el__incr,
   .el-big:hover .el__incr {
@@ -2272,6 +2291,8 @@ body {
   }
 }
 .item-info__content-close {
+  -webkit-transition: all 0.4s;
+          transition: all 0.4s;
   position: absolute;
   top: 5%;
   right: 5%;
@@ -2302,7 +2323,15 @@ body {
 .item-info__content-close:hover {
   cursor: pointer;
 }
+.item-info__content-close:hover .icon {
+  -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
 .item-info__content-close .icon {
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
   -webkit-transition: all 0.4s;
           transition: all 0.4s;
   width: 30px;
