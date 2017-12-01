@@ -1,5 +1,40 @@
 $(document).ready(function(){
 
+	//resize block
+	$(window).resize(function(){
+		slideUserInfo();
+	});
+
+	var slideUserInfo = function(){
+		if($(window).width() < 769 ){
+			$('.history__el-wrap').click(function(){
+				$(this).find('.personal-sub').slideDown();
+			})
+		}
+	};
+	slideUserInfo();
+	//resize block end
+
+
+	//pesonal tab
+	$('.history__el').click(function(){
+		var currentEl =  $(this).index();
+
+		$('.history__el').removeClass('history__el--active');
+		$(this).addClass('history__el--active');
+
+		$('.personal').removeClass('personal--show');
+		$('.personal').each(function(){
+			if($(this).index()==currentEl){
+				$(this).addClass('personal--show');
+			}
+		});
+	});
+
+
+	
+	//pesonal tab end
+
 	//video
 	$('.video-layer').on('click', function(ev) {
     $(".introVideo")[0].src += "&autoplay=1";
@@ -8,6 +43,7 @@ $(document).ready(function(){
  		$('.video-img').hide();
 
   });
+	//video end
 
 
 	//tab
@@ -351,7 +387,7 @@ $(document).ready(function(){
 	//toggle icon mobile menu end
 
 	//template scroll bar
-	$('.module__cont, .descript__cont , .info-block').perfectScrollbar();
+	$('.module__cont, .descript__cont , .info-block , .scroll-block').perfectScrollbar();
 	//template scroll bar end
 
 	//message for old IE

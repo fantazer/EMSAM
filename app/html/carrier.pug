@@ -1,0 +1,47 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+menu()
+	.content
+		.content-filter
+		.content-wrap
+			+module()
+			.content-frame
+				.content-frame__left.content-frame__col.scroll-block
+					.history
+						.history__title Истории карьеры
+						.history__list
+							- for (var i=0;i<14;i++)
+								.history__el-wrap
+									.history__el(class=i== 0 ? 'history__el--active' : null)
+										.history__el-img
+											.history__el-img-el(style="background-image:url('img/user.jpg')")
+										.history__el-content
+											.history__el-title Работник Ресторана #{i+1}
+											.history__el-text Иванова Евгения, 21 год
+									.personal-sub
+										.personal-sub__img(style="background-image:url('img/person.jpg')")
+										.personal-sub__title Шеф-Повар #{i + 1}
+										.personal-sub__name Шестаков Михаил
+										.veksel
+											+icon("uzor","icon")
+										.personal-sub__content
+											p В сети ресторанов японской и итальянской кухни «Сушкоф» открыта вакансия старшего повара. Мы ищем человека, который любит кухню и умеет эффективно управлять сменой. Наш старший повар — это правая рука Шеф-повара.
+											p В сети ресторанов японской и итальянской кухни «Сушкоф» открыта вакансия старшего повара. Мы ищем человека, который любит кухню и умеет эффективно управлять сменой. Наш старший повар — это правая рука Шеф-повара.
+
+				.content-frame__right.content-frame__col.content-frame__right--personal.scroll-block
+					- for (var i=0;i<14;i++)
+						.personal(class=i== 0 ? 'personal--show' : null)
+							.personal__img(style="background-image:url('img/person.jpg')")
+							.personal__title Шеф-Повар #{i+1}
+							.personal__name Шестаков Михаил
+							.veksel
+								+icon("uzor","icon")
+							.personal__content
+								p В сети ресторанов японской и итальянской кухни «Сушкоф» открыта вакансия старшего повара. Мы ищем человека, который любит кухню и умеет эффективно управлять сменой. Наш старший повар — это правая рука Шеф-повара.
+								p В сети ресторанов японской и итальянской кухни «Сушкоф» открыта вакансия старшего повара. Мы ищем человека, который любит кухню и умеет эффективно управлять сменой. Наш старший повар — это правая рука Шеф-повара.
+	+toolbar()
++modal()
+
+include ./block_html/_script.pug
