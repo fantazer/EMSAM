@@ -87,7 +87,7 @@ mixin module()
 				.tab__cont(data-tab="self")
 					p нет информации
 				.tab__cont.tab__cont--hide(data-tab="deliver")
-					select
+					select(data-placeholder="Выберите значение")
 						option
 						option Москва
 						option Волгоград
@@ -263,4 +263,41 @@ mixin module()
 						.modal-title Ура! Вы успешно <br>	зарегистрированы :)
 						.modal-text Мы отправили письмо на Вашу почту
 						.modal-btn.modal-close Хорошо
+
+
+	.module(data-module="anket")
+		.module-anket.module__cont
+			.form-title Заполните анкету
+			form(action="#")
+				input(type="text" placeholder="Имя Фамилия*" )
+				select(data-placeholder="Ресторан, в котором удобно работать")
+					option
+						option Ресторан 1
+						option Ресторан 2
+						option Ресторан 3
+				select(data-placeholder="Кем хотите работать*")
+					option
+					option Сушеф
+					option Повар
+					option Официант
+				input(type="text" placeholder="Телефон*" )
+				input(type="text" placeholder="Email" )
+				textarea(name="text", cols="30", rows="5" placeholder="Как Вы узнали о “ЕмСам”")
+				.get-file
+				.confirm
+					.check-el
+						label.style-label.style-label--checkbox
+							input(type="checkbox").sytle-input
+							.sytle-input-element
+								+icon("checked","icon-check")
+							.sytle-input-text Я даю согласие на
+								a(href="#") хранение, обработку и использование своих персональных данных
+				label.btn-upload
+					+icon("upload","icon")
+					span Прикрепить резюме
+					input(type="file").btn-upload-el
+
+				.btn-row--center
+					.order-get__el Отправить
+
 	//block module end

@@ -11,6 +11,9 @@
 		"news":"news",
 		"catalog":"catalog",
 		"cabinet":"cabinet",
-		"delivery":"delivery"
+		"delivery":"delivery",
+		"work":"work",
+		"carrier":"carrier",
+		"company":"company"
 	}
 }

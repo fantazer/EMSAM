@@ -66,6 +66,10 @@
 			</div>
 			<div class="menu">
 				<div class="menu-wrap">
+					<div class="menu-switch">
+						<a class="menu-switch__el menu-switch__el--active" href="#">Ресторан</a>
+						<a class="menu-switch__el" href="#">Работа</a>
+					</div>
 					<div class="menu-cont">
 						<a class="menu-logo" href="/">
 							<svg class="icon">
@@ -334,7 +338,7 @@
 									<p>нет информации</p>
 								</div>
 								<div class="tab__cont tab__cont--hide" data-tab="deliver">
-									<select>
+									<select data-placeholder="Выберите значение">
 										<option></option>
 										<option>Москва</option>
 										<option>Волгоград</option>
@@ -620,6 +624,56 @@
 							</div>
 						</div>
 					</div>
+					<div class="module" data-module="anket">
+						<div class="module-anket module__cont">
+							<div class="form-title">Заполните анкету</div>
+							<form action="#">
+								<input type="text" placeholder="Имя Фамилия*" />
+								<select data-placeholder="Ресторан, в котором удобно работать">
+									<option>
+										<option>Ресторан 1</option>
+										<option>Ресторан 2</option>
+										<option>Ресторан 3</option>
+									</option>
+								</select>
+								<select data-placeholder="Кем хотите работать*">
+									<option></option>
+									<option>Сушеф</option>
+									<option>Повар</option>
+									<option>Официант</option>
+								</select>
+								<input type="text" placeholder="Телефон*" />
+								<input type="text" placeholder="Email" />
+								<textarea name="text" cols="30" rows="5" placeholder="Как Вы узнали о “ЕмСам”"></textarea>
+								<div class="get-file"></div>
+								<div class="confirm">
+									<div class="check-el">
+										<label class="style-label style-label--checkbox">
+											<input class="sytle-input" type="checkbox" />
+											<div class="sytle-input-element">
+												<svg class="icon-check">
+													<use xlink:href="#checked"></use>
+												</svg>
+											</div>
+											<div class="sytle-input-text">Я даю согласие на
+												<a href="#">хранение, обработку и использование своих персональных данных</a>
+											</div>
+										</label>
+									</div>
+								</div>
+								<label class="btn-upload">
+									<svg class="icon">
+										<use xlink:href="#upload"></use>
+									</svg>
+									<span>Прикрепить резюме</span>
+									<input class="btn-upload-el" type="file" />
+								</label>
+								<div class="btn-row--center">
+									<div class="order-get__el">Отправить</div>
+								</div>
+							</form>
+						</div>
+					</div>
 					<!--block module end-->
 					<div class="content-frame">
 						<div class="content-frame__left content-frame__col">
@@ -787,7 +841,7 @@
 		<script src="bower/svg4everybody/dist/svg4everybody.js"></script>
 		<!--script(src='bower/jquery-nice-select/js/jquery.nice-select.min.js')-->
 		<script src="bower/select2/dist/js/select2.min.js"></script>
-		<script src="js/jquery.smoothscroll.js"></script>
+		<!--script(src="js/jquery.smoothscroll.js")-->
 		<script src="bower/perfect-scrollbar/js/perfect-scrollbar.jquery.js"></script>
 		<!--script(src="js/perfect-scrollbar.jquery.js")-->
 		<!--script(src='bower/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js')-->

@@ -1,5 +1,14 @@
 $(document).ready(function(){
 
+	//video
+	$('.video-layer').on('click', function(ev) {
+    $(".introVideo")[0].src += "&autoplay=1";
+    ev.preventDefault();
+ 		$('.video-layer').hide();
+ 		$('.video-img').hide();
+
+  });
+
 
 	//tab
 	$('.tab__el').click(function(){
@@ -17,10 +26,14 @@ $(document).ready(function(){
 	//tab end
 
 	//init nice select
-	$("select").select2({
-	  minimumResultsForSearch: Infinity,
-	  placeholder: "Выберите значение",
+	$("select").each(function(){
+		var currentData = $(this).data('placeholder');
+		$(this).select2({
+			minimumResultsForSearch: Infinity,
+			placeholder: currentData
+		});
 	});
+
 	// //add icon caret
 	$('b[role="presentation"]').hide();
 	$('.select2-selection__arrow').append('<svg class="icon-select-arrow"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#small-arrow-down"></use></svg>');

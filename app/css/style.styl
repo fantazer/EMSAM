@@ -2,6 +2,7 @@
 @import "variable/_function.styl"
 @import "variable/_ie.styl"
 @import "icon/sprite.css"
+@import "variable/_fonts.styl"
 @import "variable/_helper.styl"
 @import "variable/_default.styl"
 @import "variable/_elements.styl"
@@ -1333,4 +1334,200 @@ body
   transition: .2s linear top;
   /* maybe other vendor-prefixed transitions */
 }
+
+.main-page__first-section-descr
+	+below(768px)
+		width: 100%
+	width: 50%
+	bg-full()
+	position: relative
+.work-desc-filter
+	position: absolute
+	top 0
+	left 0
+	width: 100%
+	height: 100%
+	background-color #282323
+	opacity 0.6
+.work-desc
+	position: relative
+	color white
+	padding 20% 15% 10% 15%
+.work-desc__title
+	font-family Oswald
+	font-size 44px
+	font-weight 300
+	margin-bottom: 15%
+.work-desc-list
+	margin-bottom: 30%
+.work-desc-list__el
+	margin-bottom: 10%
+.work-desc-list__title
+	font-family Oswald
+	font-size 28px
+.work-desc-list__text
+	font-family Oswald
+	font-size: 15px
+	color rgba(255, 255, 255, 0.71)
+.work-desc-get
+	@extend .btn--md
+	@extend .btn--green
+
+.video
+	width: 100%
+	height: 100%
+	position: relative
+.introVideo
+	width: 100%
+	height: 100%
+
+.video-layer
+	position: absolute
+	top 0
+	left 0
+	width: 100%
+	height: 100%
+	background: rgba(73, 46, 35, 0.7)
+.video-img
+	position: absolute
+	top 0
+	left 0
+	width: 100%
+	height: 100%
+	bg-full()
+
+.video-layer-cont
+	flex(mid)
+	fl()
+	width: 100%
+	height: 100%
+.video-play
+	margin-bottom: 3%
+	cp()
+	.icon
+		size 100px
+.video-title
+	color #ffffff
+	font-family Oswald
+	font-size 28px
+	font-weight 300
+	margin-bottom: 20px
+.video-work
+	color #ffffff
+	font-size 15px
+	font-weight 400
+
+.line-title-wrap--border
+	padding-bottom: 6%
+	border-bottom:1px solid #f2f2f2
+
+.item-slider__wrap--full
+	width: 80%
+	.item-slider_title
+		text-align: left
+	.item-slider_text
+		text-align: left
+		line-height: 1.6
+
+.item-slider__user
+	flex(between)
+	margin-bottom: 20px
+	margin-top: 3%
+//.item-slider__user-img
+.item-slider__user-img-el
+	size 80px
+	bg-full()
+	br(50%)
+.item-slider__user-content
+	width: calc(100% - 100px)
+.item-slider__user-title
+	@extend .type--lg
+	margin-bottom: 15px
+//.item-slider__user-text
+
+.filter--green
+	background: rgba(104, 186, 165, 0.85)
+
+.agent
+	position: relative
+	width: 100%
+	height: 100%
+.agent__wrap
+	width: 100%
+	height: 100%
+	flex(mid)
+	fl()
+.agent__icon
+	margin-bottom: 3%
+	.icon
+		size 80px
+
+.agent__title
+	@extend .type--lg
+	color white
+	margin-bottom: 7%
+.agent__get
+	@extend .btn--md
+	@extend .btn--light
+
+.restorans-events
+	+below(768px)
+		padding: 10%
+	padding: 3% 5% 6% 5%
+	background: #f4f4f4
+.events-wrap
+	flex(between)
+	fw()
+	margin-top: 5%
+.events__el
+	+below(640px)
+		width: 100%
+		margin-bottom: 20px
+	width:48%
+.events__head
+	f()
+	align-items: center
+	margin-bottom: 25px
+.events__date
+	+below(768px)
+		size 70px
+	size 90px
+	flex(mid)
+	fl()
+	padding: 15px
+	background: $green
+	color white
+.events__date-nub
+	@extend .type--xl
+	color white
+//.events__date-text
+//.events__cont
+.events__text
+	line-height: 1.6
+.events__title
+	@extend .type--lg
+	width: 70%
+	margin-left: 20px
+
+.module-anket
+	.select2
+		margin-bottom: 5%
+	textarea
+		width: 100%
+		margin-bottom: 5%
+
+.btn-upload
+	@extend .btn--md
+	@extend .btn--light
+	margin-bottom: 5%
+	.icon
+		size 25px
+		margin-right: 20px
+	flex(mid)
+	input[type="file"]
+		position  fixed
+		top  -9999px
+
+.btn-row--center
+	flex(mid)
 @import "../module/**/*"
