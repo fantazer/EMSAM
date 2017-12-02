@@ -1,5 +1,10 @@
 $(document).ready(function(){
 
+
+	// fancy box
+	$(".fancybox").fancybox();
+	// fancy box === end
+
 	//resize block
 	$(window).resize(function(){
 		slideUserInfo();
@@ -8,7 +13,7 @@ $(document).ready(function(){
 	var slideUserInfo = function(){
 		if($(window).width() < 769 ){
 			$('.history__el-wrap').click(function(){
-				$(this).find('.personal-sub').slideDown();
+				$(this).find('.personal-sub').slideToggle();
 			})
 		}
 	};
@@ -17,11 +22,12 @@ $(document).ready(function(){
 
 
 	//pesonal tab
-	$('.history__el').click(function(){
+	$('.history__el-wrap').click(function(){
 		var currentEl =  $(this).index();
+		console.log('currentEl',currentEl);
 
 		$('.history__el').removeClass('history__el--active');
-		$(this).addClass('history__el--active');
+		$(this).find('.history__el').addClass('history__el--active');
 
 		$('.personal').removeClass('personal--show');
 		$('.personal').each(function(){
@@ -271,9 +277,13 @@ $(document).ready(function(){
 			hideModule();
 			$('.module').removeClass('module--open');
 		});
+		$('.module-close').click(function(){
+			hideModule();
+		});
 	//animate module end
 
 	//modal
+
 	var closeModal = function () {
   	$('.modal-layer').removeClass('modal-layer-show');
   	$("body").removeClass("modal-fix");
@@ -319,6 +329,8 @@ $(document).ready(function(){
 	$('.toggle-close-modal').click(function (){
 		closeModal();
 	});
+
+
 	//modal end
 
 	$(".main-page__first-section-slider").owlCarousel({

@@ -1,0 +1,61 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+menu()
+	.content
+		.content-filter
+		.content-wrap
+			+module()
+			.company
+				.company__cont
+					.company__wrap
+						.company__title Сеть ресторанов “ЕмСам”
+						.company__text
+							p «ЕмСам» — международная сеть пиццерий, которая родилась в Сыктывкаре, а работает уже в девяти странах мира. В прошлом году мы открыли пиццерию в США и Китае. Мы растем, потому что нам не все равно, что и как мы делаем. Наша цель — делать действительно классную пиццу. И мы ищем дружелюбных и усердных людей, которые хотят гордиться тем, что они делают.
+
+							p Для многих сотрудников «Додо Пицца» стала больше, чем просто работой. У нас люди находят друзей, открывают в себе таланты, строят карьеру — и в конечном счете меняют свою жизнь. Нам не важен ваш пол, возраст, национальность и даже образование. Всему, что вам потребуется, мы научим. Чтобы попасть к нам, не нужно ничего, кроме желания.
+						.company__video
+							.video
+								.video-img(style="background-image:url('https://img.youtube.com/vi/yCR1iXLEyBY/maxresdefault.jpg')")
+								iframe(src="https://www.youtube.com/embed/yCR1iXLEyBY?showinfo=0&controls=1&autohide=1" ).introVideo
+								.video-layer
+									.video-layer-cont
+										.video-play
+											+icon("play","icon")
+										.video-title Светлана Иванова
+										.video-work HR - Директор
+						.company__info
+							.company__info-el
+								.company__info-val 5
+								.company__info-text Ресторанов <br> в г.Тагил
+							.company__info-el
+								.company__info-val 98
+								.company__info-text Сотрудников <br> в штате  в г.Тагил
+							.company__info-el
+								.company__info-val 40 000 руб.
+								.company__info-text Средняя <br> заработная плата
+
+						.company__galary
+							a(href="img/galary-1.jpg" rel="group-elemen").company__galary-link.fancybox
+								.company__galary-el(style="background-image:url('img/galary-1.jpg')")
+							a(href="img/galary-2.jpg" rel="group-elemen").company__galary-link.fancybox
+								.company__galary-el(style="background-image:url('img/galary-2.jpg')")
+							a(href="img/galary-3.jpg" rel="group-elemen").company__galary-link.fancybox
+								.company__galary-el(style="background-image:url('img/galary-3.jpg')")
+							a(href="img/galary-4.jpg" rel="group-elemen").company__galary-link.fancybox
+								.company__galary-el(style="background-image:url('img/galary-4.jpg')")
+
+					.company__map
+				.company__work
+					.filter.filter--green
+					.company__work-cont.get-module(data-module="anket")
+						.company__work-icon
+							+icon("form","icon")
+						.company__work-title Хочу <br>работать<br> с вами
+						.company__work-text Заполните <br> анкету
+
+	+toolbar()
++modal()
+
+include ./block_html/_script.pug

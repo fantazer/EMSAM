@@ -235,6 +235,8 @@ body
 	color $link-color
 
 .item-slider__wrap
+	+below(768px)
+		padding: 20px 0
 	width: 60%
 
 .item-slider_title
@@ -1350,19 +1352,35 @@ body
 	background-color #282323
 	opacity 0.6
 .work-desc
+	+below(768px)
+		padding: 10% 15%
+		height: 100vh
+	+below(640px)
+		height: calc(100vh - 100px)
+		padding: 5%
+		flex(mid)
+		fl()
 	position: relative
 	color white
 	padding 20% 15% 10% 15%
 .work-desc__title
+	+below(768px)
+		margin-bottom: 10%
+	+below(640px)
+		font-size: 32px
 	font-family Oswald
 	font-size 44px
 	font-weight 300
 	margin-bottom: 15%
 .work-desc-list
+	+below(768px)
+		margin-bottom: 10%
 	margin-bottom: 30%
 .work-desc-list__el
 	margin-bottom: 10%
 .work-desc-list__title
+	+below(640px)
+		font-size: 22px
 	font-family Oswald
 	font-size 28px
 .work-desc-list__text
@@ -1378,6 +1396,9 @@ body
 	height: 100%
 	position: relative
 .introVideo
+	//position: absolute
+	top 0
+	left 0
 	width: 100%
 	height: 100%
 
@@ -1405,6 +1426,8 @@ body
 	margin-bottom: 3%
 	cp()
 	.icon
+		+below(768px)
+			size 50px
 		size 100px
 .video-title
 	color #ffffff
@@ -1416,7 +1439,7 @@ body
 	color #ffffff
 	font-size 15px
 	font-weight 400
-
+	text-align: center
 .line-title-wrap--border
 	padding-bottom: 6%
 	border-bottom:1px solid #f2f2f2
@@ -1476,6 +1499,8 @@ body
 	padding: 3% 5% 6% 5%
 	background: #f4f4f4
 .events-wrap
+	+below(768px)
+		margin-top: 30px
 	flex(between)
 	fw()
 	margin-top: 5%
@@ -1510,13 +1535,36 @@ body
 	margin-left: 20px
 
 .module-anket
+	position: relative
 	.select2
 		margin-bottom: 5%
 	textarea
 		width: 100%
 		margin-bottom: 5%
 
+.module-close
+	+below(768px)
+		padding: 10px
+	cp()
+	tr(all)
+	position: absolute
+	top 0
+	right: 0
+	padding: 20px
+	background: $red
+	z-index 100
+	&:hover
+		background: darken($red,20)
+	.icon
+		+below(768px)
+			size 16px
+		size 20px
+		fill white
+
 .btn-upload
+	+below(768px)
+		font-size: 12px
+		padding: 20px
 	@extend .btn--md
 	@extend .btn--light
 	margin-bottom: 5%
@@ -1603,6 +1651,8 @@ body
 .personal-sub
 	display: none
 	padding: 20px 0
+	border-bottom:1px solid #e7e7e7
+
 .personal-sub--show
 	display: block
 .personal-sub__img
@@ -1626,4 +1676,132 @@ body
 
 .personal-sub--show
 	display: block
+
+.company
+	+below(768px)
+		fw()
+	f()
+	position: relative
+.company__cont
+	+below(768px)
+		width: 100%
+	width: calc(100% - 250px)
+	min-height 100%
+.company__wrap
+	+below(1024px)
+		padding: 5% 10%
+	+below(768px)
+		padding: 5%
+	padding: 7% 15%
+.company__title
+	@extend .type--xl
+	margin-bottom: 35px
+.company__text
+	+below(768px)
+		margin-bottom: 30px
+	margin-bottom: 60px
+	line-height: 1.6
+.company__video
+	+below(768px)
+		margin-bottom: 30px
+	margin-bottom: 60px
+	.video
+		+below(1440px)
+			height: 400px
+		+below(1280px)
+			height: 350px
+		+below(640px)
+			height: 250px
+		height: 480px
+.company__info
+	+below(768px)
+		margin-bottom: 30px
+		fw()
+	f()
+	margin-bottom: 60px
+.company__info-el
+	+below(768px)
+		width: 100%
+		margin-bottom: 20px
+		text-align: center
+	width: 33.333%
+
+.company__info-val
+	+below(768px)
+		font-size: 24px
+	@extend .type--lg
+	margin-bottom: 10px
+.company__info-text
+	line-height: 1.6
+.company__galary
+	f()
+	fw()
+.company__galary-el
+	bg-full()
+	position: absolute
+	top 0
+	left 0
+	width: 100%
+	height: 100%
+.company__galary-link
+	display: block
+	width: 50%
+	padding: 20%
+	position: relative
+.company__map
+	+below(768px)
+		padding: 30% 0
+	background: gray
+	width: 100%
+	padding: 20% 0
+.company__work
+	+below(768px)
+		width: 100%
+	width: 250px
+	bgi('pattern.png')
+	min-height 100%
+	background-repeat: repeat
+	position: relative
+	background-attachment: fixed
+//.filter
+//.filter--green
+.company__work-cont
+	+below(1280px)
+		width: 210px
+	+below(1024px)
+		right: 0
+		width: 250px
+	+below(768px)
+		position: relative
+		width: 100%
+		padding: 10% 0
+	cp()
+	fl()
+	flex(mid)
+	tr(all)
+	position: fixed
+	height: 100%
+	right 95px
+	width: 250px
+	&:hover
+		transform scale(1.1)
+.company__work-icon
+	+below(768px)
+		margin-bottom: 20px
+	margin-bottom: 10%
+	.icon
+		size 60px
+.company__work-title
+	+below(768px)
+		margin-bottom: 20px
+		font-size: 22px
+	@extend .type--lg
+	text-align: center
+	color white
+	margin-bottom: 10%
+	line-height: 1.2
+.company__work-text
+	color white
+	text-align: center
+	line-height: 1.6
 @import "../module/**/*"

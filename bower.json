@@ -25,6 +25,7 @@
   "devDependencies": {
     "jquery-nice-select": "^1.1.0",
     "select2": "^4.0.3",
-    "perfect-scrollbar": "^0.7.0"
+    "perfect-scrollbar": "^0.7.0",
+    "fancybox": "^3.2.5"
   }
 }

@@ -267,6 +267,8 @@ mixin module()
 
 	.module(data-module="anket")
 		.module-anket.module__cont
+			.module-close
+				+icon("close","icon")
 			.form-title Заполните анкету
 			form(action="#")
 				input(type="text" placeholder="Имя Фамилия*" )
