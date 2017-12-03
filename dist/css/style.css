@@ -1179,6 +1179,11 @@ body {
   position: relative;
   min-height: 300px;
 }
+@media only screen and (max-width: 640px) {
+  .item-slider {
+    min-height: 400px;
+  }
+}
 .item-slider .item-slider__nav-prev,
 .item-slider .item-slider__nav-next {
   -webkit-border-radius: 50%;
@@ -1287,6 +1292,11 @@ body {
   .main-page__second-section .item-block {
     width: 100%;
     min-height: 300px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .main-page__second-section .item-block {
+    min-height: 400px;
   }
 }
 .restorans {
@@ -3138,6 +3148,11 @@ body {
   -webkit-flex-flow: column;
       -ms-flex-flow: column;
           flex-flow: column;
+}
+@media only screen and (max-width: 640px) {
+  .agent__wrap {
+    min-height: 400px;
+  }
 }
 .agent__icon {
   margin-bottom: 3%;

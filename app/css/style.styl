@@ -198,6 +198,9 @@ body
 	bottom: 10%
 
 .item-slider
+	+below(640px)
+		min-height 400px
+
 	flex(mid)
 	height: 50vh
 	position: relative
@@ -266,6 +269,8 @@ body
 		+below(768px)
 			width: 100%
 			min-height 300px
+		+below(640px)
+			min-height 400px
 		width: 50%
 
 .restorans
@@ -1480,6 +1485,8 @@ body
 	height: 100%
 	flex(mid)
 	fl()
+	+below(640px)
+		min-height 400px
 .agent__icon
 	margin-bottom: 3%
 	.icon
