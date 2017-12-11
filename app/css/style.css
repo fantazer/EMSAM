@@ -3784,7 +3784,7 @@ body {
   position: relative;
 }
 .content-frame__right--vacancy {
-  padding: 3vh 5%;
+  padding: 7vh 5%;
 }
 @media only screen and (max-width: 768px) {
   .content-frame__right--vacancy {
