@@ -8,6 +8,7 @@ $(document).ready(function(){
 	//resize block
 	$(window).resize(function(){
 		slideUserInfo();
+		slideVacancy();
 	});
 
 	var slideUserInfo = function(){
@@ -17,7 +18,14 @@ $(document).ready(function(){
 			})
 		}
 	};
-	slideUserInfo();
+	var slideVacancy = function(){
+		if($(window).width() < 769 ){
+			$('.vacancy__el-wrap').click(function(){
+				$(this).find('.vacancy-sub').slideToggle();
+			})
+		}
+	};
+	slideVacancy();
 	//resize block end
 
 
@@ -36,10 +44,24 @@ $(document).ready(function(){
 			}
 		});
 	});
-
-
-	
 	//pesonal tab end
+
+	//vacancy tab
+	$('.vacancy__el-wrap').click(function(){
+		var currentEl =  $(this).index();
+		console.log('currentEl',currentEl);
+
+		$('.vacancy__el').removeClass('vacancy__el--active');
+		$(this).find('.vacancy__el').addClass('vacancy__el--active');
+
+		$('.vacancy-container').removeClass('vacancy--show');
+		$('.vacancy-container').each(function(){
+			if($(this).index()==currentEl){
+				$(this).addClass('vacancy--show');
+			}
+		});
+	});
+	//vacancy tab end
 
 	//video
 	$('.video-layer').on('click', function(ev) {

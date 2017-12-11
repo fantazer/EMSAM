@@ -1,0 +1,58 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+menu()
+	.content
+		.content-filter
+		.content-wrap
+			+module()
+			.content-frame
+				.content-frame__left.content-frame__col.scroll-block
+					.vacancy
+						.vacancy__title Вакансии
+						.vacancy__list
+							- for (var i=0;i<6;i++)
+								.vacancy__el-wrap
+									.vacancy__el(class=i == 0 ? 'vacancy__el--active' : null)
+											.vacancy__el-text Иванова Евгения, 21 год
+									.vacancy-sub
+										.vacancy-sub__title Старший повар
+										.veksel
+											+icon("uzor","icon")
+										.vacancy-sub__content
+											p В сети ресторанов японской и итальянской кухни «Сушкоф» открыта вакансия старшего повара. Мы ищем человека, который любит кухню и умеет эффективно управлять сменой. Наш старший повар — это правая рука Шеф-повара.
+											p В сети ресторанов японской и итальянской кухни «Сушкоф» открыта вакансия старшего повара. Мы ищем человека, который любит кухню и умеет эффективно управлять сменой. Наш старший повар — это правая рука Шеф-повара.
+											.type--md Требования
+											ul.list--mark
+												li Образование от среднего специального
+												li Опыт работы поваром/старшим поваром/су-шефом от года
+												li Приветствуется опыт работы коллективом
+												li Ответственность, пунктуальность, целеустремленность
+												li Желание расти и развиваться в компании
+											.btn-row--center
+												.vacancy-get.get-module(data-module="anket") Заполнить анкету
+
+				.content-frame__right.content-frame__col.content-frame__right--vacancy.scroll-block
+					- for (var i=0;i<14;i++)
+						.vacancy-container(class=i == 0 ? 'vacancy--show' : null)
+							.vacancy__title Старший повар #{i + 1}
+							.veksel
+								+icon("uzor","icon")
+							.vacancy__content
+								p В сети ресторанов японской и итальянской кухни «Сушкоф» открыта вакансия старшего повара. Мы ищем человека, который любит кухню и умеет эффективно управлять сменой. Наш старший повар — это правая рука Шеф-повара.
+								p В сети ресторанов японской и итальянской кухни «Сушкоф» открыта вакансия старшего повара. Мы ищем человека, который любит кухню и умеет эффективно управлять сменой. Наш старший повар — это правая рука Шеф-повара.
+								.type--md.type--bold Требования
+
+								ul.list--mark
+									li Образование от среднего специального
+									li Опыт работы поваром/старшим поваром/су-шефом от года
+									li Приветствуется опыт работы коллективом
+									li Ответственность, пунктуальность, целеустремленность
+									li Желание расти и развиваться в компании
+								.btn-row--center
+									.vacancy-get.get-module(data-module="anket") Заполнить анкету
+	+toolbar()
++modal()
+
+include ./block_html/_script.pug

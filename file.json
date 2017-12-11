@@ -14,6 +14,7 @@
 		"delivery":"delivery",
 		"work":"work",
 		"carrier":"carrier",
-		"company":"company"
+		"company":"company",
+		"vacancy":"vacancy"
 	}
 }

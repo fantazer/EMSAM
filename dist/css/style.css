@@ -460,6 +460,7 @@ h2,
 .history__el-title,
 .company__info-val,
 .company__work-title,
+.vacancy__title,
 .form-title,
 .cart-total {
   font-size: 28px;
@@ -483,6 +484,7 @@ h2,
   .history__el-title,
   .company__info-val,
   .company__work-title,
+  .vacancy__title,
   .form-title,
   .cart-total {
     font-size: 16px;
@@ -497,7 +499,9 @@ h1,
 .events__date-nub,
 .personal__title,
 .personal-sub__title,
-.company__title {
+.company__title,
+.vacancy__title,
+.vacancy-sub__title {
   font-size: 44px;
   font-family: Oswald;
   font-weight: 300;
@@ -513,7 +517,9 @@ h1,
   .events__date-nub,
   .personal__title,
   .personal-sub__title,
-  .company__title {
+  .company__title,
+  .vacancy__title,
+  .vacancy-sub__title {
     font-size: 20px;
   }
 }
@@ -550,6 +556,7 @@ a {
 .work-desc-get,
 .agent__get,
 .btn-upload,
+.vacancy-get,
 .enter-foget__get,
 .cart-get__el,
 .cart-empty-get__el,
@@ -577,6 +584,7 @@ a {
 .work-desc-get:hover,
 .agent__get:hover,
 .btn-upload:hover,
+.vacancy-get:hover,
 .enter-foget__get:hover,
 .cart-get__el:hover,
 .cart-empty-get__el:hover,
@@ -598,6 +606,7 @@ a {
 .work-desc-get,
 .agent__get,
 .btn-upload,
+.vacancy-get,
 .enter-foget__get,
 .cart-get__el,
 .cart-empty-get__el,
@@ -620,6 +629,7 @@ a {
 .modal-btn,
 .item-info__get,
 .work-desc-get,
+.vacancy-get,
 .enter-foget__get,
 .cart-get__el,
 .reg-get__el {
@@ -633,6 +643,7 @@ a {
 .modal-btn .nav-icon,
 .item-info__get .nav-icon,
 .work-desc-get .nav-icon,
+.vacancy-get .nav-icon,
 .enter-foget__get .nav-icon,
 .cart-get__el .nav-icon,
 .reg-get__el .nav-icon {
@@ -643,6 +654,7 @@ a {
 .modal-btn:hover,
 .item-info__get:hover,
 .work-desc-get:hover,
+.vacancy-get:hover,
 .enter-foget__get:hover,
 .cart-get__el:hover,
 .reg-get__el:hover {
@@ -655,6 +667,7 @@ a {
 .modal-btn:active,
 .item-info__get:active,
 .work-desc-get:active,
+.vacancy-get:active,
 .enter-foget__get:active,
 .cart-get__el:active,
 .reg-get__el:active {
@@ -667,6 +680,7 @@ a {
 .modal-btn input[type="submit"],
 .item-info__get input[type="submit"],
 .work-desc-get input[type="submit"],
+.vacancy-get input[type="submit"],
 .enter-foget__get input[type="submit"],
 .cart-get__el input[type="submit"],
 .reg-get__el input[type="submit"] {
@@ -3419,7 +3433,7 @@ body {
   position: relative;
 }
 .content-frame__right--personal {
-  padding: 3% 10%;
+  padding: 3vh 10%;
   background: #faf7f6;
 }
 @media only screen and (max-width: 768px) {
@@ -3697,6 +3711,151 @@ body {
   color: #fff;
   text-align: center;
   line-height: 1.6;
+}
+.vacancy {
+  width: 100%;
+  height: 100%;
+  padding: 7vh;
+  background: #faf7f6;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-flex-flow: column;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+@media only screen and (max-width: 640px) {
+  .vacancy {
+    background: #fff;
+  }
+}
+.vacancy__title {
+  color: #a59e9b;
+  margin-bottom: 20px;
+}
+.vacancy__el {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #e7e7e7;
+}
+.vacancy__el:hover {
+  cursor: pointer;
+}
+.vacancy__el:hover .vacancy__el-text {
+  color: #ed4849;
+}
+.vacancy__el--active {
+  color: #ed4849;
+}
+.vacancy__el-text {
+  font-weight: bold;
+}
+.vacancy-container {
+  display: none;
+}
+.vacancy--show {
+  display: block;
+}
+.vacancy__title {
+  text-align: center;
+  color: #000;
+  margin-bottom: 20px;
+}
+.vacancy__name {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.vacancy__content {
+  line-height: 1.6;
+}
+.scroll-block {
+  position: relative;
+}
+.content-frame__right--vacancy {
+  padding: 3vh 5%;
+}
+@media only screen and (max-width: 768px) {
+  .content-frame__right--vacancy {
+    display: none;
+  }
+}
+.history__el--active .history__el-title {
+  color: #68baa5;
+}
+.vacancy-sub {
+  display: none;
+  padding: 20px 0;
+  border-bottom: 1px solid #e7e7e7;
+}
+.vacancy-sub--show {
+  display: block;
+}
+.vacancy-sub__img {
+  display: none;
+  width: 100%;
+  padding: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-bottom: 5%;
+}
+.vacancy-sub__title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.vacancy-sub__name {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.vacancy-sub__content {
+  line-height: 1.6;
+}
+.vacancy-sub--show {
+  display: block;
+}
+.list--mark {
+  list-style: none;
+  padding-left: 0;
+}
+.list--mark li {
+  display: inline-block;
+  position: relative;
+  padding-left: 15px;
+  margin-bottom: 10px;
+}
+.list--mark li:before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background: #68baa5;
+  left: 0px;
+  top: 10px;
+}
+.vacancy-get {
+  margin-top: 6vh;
+}
+@media only screen and (max-width: 640px) {
+  .vacancy-get {
+    margin: 10px 0;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+  }
 }
 .footer {
   margin-top: 5%;
